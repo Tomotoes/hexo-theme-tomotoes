@@ -16,7 +16,7 @@
     left: 0;
     bottom: 0;
     z-index: 66;
-    width: 200px;
+    width: 230px;
     min-height: 100%;
     background: #fff;
     box-shadow: @boxShadow;
@@ -44,6 +44,10 @@
     .brand {
         padding: 40px @menuPadding 2em;
         background: fade(@primaryColor, 50%);
+    }
+    .brand>a>img:hover{
+        transform: scale(1.8);
+        transition:all 0.1s;
     }
 
     .avatar {
@@ -149,6 +153,7 @@
         padding: 0;
         li {
             margin:0;
+            margin-right:12px;
             float: left;
             display: block;
             .icon {
@@ -303,7 +308,10 @@ a[title="站长统计"] {
             padding-top: 20px;
             padding-bottom: 1em;
         }
-
+        .touxiang:hover{
+            transform: rotate(1turn);
+            transition: all 1s;
+        }
         .nav {
             line-height: @mNavH;
 
