@@ -62,10 +62,19 @@
     }
 
     .mail {
+        text-decoration:none;
         display: inline-block;
         padding-top: 4px;
         color: @lightPrimaryColor;
         font-size: 13px;
+        letter-spacing:1.5px;
+        &:hover{
+            cursor:pointer;
+            transform:scale(1.02);
+            text-shadow:2px 2px 2px black;
+            color:white;
+            transition:all 0.5s;
+        }
     }
 
     .scroll-wrap {
