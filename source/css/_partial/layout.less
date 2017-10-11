@@ -16,7 +16,7 @@
     left: 0;
     bottom: 0;
     z-index: 66;
-    width: @menuWidth;
+    width: 200px;
     min-height: 100%;
     background: #fff;
     box-shadow: @boxShadow;
@@ -69,7 +69,6 @@
         font-size: 13px;
         letter-spacing:1.5px;
         &:hover{
-            cursor:pointer;
             transform:scale(1.02);
             text-shadow:2px 2px 2px black;
             color:white;
@@ -120,6 +119,60 @@
             font-weight: 500;
             color: @secondaryTextColor;
             text-decoration: none;
+        }
+    }
+    #followme{
+         cursor:pointer;
+        display: inline-block;
+        padding-top: 4px;
+        color: gray;
+        letter-spacing:1.5px;
+        margin-left:8%;
+        margin-bottom:3%;
+        &:hover{
+           animation:1s followme infinite;
+           &:after{
+                content:"!";
+            }
+        }
+    }
+    @keyframes followme {
+        50% {  
+            color:#0080ff;
+            transform:scale(1.5) translate(10px) skew(0deg,-10deg);
+            text-shadow:2px 2px 2px gray;
+            transition:all 0.5s;
+        }
+    }
+     .nav2 {
+        
+        padding: 0;
+        li {
+            margin:0;
+            float: left;
+            display: block;
+            .icon {
+                position: absolute;
+            }
+
+            .github{
+                color: #6d819c;
+            }
+            .qq{
+                color: #6d819c;
+            }
+
+            &:hover,
+            &.active {
+                
+                color:#263959;
+                transform:scale(1.2);
+                transition:all 0.5s;
+            }
+            a{
+                color: #6d819c;
+                padding: 10px;
+            }
         }
     }
 }

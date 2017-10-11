@@ -20,12 +20,36 @@ menu:
   th-list:
     text: 分类
     url: /categories
-  github:
-    url: https://github.com/yscoder
-    target: _blank
-  link:
+  cubes:
     text: 项目
     url: /projects
+  link:
+    text: 导航
+    url: /navigation
+  camera-retro:
+    text: 摄影
+    url: /photoes
+  send-o:
+    text: 留言
+    url: /messages
+  smile-o:
+    text: 关于
+    url: /about
+
+menu2:
+  github:
+    text: github
+    url: https://github.com/JinmaQAQ
+    target: _blank
+  stack-overflow:
+    text: 掘金
+    url: https://juejin.im/user/599b6d255188252447222dfd
+    target: _blank
+  envelope-o:
+    text: 邮箱
+    url: mailto:jinmaup@gmail.com
+
+
 
 # 你的头像url
 avatar: /img/avatar.jpg
