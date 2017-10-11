@@ -16,27 +16,29 @@
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
+      <div id="menuitems">
         <%
           var menuItem, isActive = function(item) {
               var pageUrl = url_for(page.path)
               return item.url === '/' ? pageUrl === url_for(item.url + 'index.html') : _.startsWith(pageUrl, url_for(item.url))
           };
-          for (var i in theme.menu) {
-            menuItem = theme.menu[i];
-          %>
-            <li class="waves-block waves-effect<% if(isActive(menuItem)){ %> active<% } %>">
-              <a href="<%- url_for(menuItem.url) %>" <% if(menuItem.target){ %>target="_blank"<% } %> >
-                <i class="icon icon-lg icon-<%= i %>"></i>
-                
-                <%=(menuItem.text || _.startCase(i)) %>
-                <% if(menuItem.num) {%>
-                  <span id="<%- menuItem.num %>" class="digit"></span>
-                <% } %>
-              </a>
-            </li>
-        <% } %>
+              for (var i in theme.menu) {
+                menuItem = theme.menu[i];
+              %>
+              <li class="waves-block waves-effect<% if(isActive(menuItem)){ %> active<% } %>">
+                  <a href="<%- url_for(menuItem.url) %>" <% if(menuItem.target){ %>target="_blank"<% } %> >
+                    <i class="icon icon-lg icon-<%= i %>"></i>
+                    
+                    <%=(menuItem.text || _.startCase(i)) %>
+                    <% if(menuItem.num) {%>
+                      <span id="<%- menuItem.num %>" class="digit"></span>
+                    <% } %>
+                  </a>
+              </li>
+            <% } %>
+          </div>
       <strong id="followme">follow me</strong>
-      <ul class="nav2">
+      <ul class="nav2" id="nav2icons">
           <%
             var menuItem, isActive = function(item) {
                 var pageUrl = url_for(page.path)

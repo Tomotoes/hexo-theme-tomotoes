@@ -16,7 +16,7 @@
     left: 0;
     bottom: 0;
     z-index: 66;
-    width: 230px;
+    width: 210px;
     min-height: 100%;
     background: #fff;
     box-shadow: @boxShadow;
@@ -76,7 +76,7 @@
             transform:scale(1.02);
             text-shadow:2px 2px 2px black;
             color:white;
-            transition:all 0.2s;
+            transition:all 0.11s;
         }
     }
 
@@ -95,6 +95,7 @@
         line-height: @navH;
 
         li {
+            
             padding: 0 @menuPadding;
 
             .icon {
@@ -103,18 +104,7 @@
                 left: @menuPadding;
                 line-height: inherit;
             }
-
-            &:hover,
-            &.active {
-                background: rgba(0, 0, 0, .05);
-
-                a,
-                .icon {
-                    color: @primaryColor;
-                }
-            }
         }
-
         a {
             display: block;
             padding-left: @menuPadding*2.4;
@@ -125,60 +115,64 @@
             text-decoration: none;
         }
     }
-    #followme{
-         cursor:pointer;
-        display: inline-block;
-        padding-top: 4px;
-        color: gray;
-        letter-spacing:1.5px;
-        margin-left:8%;
-        margin-bottom:3%;
-        &:hover{
-           animation:1s followme infinite;
-           &:after{
-                content:"!";
-            }
-        }
-    }
-    @keyframes followme {
-        50% {  
-            color:#0080ff;
-            transform:scale(1.5) translate(10px) skew(0deg,-10deg);
-            text-shadow:2px 2px 2px gray;
-            transition:all 0.5s;
-        }
-    }
-     .nav2 {
-        
+    
+    .nav2 {
         padding: 0;
         li {
+
             margin:0;
-            margin-right:12px;
             float: left;
             display: block;
             .icon {
                 position: absolute;
             }
-
-            .github{
+            .github,qq,a{
                 color: #6d819c;
-            }
-            .qq{
-                color: #6d819c;
-            }
-
-            &:hover,
-            &.active {
-                
-                color:#263959;
-                transform:scale(1.2);
-                transition:all 0.5s;
             }
             a{
-                color: #6d819c;
                 padding: 10px;
             }
         }
+    }
+}
+#nav2icons li:hover{
+    .icon{
+        color:black;
+    transform:scale(1.3);
+    transition:all 0.1s;
+    }
+    
+}
+#menuitems li:hover
+{
+    a,
+    .icon {
+        border-radius:25%;
+         color: #000;
+         background:#e3dede;
+    }
+}
+#followme{
+    cursor:pointer;
+    display: inline-block;
+    padding-top: 4px;
+    color: gray;
+    letter-spacing:1.5px;
+    margin-left:8%;
+    margin-bottom:3%;
+    &:hover{
+       animation:1s followme infinite;
+       &:after{
+            content:"!";
+        }
+    }
+}
+@keyframes followme {
+    50% {  
+        color:#3f4040;
+        transform:scale(1.5) translate(10px) skew(0deg,-10deg);
+        text-shadow:2px 2px 2px gray;
+        transition:all 0.5s;
     }
 }
 
