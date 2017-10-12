@@ -1,6 +1,12 @@
 <% if (theme.visit_counter) { %>
-<span id="busuanzi_container_site_pv" style='display:none'>
-    <%- theme.visit_counter.site_pv %>&nbsp;<span id="busuanzi_value_site_pv"></span>
-    &nbsp;times
-</span>
+	<i class="icon icon-lg icon-user">
+<span id="busuanzi_container_site_uv" style='display:none'>
+        <%- theme.visit_counter.site_uv %><span id="busuanzi_value_site_uv"></span>
+    </span>&nbsp;人</i>
+    &nbsp;·&nbsp;
+    <i class="icon icon-lg icon-eye">
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        <%- theme.visit_counter.site_pv %><span id="busuanzi_value_site_pv"></span>
+    </span>&nbsp;次
+    </i>
 <% } %>
