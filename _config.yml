@@ -41,9 +41,9 @@ menu2:
     text: github
     url: https://github.com/JinmaQAQ
     target: _blank
-  stack-overflow:
-    text: 掘金
-    url: https://juejin.im/user/599b6d255188252447222dfd
+  rss:
+    text: Rss
+    url: atom.xml
     target: _blank
   envelope-o:
     text: 邮箱

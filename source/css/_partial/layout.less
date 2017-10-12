@@ -219,38 +219,23 @@
 }
 
 .footer {
-    color: rgba(255,255,255,.6);
-    background: @darkPrimaryColor;
-    margin-left:-30px;
-
     .footertop {
-        font-size: 13.5px;
-        text-align: center;
+        background: white;
+        text-align:center;
+        font-size: 15px;
         .icon{
-            font-size: 14px;
+            font-size: 15px;
         }
         
         a {
             text-decoration:none;
-            color: inherit;
+            color: #a7a7a2;
             opacity: .8;
             &:hover{
-            text-decoration: underline;
-            color:blue;
+                text-decoration: underline;
+                color:#000;
            }
         }
-        
-
-    }
-    &:hover{
-        background:#fff;
-        color:#000;
-        .footertop,.icon {
-            font-size: 17px;
-        }
-        height:150px;
-        transform:scale(1.2);
-        transition:all 0.3s;
     }
 
 }

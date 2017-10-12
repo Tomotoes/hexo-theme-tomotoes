@@ -1,30 +1,16 @@
 ﻿<footer class="footer">
     
     <div class="footertop">
-        <a href="javascript:;">
-        <%-config.author %> &copy; 
-        <%if (theme.since_year && theme.since_year < date(new Date(), 'YYYY')) {%>
-        <%- theme.since_year %> - <%}%>
-        <%- date(new Date(), 'YYYY') %> 
-        </a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 
-        <% if ((config.feed) && (config.feed.path.length)) { %>
-            <a href="<%- url_for(config.feed.path) %>" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss">Rss</i></a>
-        <% } %>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        
-       
+        <a href="javascript:;">
+        &copy; 2017&nbsp;
+        <i class="icon icon-lg icon-heart"></i>&nbsp;
+        XXXXX.com
+        </a>
+
+        &nbsp;·&nbsp;
         
         <a href="javascript:;"><%- partial('plugins/site-visit') %></a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        
-        <% if(theme.ICP_license) {%>
-            <a href="http://www.miitbeian.gov.cn/" target="_blank"><%- theme.ICP_license %></a>
-        <% } %>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="http://hexo.io/" target="_blank">Hexo&nbsp;:&nbsp;</a>
-        <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>      
-        
     </div>
+    <br/>
 </footer>
