@@ -1,21 +1,30 @@
-<footer class="footer">
-    <div class="top">
-        <%- partial('plugins/site-visit') %>
-        <p>
-            <% if ((config.feed) && (config.feed.path.length)) { %>
-                <span><a href="<%- url_for(config.feed.path) %>" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            <% } %>
-            <span><%- __('footer.license') %></span>
-        </p>
-    </div>
-    <div class="bottom">
-        <p><span><%-config.author %> &copy; <%if (theme.since_year && theme.since_year < date(new Date(), 'YYYY')) {%><%- theme.since_year %> - <%}%><%- date(new Date(), 'YYYY') %></span>
-            <span>
-                <% if(theme.ICP_license) {%>
-                <a href="http://www.miitbeian.gov.cn/" target="_blank"><%- theme.ICP_license %></a><br>
-                <% } %>
-                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
-            </span>
-        </p>
+﻿<footer class="footer">
+    
+    <div class="footertop">
+        <a href="javascript:;">
+        <%-config.author %> &copy; 
+        <%if (theme.since_year && theme.since_year < date(new Date(), 'YYYY')) {%>
+        <%- theme.since_year %> - <%}%>
+        <%- date(new Date(), 'YYYY') %> 
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+        <% if ((config.feed) && (config.feed.path.length)) { %>
+            <a href="<%- url_for(config.feed.path) %>" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss">Rss</i></a>
+        <% } %>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+       
+        
+        <a href="javascript:;"><%- partial('plugins/site-visit') %></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <% if(theme.ICP_license) {%>
+            <a href="http://www.miitbeian.gov.cn/" target="_blank"><%- theme.ICP_license %></a>
+        <% } %>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://hexo.io/" target="_blank">Hexo&nbsp;:&nbsp;</a>
+        <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>      
+        
     </div>
 </footer>

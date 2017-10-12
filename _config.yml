@@ -150,8 +150,7 @@ about: 业精于勤荒于嬉，行成于思毁于随。
 
 # “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
 visit_counter:
-  site_uv: 站点总访客数：
-  site_pv: 站点总访问量：
+  site_pv: View
 
 # 动态定义title
 title_change:
