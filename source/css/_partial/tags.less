@@ -1,9 +1,8 @@
 .tabs-bar {
     position: relative;
     padding: 0;
-    margin-top: -8px;
+    margin-top: 8px;
     overflow: hidden;
-    background: @primaryColor;
 
     &.expand {
         overflow: visible;
@@ -33,7 +32,7 @@
             }
             &.active {
                 color: #fff;
-                background: @accentColor;
+                background: #4ea1d3;
                 border-radius: .2em
             }
         }
@@ -75,7 +74,7 @@
     &.active {
         color: #fff;
         &:after {
-            background: @accentColor
+            background: #005f6b;
         }
     }
     &:hover,
@@ -92,14 +91,17 @@
     z-index: 2;
     height: 44px;
     padding-left: 1em;
-    background: @primaryColor!important;
     
     .action {
-        width: 44px;
+        white-space: nowrap;
+        width: 60px;
         height: 44px;
         line-height: 20px;
         border-radius: 50%;
         .transition(.2s);
+        .icon:before{
+            content:"...";
+        }
     }
 }
 
