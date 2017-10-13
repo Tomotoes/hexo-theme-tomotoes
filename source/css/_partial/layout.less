@@ -143,13 +143,22 @@
     }
     
 }
-#menuitems li:hover,&.active
+#menuitems li:hover
 {
     a,
     .icon {
         border-radius:25%;
          color: #000;
          background:#e3dede;
+    }
+    span{
+        color:red;
+    }
+}
+#menuitems li.active{
+
+    & span:after{
+        content:"♥";
     }
 }
 #followme{

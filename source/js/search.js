@@ -17,12 +17,19 @@
 
         if (!searchData) {
             var xhr = new XMLHttpRequest();
+
             xhr.open('GET', JSON_DATA, true);
 
             xhr.onload = function () {
                 if (this.status >= 200 && this.status < 300) {
+                   
+
                     var res = JSON.parse(this.response);
+
+
                     searchData = res instanceof Array ? res : res.posts;
+                   
+
                     success(searchData);
                 } else {
                     console.error(this.statusText);
@@ -105,7 +112,6 @@
         var regExp = new RegExp(key.replace(/[ ]/g, '|'), 'gmi');
 
         loadData(function (data) {
-
             var result = data.filter(function (post) {
                 return matcher(post, regExp);
             });
