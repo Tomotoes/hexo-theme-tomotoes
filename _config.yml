@@ -94,10 +94,10 @@ reward:
 search: true
 
 # 是否大屏幕下文章页隐藏导航
-hideMenu: true
+hideMenu: false
 
 # 是否开启toc
-# toc: false
+# toc: true
 toc:
   list_number: true  # 是否显示数字排序
 
