@@ -1557,4 +1557,5 @@
 	$("#gotop").xs999(1);
 	$(".article-card").xs999(23);
 	$(".header-icon").xs999(1);
+	$('#example').bumpyText();
 }());
