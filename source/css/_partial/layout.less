@@ -10,6 +10,16 @@
     .transition(.4s);
 }
 
+#otext2{
+    margin-top:24.2px;
+}
+
+#otext2 .eBox span{
+    color: #D4DFE6 !important;
+    font-size: 12px;
+    letter-spacing:1.5px;
+}
+
 #menu {
     position: fixed;
     top: 0;
@@ -42,7 +52,7 @@
     }
 
     .brand {
-        padding: 40px @menuPadding 2em;
+        padding: 20px @menuPadding 2em;
         background: fade(@primaryColor, 50%);
     }
     .brand>a>img:hover{
@@ -63,21 +73,6 @@
     .introduce {
         margin: 1em 0 0;
         color: @textPrimaryColor;
-    }
-
-    .mail {
-        text-decoration:none;
-        display: inline-block;
-        padding-top: 4px;
-        color: @lightPrimaryColor;
-        font-size: 13px;
-        letter-spacing:1.5px;
-        &:hover{
-            transform:scale(1.02);
-            text-shadow:2px 2px 2px black;
-            color:white;
-            transition:all 0.11s;
-        }
     }
 
     .scroll-wrap {
