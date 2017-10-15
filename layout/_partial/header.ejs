@@ -25,19 +25,22 @@
 </header>
 <header class="content-header <%-hdClass %>">
     
-
+    
     <div class="container fade-scale">
-        <h1 class="title"><%=title %></h1>
-        <h5 class="subtitle">
-            <% if(is_post()){ %>
-                <%- partial('post/head-meta') %>
-            <% } else if(is_home()){ %>
-                <%- config.subtitle %>
-            <% } else if (page.layout === 'page' && page.description) {%>
-                <%- page.description %>
-            <% } %>
-        </h5>
+        <div id="text">
+            <h1 class="title"><%=title %></h1>
+            <h5 class="subtitle">
+                <% if(is_post()){ %>
+                    <%- partial('post/head-meta') %>
+                <% } else if(is_home()){ %>
+                    <%- config.subtitle %>
+                <% } else if (page.layout === 'page' && page.description) {%>
+                    <%- page.description %>
+                <% } %>
+            </h5>
+        </div>
     </div>
+    
 
     <%- partial('tags-bar', {
         type: hdClass.split('-')[0]
