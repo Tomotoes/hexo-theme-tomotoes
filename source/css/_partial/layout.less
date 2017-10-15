@@ -143,13 +143,15 @@
     }
     
 }
+.scroll-wrap canvas{
+    width:100% !important;
+    height:100% !important;
+}
 #menuitems li:hover
 {
     a,
     .icon {
-        border-radius:25%;
          color: #000;
-         background:#e3dede;
     }
     span:after{
         content:"♥";
@@ -229,6 +231,9 @@
 }
 
 .footer {
+    canvas{
+        z-index:333 !important;
+    }
     .footertop {
         background: #f6f6f6;
         text-align:center;
@@ -236,18 +241,12 @@
         .icon{
             font-size: 14px;
         }
+
         
         a {
             text-decoration:none;
             color: #a7a7a2;
             opacity: .85;
-            &:first-child:hover{
-                .icon{
-                    font-size:20px;
-                    color:red;
-                    transition:all 0.5s;
-                }
-           }
         }
     }
 
