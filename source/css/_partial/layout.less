@@ -10,17 +10,8 @@
     .transition(.4s);
 }
 
-#otext2{
-    margin-top:24.2px;
-}
-
-#otext2 .eBox span{
-    color: #D4DFE6 !important;
-    font-size: 12px;
-    letter-spacing:1.5px;
-}
-
 #menu {
+    background:#f6f6f6;
     position: fixed;
     top: 0;
     left: 0;
@@ -28,7 +19,6 @@
     z-index: 66;
     width: 210px;
     min-height: 100%;
-    background: #fff;
     box-shadow: @boxShadow;
     .transition(.4s, cubic-bezier(.18, .81, .3, .89));
 
@@ -53,7 +43,7 @@
 
     .brand {
         padding: 20px @menuPadding 2em;
-        background: fade(@primaryColor, 50%);
+        background: fade(@primaryColor, 10%);
     }
     .brand>a>img:hover{
         transform: scale(1.8);
@@ -131,6 +121,16 @@
     }
 }
 
+#otext2{
+    margin-top:24.2px;
+}
+
+#otext2 .eBox span{
+    color: #D4DFE6 !important;
+    font-size: 12px;
+    letter-spacing:1.5px;
+    text-shadow:1px 1px 1px #000;
+}
 .bumpy-char {
     position: relative;
 }

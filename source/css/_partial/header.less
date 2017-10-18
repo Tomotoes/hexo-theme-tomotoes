@@ -6,18 +6,21 @@
     width: 100%;
     color: @textPrimaryColor;
     height: @headerH;
-    background: url(../../img/background1.jpg);
+
     -webkit-transition: padding-left .6s ease-in-out, background-color .3s cubic-bezier(.4, 0, .2, 1), box-shadow .15s linear;
     transition: padding-left .6s ease-in-out, background-color .3s cubic-bezier(.4, 0, .2, 1), box-shadow .15s linear;
     z-index: 30;
 
     &.fixed {
+        background: -webkit-linear-gradient(#085675, #2e7385);
+        background: -o-linear-gradient(#085675, #2e7385);
+        background: linear-gradient(#085675, #2e7385);
         box-shadow: @boxShadow;
-
+    
         .header-title {
             visibility: visible;
         }
-
+    
     }
 
 }
@@ -56,9 +59,12 @@
     margin-left: -240px;
     padding: 20px 16px 5px 256px;
     //padding: 104px 16px 48px 256px;
-    background: url(../../img/background1.jpg);
     text-shadow: 0 0 1px rgba(0, 0, 0, .2);
+
     
+    background: -webkit-linear-gradient(#085675, #f6f6f6);
+    background: -o-linear-gradient(#085675, #f6f6f6);
+    background: linear-gradient(#085675, #f6f6f6);
     .subtitle {
         padding-top: 10px;
         font-weight: 300;
