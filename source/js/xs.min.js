@@ -1553,7 +1553,9 @@
 		};
 	}
 	$(".scroll-wrap").xs999(5);
-	$(".footer").xs999(2);
+	if(window.screen.width>450){
+		$(".footer").xs999(2);
+	}
 	$("#gotop").xs999(1);
 	$(".article-card").xs999(23);
 	$(".header-icon").xs999(1);

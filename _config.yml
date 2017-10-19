@@ -102,7 +102,7 @@ toc:
   list_number: true  # 是否显示数字排序
 
 # 文章页留言内容，hexo中所有变量及辅助函数等均可调用，具体请查阅 hexo.io
-postMessage: 文章标题：  <a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.title %></a><br>文章地址：  <a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, '') %></a><br>创建时间：  <%- date(page.date) %><br>更新时间：  <%- date(page.updated) %>
+postMessage: 文章标题：  <a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.title %></a><br>创建时间：  <%- date(page.date) %><br>更新时间：  <%- date(page.updated) %>
 
 # 站长统计，如要开启，输入CNZZ站点id，如 cnzz: 1255152447
 cnzz: false
