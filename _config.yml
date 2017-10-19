@@ -79,7 +79,7 @@ mathjax: false
 archive_yearly: true
 
 # 是否显示文章最后更新时间
-show_last_updated: true
+show_last_updated: false
 
 # 是否开启分享
 share: true
