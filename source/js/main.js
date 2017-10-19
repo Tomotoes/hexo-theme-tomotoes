@@ -32,7 +32,8 @@
                 y: y
             };
         },
-        docEl = d.documentElement;
+     docEl= ( navigator.userAgent.indexOf("MSIE") > -1) || (navigator.userAgent.indexOf("Edge") > -1)  || (navigator.userAgent.indexOf('Trident') > -1 && navigator.userAgent.indexOf("rv:11.0") > -1)|| (!!navigator.userAgent.match(/firefox/i)) || navigator.msPointerEnabled ? body : d.documentElement;
+
 
     var Blog = {
         goTop: function (end) {
