@@ -6,12 +6,14 @@
 
     <ul class="post-list">
     <% page.posts.each(function(post){ %>
-        <li class="post-list-item fade">
-            <%- partial('_partial/index-item', {
-                post: post,
-                index: true
-            }) %>
-        </li>
+    	<div onclick="location.href='<%- url_for(post.path) %>'" class="MyPostDiv">
+        	<li class="post-list-item fade">
+	            <%- partial('_partial/index-item', {
+	                post: post,
+	                index: true
+	            }) %>
+        	</li>
+       </div>
     <% }) %>
     </ul>
 

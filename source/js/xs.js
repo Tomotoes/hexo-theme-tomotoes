@@ -1557,6 +1557,7 @@
 	$("#gotop").xs999(1);
 	$(".article-card").xs999(23);
 	$(".header-icon").xs999(1);
+	$(".card-card").xs999(7);
 	/*文字跳动*/
 	$('#example').bumpyText();
 	/*文字音效*/

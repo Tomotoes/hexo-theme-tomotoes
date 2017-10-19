@@ -1,34 +1,37 @@
-<%- partial('_partial/header', {
+﻿<%- partial('_partial/header', {
     title: locals.title || theme.categories_title,
     hdClass: 'categories-header'
 }) %>
 <div class="container body-wrap fade">
-    <%
-        if(is_category()) { %>
-            <div class="waterfall">
-          <% page.posts.each(function(post){ %>
-
-            <%- partial('_partial/archive', {post: post, date_format: config.date_format}) %>
-
-        <% }) %>
-            </div>
-        <% } else {
-            site.categories.each(function(cate){
-                if(cate.length) {
-            %>
-
-            <h3 class="archive-separator" id="tag-<%=cate.name %>"><%=cate.name %></h3>
-
-            <div class="waterfall">
-            <% cate.posts.each(function(post){  %>
-
+    <% if(is_category()) { %>
+        <% category_num = 0 %>
+        <%
+            site.categories.each(function(category){
+                if(category.name == page.category.trim()){
+                    category_num = category.length
+                }
+            }) 
+        %>
+        <h5>该分类文章数: <%-category_num %></h5>
+        <div class="waterfall">
+            <% page.posts.each(function(post){ %>
                 <%- partial('_partial/archive', {post: post, date_format: config.date_format}) %>
             <% }) %>
-            </div>
-
-            <% }
-            })
-        }
-    %>
-    <%- partial('_partial/paginator') %>
+        </div>
+    <% } else { %>
+    	<h5>分类数: <%-site.categories.length %></h5>
+        <div class="card-pool">
+            <% site.categories.each(function(category){
+                if(category.length){ %>
+                    <%- partial('card', {
+                            name: category.name,
+                            slug: category.slug,
+                            link: category.permalink,
+                            count: category.length
+                        }) %>
+                    <% }
+                }) %>
+        </div>
+    <% } %>
+<%- partial('_partial/paginator') %>
 </div>

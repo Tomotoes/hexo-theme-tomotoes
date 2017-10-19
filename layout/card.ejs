@@ -1,0 +1,20 @@
+﻿<%  
+    function get(){
+        var c = 0
+        while(c<150 || c>230)
+            c = Math.floor(Math.random()*256)
+        return c
+    }
+    var color = "rgb("+get()+','+get()+','+get()+")"
+%>
+
+<a class="post-title-link" href="<%=link %>" itemprop="url">
+    <div class="card-card">
+        <div class="card-head">
+            <%-slug %> · <span style="color:#fff;background: <%-color %>;padding: 2px 5px"><%-count %></span>
+        </div>
+        <div class="card-container">
+            <span style="font-size: 20px"><%-name %></span>
+        </div>
+    </div>
+</a>

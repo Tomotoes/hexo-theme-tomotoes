@@ -1,4 +1,3 @@
-@whitecolor:#f6f6f6;
 .top-header {
     position: fixed;
     left: 0;
@@ -6,23 +5,18 @@
     width: 100%;
     color: @textPrimaryColor;
     height: @headerH;
-
     -webkit-transition: padding-left .6s ease-in-out, background-color .3s cubic-bezier(.4, 0, .2, 1), box-shadow .15s linear;
     transition: padding-left .6s ease-in-out, background-color .3s cubic-bezier(.4, 0, .2, 1), box-shadow .15s linear;
     z-index: 30;
-
     &.fixed {
-        background: -webkit-linear-gradient(#085675, #2e7385);
-        background: -o-linear-gradient(#085675, #2e7385);
-        background: linear-gradient(#085675, #2e7385);
+        background: -webkit-linear-gradient(#085675, #307586);
+        background: -o-linear-gradient(#085675, #307586);
+        background: linear-gradient(#085675, #307586);
         box-shadow: @boxShadow;
-    
         .header-title {
             visibility: visible;
         }
-    
     }
-
 }
 
 .header-icon {
@@ -31,7 +25,6 @@
     line-height: @headerH;
     text-align: center;
     color: @textPrimaryColor;
-
     &:hover {
         color: @textPrimaryColor;
     }
@@ -46,48 +39,42 @@
     white-space: nowrap;
 }
 
-#text{
-    -webkit-tranform:translateZ(0);
-    -webkit-transition-duration:0.05s;
-    -moz-tranform:translateZ(0);
-    color:#f3f3f3;
+#text {
+    -webkit-tranform: translateZ(0);
+    -webkit-transition-duration: 0.05s;
+    -moz-tranform: translateZ(0);
+    color: #f3f3f3;
 }
 
 .content-header {
-    cursor:default;
+    cursor: default;
     min-height: 210px;
     margin-left: -240px;
     padding: 20px 16px 5px 256px;
     //padding: 104px 16px 48px 256px;
     text-shadow: 0 0 1px rgba(0, 0, 0, .2);
-
-    
     background: -webkit-linear-gradient(#085675, #f6f6f6);
     background: -o-linear-gradient(#085675, #f6f6f6);
     background: linear-gradient(#085675, #f6f6f6);
     .subtitle {
         padding-top: 10px;
         font-weight: 300;
-       
     }
-
     .title {
         padding-top: 50px;
     }
-
     .article-category-list-link {
         color: lighten(@accentColor, 10%);
     }
-
-
 }
 
 .post-header {
-
-    .title, .subtitle {
+    .title,
+    .subtitle {
         display: none;
     }
 }
+
 .tags-header,
 .categories-header {
     position: relative;
@@ -96,11 +83,9 @@
 }
 
 @media screen and (max-width:1240px) {
-
     .header-title {
         text-align: left;
     }
-
 }
 
 @media screen and (max-width:760px) {
@@ -113,14 +98,11 @@
             font-size: 24px;
             line-height: 30px;
         }
-
         .subtitle {
             font-size: 14px;
             line-height: 20px
         }
-
     }
-
     .post-header {
         .title {
             display: block;
@@ -128,5 +110,4 @@
             line-height: 1.5;
         }
     }
-
 }

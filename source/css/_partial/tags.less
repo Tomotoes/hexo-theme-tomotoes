@@ -23,10 +23,8 @@
             padding: 6px 1em;
             margin-bottom: 6px;
             color: @secondaryTextColor;
-            &:hover {
-                opacity: .7;
-                text-decoration: underline;
-            }
+            text-decoration: none;
+          
             &:after {
                 display: none;
             }
@@ -61,7 +59,7 @@
     flex: none;
     padding: 12px 1em;
     line-height: 20px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #566270;
     border-radius: .2em .2em 0 0;
     &:after {
         content: '';
@@ -72,15 +70,16 @@
         height: 3px;
     }
     &.active {
-        color: #fff;
+        color: #000;
         &:after {
             background: #005f6b;
         }
     }
     &:hover,
     &:active {
-        color: #fff;
-        text-decoration: none;
+        color: #000;
+        transform: scale(1.1);
+        transition: all 0.2s;
     }
 }
 
@@ -91,10 +90,9 @@
     z-index: 2;
     height: 44px;
     padding-left: 1em;
-    a{
-        color:#fff;
+     & a{
+        text-decoration:none;
     }
-
     .action {
         white-space: nowrap;
         width: 60px;
@@ -104,7 +102,32 @@
         .transition(.2s);
     }
 }
-
+.card-pool{
+    columns: 200px;
+    -moz-column: 200px;
+    -webkit-column: 200px;
+    -o-column: 200px;
+}
+.card-card {
+    width: 200px;
+    min-height: 100px;
+    box-shadow: 2px 2px 6px #b5b5b5;
+    padding: 20px 15px;
+    margin: 10px;
+    display: inline-block;
+    font-size: 15px;
+    background-color:#EFFFE9;
+}
+.card-head {
+    padding: 10px;
+    font-size: 13px;
+}
+.card-container {
+    padding: 10px;
+}
+.card-foot {
+    padding: 10px;
+}
 @media screen and (max-width:760px) {
     .tabs-bar {
         margin-left: -16px;
@@ -122,5 +145,19 @@
     
     .tags-list-more {
         display: none;
+    }
+    .card-card{
+        width: 280px !important;
+    }
+    .card-pool{
+        padding-left:40px !important;
+    }
+}
+@media screen and (max-width:330px){
+     .card-card{
+        width: 200px !important;
+    }
+    .card-pool{
+        padding-left:35px !important;
     }
 }
