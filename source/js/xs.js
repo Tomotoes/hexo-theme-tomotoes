@@ -1,4 +1,4 @@
-(function(){
+﻿(function(){
 	function b(t,u,s){
 		this.t = t;
 		this.u = u;
@@ -1557,9 +1557,9 @@
 		$(".scroll-wrap").xs999(5);
 		$(".footer").xs999(2);
 		$("#gotop").xs999(1);
-		$(".article-card").xs999(23);
+		$(".article-card").xs999(11);
 		$(".header-icon").xs999(1);
-		$(".card-card").xs999(7);
+		$(".card-card").xs999(15);
 	}
 	
 	/*文字音效*/
