@@ -1554,6 +1554,7 @@
 	}
 	
 	if(window.screen.width>600){
+		
 		$(".scroll-wrap").xs999(5);
 		$(".footer").xs999(2);
 		$("#gotop").xs999(1);
