@@ -1,5 +1,5 @@
 (function (w, d) {
-
+    
     var body = d.body,
         $ = d.querySelector.bind(d),
         $$ = d.querySelectorAll.bind(d),
@@ -31,9 +31,81 @@
                 x: x,
                 y: y
             };
-        },
-     docEl= ( navigator.userAgent.indexOf("MSIE") > -1) || (navigator.userAgent.indexOf("Edge") > -1)  || (navigator.userAgent.indexOf('Trident') > -1 && navigator.userAgent.indexOf("rv:11.0") > -1)|| (!!navigator.userAgent.match(/firefox/i)) || navigator.msPointerEnabled ? body : d.documentElement;
+        };
+       
+   
+    var docEl=d.documentElement;
+   
+    /*电脑*/
+    if(window.screen.width>600){
+       
+        /*360，搜狗，QQ，Edge，IE9，排除IE11*/
+        if(((window.navigator.userAgent.indexOf("WOW")>-1)||(window.navigator.userAgent.indexOf("Edge")>-1)||(window.navigator.userAgent.indexOf("MSIE")>-1)) && (window.navigator.userAgent.indexOf("Trident")==-1)){
+            docEl=body;
+        }
+    }
+    /*手机*/
+    else{
+        /*安卓*/
+       if(window.navigator.userAgent.indexOf("Android")>-1){
+            /*vivo,小米,UC,QQ,搜狗,避免Chrome*/
+            if(window.navigator.userAgent.indexOf("Browser")>-1){
+                docEl=body;
+            }
+       }
+       /*IOS等..*/
+       else{
+            docEl=body;
+       } 
+    }
 
+    /*兼容IE9*/
+    if (!("classList" in document.documentElement)) {
+        /*背景渐变*/
+        document.querySelector(".content-header").style.background="#085675";
+        document.querySelector(".top-header .fixed").style.background="#085675";
+        /*还有好多未兼容的。。*/  
+        
+        Object.defineProperty(HTMLElement.prototype, 'classList', {  
+            get: function() {  
+                var self = this;  
+                function update(fn) {  
+                    return function(value) {  
+                        var classes = self.className.split(/\s+/g),  
+                            index = classes.indexOf(value);  
+                          
+                        fn(classes, index, value);  
+                        self.className = classes.join(" ");  
+                    }  
+                }  
+                  
+                return {                      
+                    add: update(function(classes, index, value) {  
+                        if (!~index) classes.push(value);  
+                    }),  
+                      
+                    remove: update(function(classes, index) {  
+                        if (~index) classes.splice(index, 1);  
+                    }),  
+                      
+                    toggle: update(function(classes, index, value) {  
+                        if (~index)  
+                            classes.splice(index, 1);  
+                        else  
+                            classes.push(value);  
+                    }),  
+                      
+                    contains: function(value) {  
+                        return !!~self.className.split(/\s+/g).indexOf(value);  
+                    },  
+                      
+                    item: function(i) {  
+                        return self.className.split(/\s+/g)[i] || null;  
+                    }  
+                };  
+            }  
+        });  
+    }  
 
     var Blog = {
         goTop: function (end) {

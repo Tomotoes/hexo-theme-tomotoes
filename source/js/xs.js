@@ -1552,21 +1552,25 @@
 			clearTimeout(id);
 		};
 	}
-	$(".scroll-wrap").xs999(5);
-	if(window.screen.width>450){
+	
+	if(window.screen.width>600){
+		$(".scroll-wrap").xs999(5);
 		$(".footer").xs999(2);
+		$("#gotop").xs999(1);
+		$(".article-card").xs999(23);
+		$(".header-icon").xs999(1);
+		$(".card-card").xs999(7);
 	}
-	$("#gotop").xs999(1);
-	$(".article-card").xs999(23);
-	$(".header-icon").xs999(1);
-	$(".card-card").xs999(7);
-	/*文字跳动*/
-	$('#example').bumpyText();
+	
 	/*文字音效*/
 	elasticText( {
         id: 'otext2',
         duration:100,
         effact:'easeOut',
         content: '天行健，君子以自强不息。'
-     });
+ 	});
+
+	/*文字跳动*/
+	$('#example').bumpyText();
+	
 }());
