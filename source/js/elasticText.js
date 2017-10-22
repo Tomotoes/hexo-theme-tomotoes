@@ -2,12 +2,10 @@ function elasticText() {
   var args = arguments;
   var EventUtil = {
     e: "",
-    //鍐呴儴鑾峰彇event浜嬩欢
     gEve: function(event) {
       this.e = event ? event : window.event;
       return this;
     },
-    //澶栭儴鑾峰彇event浜嬩欢
     getEvent: function(event) {
       return event ? event : window.event;
     },
@@ -18,7 +16,6 @@ function elasticText() {
         return callback(this.e);
       }
     },
-    //缁戝畾浜嬩欢
     addHandler: function(ele, type, handler) {
       if(ele.addEventListener) {
         ele.addEventListener(type, handler, false);
@@ -28,7 +25,6 @@ function elasticText() {
         ele["on" + type] = handler;
       }
     },
-    //绉婚櫎缁戝畾浜嬩欢
     removeHandler: function(ele, type, handler) {
       if(ele.removeEventListener) {
         ele.removeEventListener(type, handler, false);
@@ -144,23 +140,10 @@ function elasticText() {
       du = obj.duration || 50,
       effact = obj.effact;
     var tf = document.getElementById(id);
-    if(tf === null || tf === void 0) {
-      throw new Error('璇锋鏌d鏄惁閿欒');
-    }
     if(typeof fs !== 'string') {
       fs = fs.toString();
     }
-    if(!/^\d{2}(|px)$/.test(fs)) {
-      throw new Error('璇锋鏌ontSize鏍煎紡鏄惁閿欒');
-    } else {
-      fs = fs.match(/^\d{2}/)[0];
-    }
-    if(!(effact in ef)) {
-      throw new Error('娌℃湁姝ゆ晥鏋滃悕绉�');
-    }
-    if(typeof du !== 'number') {
-      throw new Error('鎸佺画鏃堕棿绫诲瀷閿欒')
-    }
+    fs = fs.match(/^\d{2}/)[0];
     var textBox = document.createElement('div');
     textBox.setAttribute('class', 'eBox');
 
@@ -232,9 +215,6 @@ function elasticText() {
       gb = false;
       mark = false;
     }
-  }
-  if(!arguments.length) {
-    throw new Error('璇峰～鍐欏弬鏁�');
   }
   Array.prototype.forEach.call(args, function(item) {
     new mFn(item);

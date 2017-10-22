@@ -74,7 +74,7 @@
 
     .nav {
         margin: 0;
-        padding: 12px 0;
+        padding: 0;
         height: 300px;
         min-height: ~"calc(100% - 115px)";
         list-style: none;
@@ -105,7 +105,7 @@
     .nav2 {
         padding: 0;
         li {
-
+            
             margin:0;
             float: left;
             display: block;
@@ -187,7 +187,11 @@
         text-shadow:2px 2px 2px gray;
     }
 }
-
+#world canvas{
+    width: 100% !important;
+    height: 100% !important;
+    z-index:9999 !important;
+}
 #main {
     padding-left: @menuWidth;
     min-height: 100%;
@@ -308,6 +312,10 @@ a[title="站长统计"] {
 
     ::-webkit-scrollbar {
         display: none;
+    }
+
+    #world canvas{
+        display:none !important;
     }
 }
 

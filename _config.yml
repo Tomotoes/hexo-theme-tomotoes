@@ -20,15 +20,6 @@ menu:
   th-list:
     text: 分类
     url: /categories
-  cubes:
-    text: 项目
-    url: /projects
-  link:
-    text: 导航
-    url: /navigation
-  camera-retro:
-    text: 摄影
-    url: /photoes
   send-o:
     text: 留言
     url: /messages
@@ -48,6 +39,18 @@ menu2:
   envelope-o:
     text: 邮箱
     url: mailto:jinmaup@gmail.com
+  stack-overflow:
+    text: 掘金
+    url: https://juejin.im/user/599b6d255188252447222dfd
+    target: _blank 
+  facebook:
+    text: facebook
+    url: https://www.facebook.com/profile.php?id=100022718221060
+    target: _blank
+  weixin:
+    text: 微信
+    url: img/weixin.gif
+    target: _blank
 
 
 
