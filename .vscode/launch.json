@@ -9,6 +9,25 @@
             "request": "launch",
             "name": "Launch Program",
             "program": "${file}"
+        },
+        {
+            "name": "nodeLauch", //单独调试js，即可以直接运行js
+            "type": "node",
+            "request": "launch",
+            "program": "${file}", //这个配置成你要调试的文件、${file}当前打开的文件
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "internalConsole",
+            "preLaunchTask": "",
+            "sourceMaps": false
         }
     ]
 }

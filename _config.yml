@@ -42,7 +42,7 @@ menu2:
   stack-overflow:
     text: 掘金
     url: https://juejin.im/user/599b6d255188252447222dfd
-    target: _blank 
+    target: _blank
   facebook:
     text: facebook
     url: https://www.facebook.com/profile.php?id=100022718221060
@@ -92,6 +92,7 @@ reward:
   title: 感谢您的鼓励支持！
   wechat: /img/wechat.png     #微信，关闭设为 false
   alipay: /img/alipay.png     #支付宝，关闭设为 false
+  wechatalipay: /img/dog.png
 
 # 是否开启搜索
 search: true
@@ -127,10 +128,10 @@ less:
     - source/css/style.less
 
 # 是否开启友言评论, 填写友言用户id2146950
-uyan_uid: false 
+uyan_uid: false
 
 # 是否使用 gitment，https://github.com/imsun/gitment
-gitment: 
+gitment:
   owner: JinmaQAQ
   repo: JinmaQAQ.github.io
   client_id: 57b2bf7c5af44e329e4b
@@ -150,8 +151,8 @@ about: 业精于勤荒于嬉，行成于思毁于随。
 
 # “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
 visit_counter:
-  site_pv: 访问次数： 
-  site_uv: 访问用户： 
+  site_pv: 访问次数：
+  site_uv: 访问用户：
 
 # 动态定义title
 title_change:

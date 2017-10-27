@@ -1,19 +1,95 @@
 
 .page-reward {
-    margin: 60px 0;
+    margin: 0px 0;
     text-align: center;
 }
-.page-reward-btn {
-    width: 56px;
-    height: 56px;
-    line-height: 56px;
-    font-size: 20px;
-    color: #2b90d9;
-    .boxShadow();
-    &:hover,
-    &:active {
-        text-decoration: none;
-    }
+
+.myreward a {
+	position: relative;
+	display: inline-block;
+	margin: 15px 25px;
+	outline: none;
+	color: #999;
+	text-decoration: none;
+	letter-spacing: 1px;
+	font-weight: 400;
+    font-size: 1.35em;
+    padding: 18px 20px;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+}
+
+.myreward a::before,
+.myreward a::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #ccc;
+	content: '';
+	opacity: 0.5;
+	-webkit-transition: opacity 0.3s, height 0.3s;
+	-moz-transition: opacity 0.3s, height 0.3s;
+	transition: opacity 0.3s, height 0.3s;
+}
+
+.myreward a::after {
+	top: 100%;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.myreward a span:first-child {
+	z-index: 2;
+	display: block;
+	font-weight: 300;
+}
+
+.myreward a span:last-child {
+	z-index: 1;
+	display: block;
+	padding: 8px 0 0 0;
+	color: rgba(0,0,0,0.4);
+	text-shadow: none;
+	text-transform: none;
+	font-style: italic;
+	font-size: 0.75em;
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.myreward a:hover::before,
+.myreward a:focus::before {
+	height: 6px;
+}
+
+.myreward a:hover::before,
+.myreward a:hover::after,
+.myreward a:focus::before,
+.myreward a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.myreward a:hover span:last-child,
+.myreward a:focus span:last-child {
+	opacity: 1;
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	transform: translateY(0%);
 }
 
 .reward-title {
@@ -50,7 +126,7 @@
 .reward-toggle {
     position: relative;
     display: block;
-    width: 120px;
+    width: 200px;
     overflow: hidden;
     margin: 40px auto 0;
     border-radius: 3px;
@@ -60,16 +136,11 @@
     &-check {
         position: absolute;
         visibility: hidden;
-        &:checked {
-            +.reward-toggle-ctrol {
-                .transform(translate3d(-60px, 0, 0))
-            }
-        }
     }
 
     &-ctrol {
         display: flex;
-        width: 180px;
+        width: 200px;
         height: 30px;
         line-height: 30px;
         background: #eee;
@@ -81,26 +152,31 @@
 
     &-item,
     &-label {
-        flex: 0 0 auto;
-        width: 60px;
         height: 100%;
     }
 
     &-item {
         position: relative;
         z-index: 2;
-        height: 100%;
         text-align: center;
         color: #fff;
         font-size: 12px;
         box-shadow: inset 0 0 15px rgba(0, 0, 0, .3)
     }
     .alipay {
+        flex-grow:1;
         background: #1e88e5;
     }
     .wechat {
+        flex-grow:1;
         background: #4caf50;
     }
+}
+
+#reward canvas{
+    z-index:-1 !important;
+    width:100%;
+    height:100%;
 }
 
 @media screen and (max-width:760px) {

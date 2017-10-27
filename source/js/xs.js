@@ -1,4 +1,4 @@
-﻿(function(){
+(function(){
 	function b(t,u,s){
 		this.t = t;
 		this.u = u;
@@ -55,7 +55,7 @@
 		n1:function(){
 			var t=this;
 			if(t.u<=0){
-				console.warn('莚傑絵���羃≧��膃�'+t.u+'筝�����鐚�鐚�');
+				console.warn('鑾氬倯绲碉拷锟斤拷缇冣墽锟斤拷鑶冿拷'+t.u+'绛濓拷锟斤拷锟斤拷閻氾拷閻氾拷');
 				return false;
 			}
 			if(t.u<=10){
@@ -235,7 +235,7 @@
 					}
 				}else if(t.u == 20){
 					if(t.a.length == 0){
-						t.z = Math.sqrt(Math.pow(t.w/2,2)+Math.pow(t.h/2,2)); 
+						t.z = Math.sqrt(Math.pow(t.w/2,2)+Math.pow(t.h/2,2));
 						t.a = [t.w/2,t.h/2,1];
 					}
 					if(!t.d){
@@ -323,7 +323,7 @@
 						t.a1=[];
 						for(var i = 0;i<t.w/2;i++){
 							t.a[i] = {x:i*2,y:-t.h,w:2,h:t.h,t:false};
-							t.a1.push(i); 
+							t.a1.push(i);
 						}
 					}
 					if(!t.d){
@@ -346,7 +346,7 @@
 					}
 				}else if(t.u == 30){
 					if(t.a.length == 0){
-						t.z = Math.sqrt(Math.pow(t.w/2,2)+Math.pow(t.h/2,2)); 
+						t.z = Math.sqrt(Math.pow(t.w/2,2)+Math.pow(t.h/2,2));
 						t.a = [t.w/2,t.h/2,t.z,-90];
 					}
 					if(!t.d){
@@ -355,7 +355,7 @@
 					}
 				}
 			}else{
-				console.warn('莚傑絵���羃≧��膃�'+t.u+'筝�����鐚�鐚�');
+				console.warn('鑾氬倯绲碉拷锟斤拷缇冣墽锟斤拷鑶冿拷'+t.u+'绛濓拷锟斤拷锟斤拷閻氾拷閻氾拷');
 			}
 		},
 		x1:function(t){
@@ -1552,26 +1552,25 @@
 			clearTimeout(id);
 		};
 	}
-	
+
 	if(window.screen.width>600){
-		
+
 		$(".scroll-wrap").xs999(5);
 		$(".footer").xs999(2);
 		$("#gotop").xs999(1);
 		$(".article-card").xs999(11);
 		$(".header-icon").xs999(1);
-		$(".card-card").xs999(15);
+        $(".card-card").xs999(15);
+        $("#reward").xs999(7);
 	}
-	
-	/*文字音效*/
+
 	elasticText( {
         id: 'otext2',
         duration:100,
         effact:'easeOut',
-        content: '天行健，君子以自强不息。'
+        content: '天行健，君子以自强不息'
  	});
 
-	/*文字跳动*/
-	$('#example').bumpyText();
-	
+    $('#example').bumpyText();
+
 }());
