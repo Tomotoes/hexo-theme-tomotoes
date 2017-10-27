@@ -16,7 +16,7 @@
         forEach = Array.prototype.forEach,
         even = ('ontouchstart' in w && /Mobile|Android|iOS|iPhone|iPad|iPod|Windows Phone|KFAPWI/i.test(navigator.userAgent)) ? 'touchstart' : 'click',
         isWX = /micromessenger/i.test(navigator.userAgent),
-        noop = function () { },
+        noop = function () {},
         offset = function (el) {
             var x = el.offsetLeft,
                 y = el.offsetTop;
@@ -34,43 +34,44 @@
         };
 
 
-    var docEl=d.documentElement;
+    var docEl = d.documentElement;
 
     /*电脑*/
-    if(window.screen.width>600){
+    if (window.screen.width > 600) {
 
         /*360，搜狗，QQ，Edge，IE9，排除IE11*/
-        if(((window.navigator.userAgent.indexOf("WOW")>-1)||(window.navigator.userAgent.indexOf("Edge")>-1)||(window.navigator.userAgent.indexOf("MSIE")>-1)) && (window.navigator.userAgent.indexOf("Trident")==-1)){
-            docEl=body;
+        if (((window.navigator.userAgent.indexOf("WOW") > -1) || (window.navigator.userAgent.indexOf("Edge") > -1) || (window.navigator.userAgent.indexOf("MSIE") > -1)) && (window.navigator.userAgent.indexOf("Trident") == -1)) {
+            docEl = body;
         }
     }
     /*手机*/
-    else{
+    else {
         /*安卓*/
-       if(window.navigator.userAgent.indexOf("Android")>-1){
+        if (window.navigator.userAgent.indexOf("Android") > -1) {
             /*vivo,小米,UC,QQ,搜狗,避免Chrome*/
-            if(window.navigator.userAgent.indexOf("Browser")>-1){
-                docEl=body;
+            if (window.navigator.userAgent.indexOf("Browser") > -1) {
+                docEl = body;
             }
-       }
-       /*IOS等..*/
-       else{
-            docEl=body;
-       }
+        }
+        /*IOS等..*/
+        else {
+            docEl = body;
+        }
     }
 
     /*兼容IE9*/
     if (!("classList" in document.documentElement)) {
         /*背景渐变*/
-        document.querySelector(".content-header").style.background="#085675";
-        document.querySelector(".top-header .fixed").style.background="#085675";
+        document.querySelector(".content-header").style.background = "#085675";
+        document.querySelector(".top-header .fixed").style.background = "#085675";
         /*还有好多未兼容的。。*/
 
         Object.defineProperty(HTMLElement.prototype, 'classList', {
-            get: function() {
+            get: function () {
                 var self = this;
+
                 function update(fn) {
-                    return function(value) {
+                    return function (value) {
                         var classes = self.className.split(/\s+/g),
                             index = classes.indexOf(value);
 
@@ -80,26 +81,26 @@
                 }
 
                 return {
-                    add: update(function(classes, index, value) {
+                    add: update(function (classes, index, value) {
                         if (!~index) classes.push(value);
                     }),
 
-                    remove: update(function(classes, index) {
+                    remove: update(function (classes, index) {
                         if (~index) classes.splice(index, 1);
                     }),
 
-                    toggle: update(function(classes, index, value) {
+                    toggle: update(function (classes, index, value) {
                         if (~index)
                             classes.splice(index, 1);
                         else
                             classes.push(value);
                     }),
 
-                    contains: function(value) {
+                    contains: function (value) {
                         return !!~self.className.split(/\s+/g).indexOf(value);
                     },
 
-                    item: function(i) {
+                    item: function (i) {
                         return self.className.split(/\s+/g)[i] || null;
                     }
                 };
@@ -279,34 +280,32 @@
 
             var $rewardToggle = $('#rewardToggle');
 
-            var tip_first=false;
+            var tip_first = false;
             $(".wechat").addEventListener('click', function () {
-                tip_first=true;
+                tip_first = true;
             })
 
             var $rewardCode = $('#rewardCode');
             if ($rewardToggle) {
                 $rewardToggle.addEventListener('change', function () {
-                    if(this.checked){
-                        $rewardCode.src=this.dataset.alipay;
-                        $(".wechat").style="";
-                        $(".alipay").style="flex-grow:4;";
-                        $(".icon-caret-up").style="margin-left:20%;";
-                    }
-                    else{
-                        if(!tip_first){
-                            $rewardCode.src=this.dataset.alipay;
-                            $(".wechat").style="";
-                            $(".alipay").style="flex-grow:4;";
-                            $(".icon-caret-up").style="margin-left:20%;";
-                            this.checked=true;
-                            tip_first=true;
-                        }
-                        else{
-                            $rewardCode.src=this.dataset.wechat;
-                            $(".alipay").style="";
-                            $(".wechat").style="flex-grow:4;";
-                            $(".icon-caret-up").style="margin-left:-20%;";
+                    if (!this.checked) {
+                        $rewardCode.src = this.dataset.alipay;
+                        $(".wechat").style = "";
+                        $(".alipay").style = "flex-grow:4;";
+                        $(".icon-caret-up").style = "margin-left:20%;";
+                    } else {
+                        if (!tip_first) {
+                            $rewardCode.src = this.dataset.alipay;
+                            $(".wechat").style = "";
+                            $(".alipay").style = "flex-grow:4;";
+                            $(".icon-caret-up").style = "margin-left:20%;";
+                            this.checked = true;
+                            tip_first = true;
+                        } else {
+                            $rewardCode.src = this.dataset.wechat;
+                            $(".alipay").style = "";
+                            $(".wechat").style = "flex-grow:4;";
+                            $(".icon-caret-up").style = "margin-left:-20%;";
                         }
 
                     }
@@ -524,7 +523,7 @@
 
     var ignoreUnload = false;
     var $mailTarget = $('a[href^="mailto"]');
-    if($mailTarget) {
+    if ($mailTarget) {
         $mailTarget.addEventListener(even, function () {
             ignoreUnload = true;
         });
@@ -603,35 +602,37 @@
     } else {
         console.error('Waves loading failed.')
     }
+    if (window.screen.width > 600) {
+        /*3D文字*/
+        var text = document.getElementById('text'),
+            body = document.body,
+            steps = 7;
 
-    /*3D文字*/
-    var text = document.getElementById('text'),
-    body = document.body,
-    steps = 7;
-    function threedee (e) {
-        var x = Math.round(steps / (window.innerWidth / 2) * (window.innerWidth / 2 - e.clientX)),
-            y = Math.round(steps / (window.innerHeight / 2) * (window.innerHeight / 2 - e.clientY)),
-            shadow = '',
-            color = 190,
-            radius = 3,
-            i;
+        function threedee(e) {
+            var x = Math.round(steps / (window.innerWidth / 2) * (window.innerWidth / 2 - e.clientX)),
+                y = Math.round(steps / (window.innerHeight / 2) * (window.innerHeight / 2 - e.clientY)),
+                shadow = '',
+                color = 190,
+                radius = 3,
+                i;
 
-        for (i=0; i<steps; i++) {
-            tx = Math.round(x / steps * i);
-            ty = Math.round(y / steps * i);
-            if (tx || ty) {
-                color -= 3 * i;
-                shadow += tx + 'px ' + ty + 'px 0 rgb(' + color + ', ' + color + ', ' + color + '), ';
+            for (i = 0; i < steps; i++) {
+                tx = Math.round(x / steps * i);
+                ty = Math.round(y / steps * i);
+                if (tx || ty) {
+                    color -= 3 * i;
+                    shadow += tx + 'px ' + ty + 'px 0 rgb(' + color + ', ' + color + ', ' + color + '), ';
+                }
             }
+
+            shadow += x + 'px ' + y + 'px 1px rgba(0,0,0,.2), ' + x * 2 + 'px ' + y * 2 + 'px 6px rgba(0,0,0,.3)';
+
+            text.style.textShadow = shadow;
+            text.style.webkitTransform = 'translateZ(0) rotateX(' + y * 1.5 + 'deg) rotateY(' + -x * 1.5 + 'deg)';
+            text.style.MozTransform = 'translateZ(0) rotateX(' + y * 1.5 + 'deg) rotateY(' + -x * 1.5 + 'deg)';
         }
-
-        shadow += x + 'px ' + y + 'px 1px rgba(0,0,0,.2), ' + x*2 + 'px ' + y*2 + 'px 6px rgba(0,0,0,.3)';
-
-        text.style.textShadow = shadow;
-        text.style.webkitTransform = 'translateZ(0) rotateX(' + y*1.5 + 'deg) rotateY(' + -x*1.5 + 'deg)';
-        text.style.MozTransform = 'translateZ(0) rotateX(' + y*1.5 + 'deg) rotateY(' + -x*1.5 + 'deg)';
+        /*var 3dtext=document.querySelector(".content-header")*/
+        document.querySelectorAll("header")[1].addEventListener('mousemove', threedee, false);
     }
-    /*var 3dtext=document.querySelector(".content-header")*/
-    document.querySelectorAll("header")[1].addEventListener('mousemove', threedee, false);
-    document.getElementById("rewardToggle").checked=true
+
 })(window, document);
