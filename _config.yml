@@ -9,22 +9,22 @@
 #    target: _blank    是否跳出，省略则在当前页面打开
 menu:
   home:
-    text: 主页
+    text: 主 页
     url: /
   archives:
     url: /archives
-    text: 归档
+    text: 归 档
   tags:
     url: /tags
-    text: 标签
+    text: 标 签
   th-list:
-    text: 分类
+    text: 分 类
     url: /categories
   send-o:
-    text: 留言
+    text: 留 言
     url: /messages
   smile-o:
-    text: 关于
+    text: 关 于
     url: /about
 
 menu2:
@@ -48,9 +48,9 @@ menu2:
     url: https://www.facebook.com/profile.php?id=100022718221060
     target: _blank
   weixin:
-    text: 微信
+    text: 欢迎关注全栈之路公众号！
     url: img/weixin.gif
-    target: _blank
+    target: false
 
 
 
@@ -67,7 +67,7 @@ favicon: /img/favicon.ico
 email: 少年锦时.
 
 # 设置 Android L Chrome 浏览器状态栏颜色
-color: '#3F51B5'
+color: '#085675'
 
 # 页面标题
 tags_title: 标签
