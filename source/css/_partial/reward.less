@@ -110,7 +110,25 @@
         bottom: 0;
         right: 0;
     }
+    span{
+        -webkit-background-clip: text;    /*按文字裁剪*/
+        -webkit-text-fill-color: transparent;    /*文字的颜色使用背景色*/
+        background-color:#19385c;    /*设置一个背景色*/
+        background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 30%, #aff0ff 50%, rgba(0, 0, 0, 0.6) 70%);        /*设置渐变的背景，按对角线渐变*/
+        background-blend-mode: hard-light;    /*设置背景为混合模式下的强光模式*/
+        background-size: 200%;
+        -webkit-animation: shine 4s infinite;    /*给背景添加动画改变位置*/
+    }
+
 }
+@-webkit-keyframes shine {
+
+        from {background-position: 100%;}
+
+        to {background-position: 0;}
+
+}
+
 .reward-lay {
     max-width: 100%;
     width: 360px;
@@ -163,11 +181,11 @@
         font-size: 12px;
         box-shadow: inset 0 0 15px rgba(0, 0, 0, .3)
     }
-    .alipay {
+    .alipay_pay {
         flex-grow:1;
         background: #1e88e5;
     }
-    .wechat {
+    .wechat_pay {
         flex-grow:1;
         background: #4caf50;
     }
@@ -181,7 +199,7 @@
 
 @media screen and (max-width:760px) {
     .reward-title {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 

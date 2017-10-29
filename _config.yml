@@ -49,7 +49,7 @@ menu2:
     target: _blank
   weixin:
     text: 欢迎关注全栈之路公众号！
-    url: img/weixin.gif
+    url: javascript:;
     target: false
 
 
@@ -62,6 +62,8 @@ avatar_link: /
 brand: /img/2510-5.jpg
 # favicon
 favicon: /img/favicon.ico
+# 微信公众号
+wechat: /img/wechat.jpg
 
 # email
 email: 少年锦时.

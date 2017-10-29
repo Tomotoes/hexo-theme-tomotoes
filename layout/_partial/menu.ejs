@@ -28,7 +28,7 @@
               <li class="waves-block waves-effect<% if(isActive(menuItem)){ %> active<% } %>">
                   <a href="<%- url_for(menuItem.url) %>" <% if(menuItem.target){ %>target="_blank"<% } %> >
                     <i class="icon icon-lg icon-<%= i %>"></i>
-                    
+
                     <%=(menuItem.text || _.startCase(i)) %>
                     <% if(menuItem.num) {%>
                       <span id="<%- menuItem.num %>" class="digit"></span>
@@ -50,12 +50,12 @@
               menuItem = theme.menu2[i];
             %>
               <li class="waves-block waves-effect<% if(isActive(menuItem)){ %> active<% } %>">
-                <a href="<%- url_for(menuItem.url) %>" <% if(menuItem.target){ %>target="_blank"<% } %> <% if(menuItem.text){ %>title="<%-menuItem.text %>"<% } %> >
+                <a href="<%- url_for(menuItem.url) %>" <% if(menuItem.target!=false){ %>target="_blank"<% } else { %>id="wechat_icon" <% } if(menuItem.text){ %>title="<%-menuItem.text %>"<% } %> >
                   <i class="icon icon-lg icon-<%= i %> <%= i %>"></i>
                 </a>
               </li>
           <% } %>
-          
+
         </ul>
 
       </ul>

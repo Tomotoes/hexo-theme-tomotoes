@@ -281,7 +281,7 @@
             var $rewardToggle = $('#rewardToggle');
 
             var tip_first = false;
-            $(".wechat").addEventListener('click', function () {
+            $(".wechat_pay").addEventListener('click', function () {
                 tip_first = true;
             })
 
@@ -290,21 +290,21 @@
                 $rewardToggle.addEventListener('change', function () {
                     if (!this.checked) {
                         $rewardCode.src = this.dataset.alipay;
-                        $(".wechat").style = "";
-                        $(".alipay").style = "flex-grow:4;";
+                        $(".wechat_pay").style = "";
+                        $(".alipay_pay").style = "flex-grow:4;";
                         $(".icon-caret-up").style = "margin-left:20%;";
                     } else {
                         if (!tip_first) {
                             $rewardCode.src = this.dataset.alipay;
-                            $(".wechat").style = "";
-                            $(".alipay").style = "flex-grow:4;";
+                            $(".wechat_pay").style = "";
+                            $(".alipay_pay").style = "flex-grow:4;";
                             $(".icon-caret-up").style = "margin-left:20%;";
                             this.checked = true;
                             tip_first = true;
                         } else {
                             $rewardCode.src = this.dataset.wechat;
-                            $(".alipay").style = "";
-                            $(".wechat").style = "flex-grow:4;";
+                            $(".alipay_pay").style = "";
+                            $(".wechat_pay").style = "flex-grow:4;";
                             $(".icon-caret-up").style = "margin-left:-20%;";
                         }
 
@@ -312,6 +312,10 @@
 
                 })
             }
+        },
+        weixin: function () {
+            var modal = new this.modal('#wechat');
+            $('#wechat_icon').addEventListener(even, modal.toggle);
         },
         waterfall: function () {
 
@@ -584,6 +588,7 @@
     if (w.BLOG.REWARD) {
         Blog.reward()
     }
+    Blog.weixin();
 
     Blog.noop = noop;
     Blog.even = even;
