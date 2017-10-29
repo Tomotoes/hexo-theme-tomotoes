@@ -1564,7 +1564,8 @@
         $("#reward").xs999(7);
         $("#wechat").xs999(8);
 
-		$('#example').bumpyText();
+        $('#example').bumpyText();
+        $('.post-card-title').bumpyText();
 
 		$("#followme").after("<div id='world'></div>");
 	}
@@ -1573,7 +1574,7 @@
         id: 'otext2',
         duration:100,
         effact:'easeOut',
-        content: '天行健，君子以自强不息'
+        content: '你算哪块小饼干！'
  	});
 
 
