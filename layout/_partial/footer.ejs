@@ -1,14 +1,18 @@
 ﻿<footer class="footer">
-    
+    <div id="hitokoto">
+        <span id="hitokoto_p"></span>
+        <a href="javascript:;" title="换一句吧" id="refresh"><img class="refresh" src="<%- url_for(theme.refresh) %>" alt ></a>
+	</div>
+    <br/>
     <div class="footertop">
-
-        <a href="javascript:;">
+        
+        <a href="javascript:;"><span>
         &copy; 2017&nbsp;
         <i class="icon icon-lg icon-heart"></i>&nbsp;
         XXXXX.com
-        </a>
-        <br/> <br/>
-        <a href="javascript:;"><%- partial('plugins/site-visit') %></a>
+        </span></a>
+        <br/>
+        <a href="javascript:;"><span><%- partial('plugins/site-visit') %></span></a>
     </div>
     <br/>
 </footer>

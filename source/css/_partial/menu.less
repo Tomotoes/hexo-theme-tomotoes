@@ -1,0 +1,242 @@
+#menu-off {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    .transition(.4s);
+}
+
+#menu {
+    background:#f6f6f6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 66;
+    width: 210px;
+    min-height: 100%;
+    box-shadow: @boxShadow;
+    .transition(.4s, cubic-bezier(.18, .81, .3, .89));
+
+    &.hide {
+        .transform(translateX(-100%));
+        #menu-off {
+            .transform(scale(0));
+        }
+        +#main {
+            padding-left: 0;
+        }
+    }
+
+    .inner {
+        position: relative;
+        height: 100%;
+    }
+
+    .brand-wrap {
+        background-size: 100% 100%;
+    }
+
+    .brand {
+        padding: 20px @menuPadding 2em;
+        background: fade(@primaryColor, 10%);
+    }
+    .brand>a>img:hover{
+        transform: scale(1.8);
+        transition:all 0.1s;
+    }
+
+    .avatar {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: 500ms;
+        -o-transition: 500ms;
+        -moz-transition: 500ms;
+        -webkit-transition: 500ms;
+        
+        box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
+        &:hover{
+            transform: none;
+            -o-transform: none;
+            -ms-transform: none;
+            -moz-transform: none;
+            -webkit-transform: none;
+        
+            box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .introduce {
+        margin: 1em 0 0;
+        color: @textPrimaryColor;
+    }
+
+    .scroll-wrap {
+        position: relative;
+        overflow-y: auto;
+    }
+
+
+    .nav {
+        margin: 0;
+        padding: 0;
+        height: 300px;
+        min-height: ~"calc(100% - 115px)";
+        list-style: none;
+        line-height: @navH;
+
+        li {
+
+            padding: 0 @menuPadding;
+
+            .icon {
+                position: absolute;
+                top: 0;
+                left: @menuPadding;
+                line-height: inherit;
+            }
+        }
+        a {
+            display: block;
+            padding-left: @menuPadding*2.4;
+            height: @navH;
+            line-height: @navH;
+            font-weight: 500;
+            color: @secondaryTextColor;
+            text-decoration: none;
+        }
+    }
+
+    .nav2 {
+        padding: 0;
+        li {
+
+            margin:0;
+            float: left;
+            display: block;
+            .icon {
+                position: absolute;
+                color: #6d819c;
+            }
+            a{
+                padding: 10px;
+            }
+        }
+    }
+}
+
+#otext2{
+    margin-top:24.2px;
+}
+/*文字音效*/
+#otext2 .eBox span{
+    color: #F0E5DE !important;
+    font-size: 12px;
+    letter-spacing:2px;
+    font-weight: bold;
+
+}
+
+/*文字跳动*/
+.bumpy-char {
+    position: relative;
+}
+
+#nav2icons li:hover{
+    .icon{
+        color:black;
+        transform:scale(1.3);
+        transition:all 0.1s;
+    }
+
+}
+
+.scroll-wrap canvas{
+    width:100% !important;
+    height:100% !important;
+}
+
+#menuitems li:hover
+{
+    a,
+    .icon {
+         color: #000;
+    }
+    span:after{
+        content:"♥";
+        color:red;
+    }
+}
+
+#menuitems li.active{
+    & span:after{
+        content:"♥";
+    }
+}
+
+#followme{
+    display: inline-block;
+    padding-top: 4px;
+    color: gray;
+    letter-spacing:1.5px;
+    margin-left:8%;
+    margin-bottom:3%;
+    &:hover{
+       animation:0.8s followme infinite;
+       &:after{
+            content:"!";
+        }
+    }
+}
+
+@keyframes followme {
+    75% {
+        color:#3f4040;
+        transform:scale(1.5) translate(10px) skew(0deg,-10deg);
+        text-shadow:2px 2px 2px gray;
+    }
+}
+
+/*狮子*/
+#world canvas{
+    width: 100% !important;
+    height: 100% !important;
+    z-index:9999 !important;
+}
+
+@media screen and (max-width:1240px) {
+    #menu-off {
+        display: none;
+    }
+
+    #menu {
+        z-index: 99;
+        box-shadow: none;
+        .transform(translateX(-100%));
+
+        &.show {
+            .transform(translateX(0));
+        }
+    }
+}
+
+@media screen and (max-width:760px) {
+    #menu {
+        .brand {
+            padding-top: 20px;
+            padding-bottom: 1em;
+        }
+        .nav {
+            line-height: @mNavH;
+
+            a {
+                height: @mNavH;
+                line-height: @mNavH;
+            }
+        }
+    }
+}

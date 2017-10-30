@@ -1577,5 +1577,25 @@
         content: '你算哪块小饼干！'
  	});
 
+	function get_hitokoto() {
+		$.ajax({
+			type: 'POST',
+			url: 'https://sslapi.hitokoto.cn/',
+			dataType: 'json',
+			timeout: 4000,
+			success: function(data) {
+				$("#hitokoto_p").html(data.hitokoto + " --" + data.from);
+					$('#hitokoto_p').bumpyText();
 
+			},
+			error: function() {
+				$("#hitokoto_p").html("我好像又抽风了~ (゜-゜)つロ ");
+			}
+		});
+	}
+
+	$("#refresh").click(function() {
+		get_hitokoto();
+	})
+	get_hitokoto();
 }());
