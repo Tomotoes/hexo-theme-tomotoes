@@ -170,8 +170,22 @@
 .wx-share {
     p {
         margin: 0 0 15px;
+        -webkit-background-clip: text;    /*按文字裁剪*/
+        -webkit-text-fill-color: transparent;    /*文字的颜色使用背景色*/
+        background-color:#19385c;    /*设置一个背景色*/
+        background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 30%, #aff0ff 50%, rgba(0, 0, 0, 0.6) 70%);        /*设置渐变的背景，按对角线渐变*/
+        background-blend-mode: hard-light;    /*设置背景为混合模式下的强光模式*/
+        background-size: 200%;
+        -webkit-animation: shine 4s infinite;    /*给背景添加动画改变位置*/
     }
-
+    @-webkit-keyframes shine {
+        
+            from {background-position: 100%;}
+        
+            to {background-position: 0;}
+        
+    }
+        
     img {
         width: 200px;
     }

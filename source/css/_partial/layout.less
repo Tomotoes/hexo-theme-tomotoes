@@ -39,7 +39,6 @@
 
     .brand-wrap {
         background-size: 100% 100%;
-        cursor:pointer !important;
     }
 
     .brand {
@@ -55,10 +54,25 @@
         display: block;
         width: 80px;
         height: 80px;
-        border: 2px solid #fff;
         border-radius: 50%;
         overflow: hidden;
-        box-shadow: @boxShadow;
+        transition: 500ms;
+        -o-transition: 500ms;
+        -moz-transition: 500ms;
+        -webkit-transition: 500ms;
+        
+        box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
+        &:hover{
+            transform: none;
+            -o-transform: none;
+            -ms-transform: none;
+            -moz-transform: none;
+            -webkit-transform: none;
+        
+            box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.5);
+        }
     }
 
     .introduce {
@@ -111,8 +125,6 @@
             display: block;
             .icon {
                 position: absolute;
-            }
-            .github,qq,a{
                 color: #6d819c;
             }
             a{
@@ -167,7 +179,6 @@
     }
 }
 #followme{
-    cursor:pointer;
     display: inline-block;
     padding-top: 4px;
     color: gray;

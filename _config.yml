@@ -28,31 +28,30 @@ menu:
     url: /about
 
 menu2:
-  github:
-    text: github
-    url: https://github.com/JinmaQAQ
-    target: _blank
   rss:
     text: Rss
     url: atom.xml
     target: _blank
   envelope-o:
     text: 邮箱
-    url: mailto:jinmaup@gmail.com
-  stack-overflow:
-    text: 掘金
-    url: https://juejin.im/user/599b6d255188252447222dfd
-    target: _blank
-  facebook:
-    text: facebook
-    url: https://www.facebook.com/profile.php?id=100022718221060
-    target: _blank
+    url: mailto:1755811882@qq.com
+    target: _parent
   weixin:
     text: 欢迎关注全栈之路公众号！
     url: javascript:;
     target: false
-
-
+  weibo:
+    text: 微博
+    url: http://weibo.com/p/1005056179399347/home
+    target: _blank
+  github:
+    text: github
+    url: https://github.com/JinmaQAQ
+    target: _blank
+  stack-overflow:
+    text: 掘金
+    url: https://juejin.im/user/599b6d255188252447222dfd
+    target: _blank
 
 # 你的头像url
 avatar: /img/avatar.jpg
@@ -158,8 +157,8 @@ visit_counter:
 
 # 动态定义title
 title_change:
-  normal: (つェ⊂)咦!又好了!
-  leave: 死鬼去哪里了！
+  normal: (✿◡‿◡) 哼 回来就好!
+  leave: (╯▔皿▔)╯死鬼去哪里了！
 
 # 设置为 true 发布后将使用 unpkg cdn
 cdn: false
