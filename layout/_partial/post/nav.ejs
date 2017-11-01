@@ -5,8 +5,7 @@
     %>
     <div class="waves-block waves-effect prev">
       <a href="<%- url_for(post.prev.path) %>" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title"><%=prevTitle %></h4>
+        <h4 class="title" data-hover="上一篇：<%=prevTitle %>">上一篇：<%=prevTitle %></h4>
       </a>
     </div>
   <% } %>
@@ -16,8 +15,7 @@
     %>
     <div class="waves-block waves-effect next">
       <a href="<%- url_for(post.next.path) %>" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title"><%=nextTitle %></h4>
+        <h4 class="title" data-hover="下一篇：<%=nextTitle %>">下一篇：<%=nextTitle %></h4>
       </a>
     </div>
   <% } %>

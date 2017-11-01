@@ -110,16 +110,35 @@
 .post-nav {
     margin-top: 30px;
     padding: 16px 0 0;
-
+   
     .prev,
     .next {
-        width: 47%;
-        background: @codeBg;
+        height:100%;
+        border-radius: 20px;
+        text-align:center;
+        width: 45%;
+        background:#e3dede;
+        
     }
+  
 
-    .next {
-        text-align: right;
+    .title{
+        letter-spacing: 2px;
+        color: #999;
+        font-weight: 700;
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s;
+        .hoverLine(#000);
     }
+    
+    .title:hover,
+    .title:focus {
+        color: #000;
+    }
+    
+   
+    
 }
 
 .post-nav-link {
@@ -127,17 +146,14 @@
     line-height: 2em;
     font-size: 16px;
     padding: 10px 16px;
-
-    .title {
-        .hoverLine(@primaryColor);
+    
+    &:hover{
+        text-decoration: none;
+        
     }
-
+  
     .icon {
         vertical-align: -9%;
-    }
-
-    .tips {
-        color: @secondaryTextColor;
     }
 }
 

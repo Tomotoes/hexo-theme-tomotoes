@@ -28,11 +28,10 @@
               <li class="waves-block waves-effect<% if(isActive(menuItem)){ %> active<% } %>">
                   <a href="<%- url_for(menuItem.url) %>" <% if(menuItem.target){ %>target="_blank"<% } %> >
                     <i class="icon icon-lg icon-<%= i %>"></i>
-
-                    <%=(menuItem.text || _.startCase(i)) %>
+                    <span data-hover="<%=(menuItem.text || _.startCase(i)) %>"><%=(menuItem.text || _.startCase(i)) %></span>
                     <% if(menuItem.num) {%>
                       <span id="<%- menuItem.num %>" class="digit"></span>
-                    <% } %><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <% } %><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
                   </a>
 
               </li>

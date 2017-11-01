@@ -68,16 +68,22 @@
             box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.5);
             -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.5);
         }
+
     }
 
     .introduce {
         margin: 1em 0 0;
         color: @textPrimaryColor;
+        .nickname{
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
     }
 
     .scroll-wrap {
         position: relative;
         overflow-y: auto;
+        overflow-x: hidden;
     }
 
 
@@ -138,7 +144,6 @@
     font-size: 12px;
     letter-spacing:2px;
     font-weight: bold;
-
 }
 
 /*文字跳动*/
@@ -160,34 +165,69 @@
     height:100% !important;
 }
 
+#menuitems li a {
+	overflow: hidden;
+	padding: 0 4px;
+	height: 1em;
+}
+
+#menuitems li a span {
+    font-weight: 700;
+	position: relative;
+	display: inline-block;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+#menuitems li a span::before {
+	position: absolute;
+	top: 100%;
+	content: attr(data-hover);
+	font-weight: 700;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+#menuitems li a:hover span,
+#menuitems li a:focus span {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+
 #menuitems li:hover
 {
     a,
     .icon {
          color: #000;
     }
-    span:after{
+    b:after{
         content:"♥";
         color:red;
     }
 }
 
 #menuitems li.active{
-    & span:after{
+    & b:after{
         content:"♥";
     }
 }
 
 #followme{
+    font-family: Arial, Helvetica, sans-serif;
     display: inline-block;
     padding-top: 4px;
     color: gray;
     letter-spacing:1.5px;
     margin-left:8%;
     margin-bottom:3%;
+    
     &:hover{
-       animation:0.8s followme infinite;
-       &:after{
+        animation:0.8s followme infinite;
+        &::after{
             content:"!";
         }
     }
@@ -201,11 +241,44 @@
     }
 }
 
+@-webkit-keyframes followme {
+    75% {
+        color:#3f4040;
+        transform:scale(1.5) translate(10px) skew(0deg,-10deg);
+        text-shadow:2px 2px 2px gray;
+    }
+}
+
 /*狮子*/
 #world canvas{
     width: 100% !important;
     height: 100% !important;
     z-index:9999 !important;
+    
+    animation:2s shizi ease-in infinite  alternate;
+    animation-play-state: paused;
+    &:hover{
+        animation-play-state: running;
+    }
+}
+@keyframes shizi {
+    100% {
+        transform: scale(2);
+        -ms-transform:scale(2); 	/* IE 9 */
+        -moz-transform:scale(2); 	/* Firefox */
+        -webkit-transform:scale(2); /* Safari 和 Chrome */
+        -o-transform:scale(2); 
+    }
+
+}
+@-webkit-keyframes shizi {
+    100% {
+        transform:scale(2);
+        -ms-transform:scale(2);/* IE 9 */
+        -moz-transform:scale(2); 	/* Firefox */
+        -webkit-transform:scale(2); /* Safari 和 Chrome */
+        -o-transform:scale(2); 
+    }
 }
 
 @media screen and (max-width:1240px) {

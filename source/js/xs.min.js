@@ -1560,9 +1560,23 @@
 		$("#gotop").xs999(1);
 		$(".article-card").xs999(11);
 		$(".header-icon").xs999(1);
-        $(".card-card").xs999(15);
+		var RandomStyle=Math.random();
+		if(RandomStyle>0.5){
+			$(".card-card").xs999(23);
+		}
+		else{
+			$(".card-card").xs999(17);
+		}
+
         $("#reward").xs999(7);
-        $("#wechat").xs999(8);
+		$("#wechat").xs999(8);
+		
+		if(RandomStyle>0.5){
+			$(".tabs-bar").xs999(26);
+		}
+		else{
+			$(".tabs-bar").xs999(20);
+		}
 
         $('#example').bumpyText();
         $('.post-card-title').bumpyText();
@@ -1584,9 +1598,13 @@
 			dataType: 'json',
 			timeout: 4000,
 			success: function(data) {
-				$("#hitokoto_p").html(data.hitokoto + " --" + data.from);
+				if(data.hitokoto.length+data.from.length>20&&window.screen.width<600){
+					get_hitokoto();
+				}
+				else{
+					$("#hitokoto_p").html(data.hitokoto + " --" + data.from);
 					$('#hitokoto_p').bumpyText();
-
+				}
 			},
 			error: function() {
 				$("#hitokoto_p").html("我好像又抽风了~ (゜-゜)つロ ");

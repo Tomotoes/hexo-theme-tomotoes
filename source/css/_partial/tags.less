@@ -3,7 +3,15 @@
     padding: 0;
     margin-top: 8px;
     overflow: hidden;
-
+   
+    outline: none;
+    canvas{
+        border-radius: 20px;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    border-radius: 20px;
+    
     &.expand {
         overflow: visible;
         text-shadow: none;
@@ -14,7 +22,8 @@
             display: block;
             padding: 16px;
             white-space: normal;
-            background: #fff;
+            // 列表背景
+            background: #e4e7ec;
             border-radius: 4px;
             box-shadow: @boxShadow;
         }
@@ -22,17 +31,24 @@
         .tags-list .tags-list-item {
             padding: 6px 1em;
             margin-bottom: 6px;
-            color: @secondaryTextColor;
+            //列表项颜色
+            color: #52616a;
             text-decoration: none;
           
             &:after {
                 display: none;
             }
             &.active {
-                color: #fff;
-                background: #4ea1d3;
-                border-radius: .2em
+                font-weight: bold;
+                color:#252c41;
+                border-radius: .2em;
             }
+        }
+        canvas{
+            display: none !important;
+        }
+        .action{
+            color: #52616a;
         }
     }
 }
@@ -47,7 +63,6 @@
     padding: 0;
     white-space: nowrap;
     .transition(.2s);
-
     .flex-row;
 }
 
@@ -59,8 +74,8 @@
     flex: none;
     padding: 12px 1em;
     line-height: 20px;
-    color: #566270;
     border-radius: .2em .2em 0 0;
+    color:#f4f5f9;
     &:after {
         content: '';
         position: absolute;
@@ -70,16 +85,41 @@
         height: 3px;
     }
     &.active {
-        color: #000;
+        color:#252c41;
         &:after {
-            background: #005f6b;
+            background: #e4e7ec;
         }
     }
-    &:hover,
-    &:active {
-        color: #000;
-        transform: scale(1.1);
-        transition: all 0.2s;
+    &:not(.active):hover{
+        font-weight: bold;
+        color:#252c41;
+        transform: scale(0.95);
+    }
+
+    -webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+    transition: color 0.3s;
+    
+    &::before {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        color: transparent;
+        content: '•';
+        text-shadow: 0 0 transparent;
+        font-size: 1.2em;
+        -webkit-transition: text-shadow 0.3s, color 0.3s;
+        -moz-transition: text-shadow 0.3s, color 0.3s;
+        transition: text-shadow 0.3s, color 0.3s;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    
+    &:not(.active):not(.action):hover::before,
+    &:not(.active):not(.action):focus::before {
+        color: #fff;
+        text-shadow: 10px 0 #fff, -10px 0 #fff;
     }
 }
 
@@ -90,7 +130,7 @@
     z-index: 2;
     height: 44px;
     padding-left: 1em;
-     & a{
+    & a{
         text-decoration:none;
     }
     .action {
@@ -101,6 +141,7 @@
         border-radius: 50%;
         .transition(.2s);
     }
+    
 }
 .card-pool{
     columns: 200px;
@@ -109,6 +150,7 @@
     -o-column: 200px;
 }
 .card-card {
+    border-radius: 10px;
     width: 200px;
     min-height: 100px;
     box-shadow: 2px 2px 6px #b5b5b5;
@@ -118,6 +160,10 @@
     font-size: 15px;
     background-color:#FFFFF3;
     overflow: hidden;
+    canvas{
+        height: 100% !important;
+        width: 100% !important;
+    }
 }
 .card-head {
     padding: 10px;
