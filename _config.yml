@@ -58,7 +58,7 @@ avatar: /img/avatar.jpg
 # avatar link
 avatar_link: /
 # 头像背景图
-brand: /img/2510-5.jpg
+brand: /img/background.jpg
 # favicon
 favicon: /img/favicon.ico
 # 微信公众号
@@ -70,7 +70,7 @@ refresh: /img/refresh.png
 email: 少年锦时.
 
 # 设置 Android L Chrome 浏览器状态栏颜色
-color: '#085675'
+color: '#537FA5'
 
 # 页面标题
 tags_title: 标签
@@ -80,7 +80,7 @@ categories_title: 分类
 # 文章截断
 excerpt_render: true
 excerpt_length: 175
-excerpt_link: 阅读全文...
+excerpt_link: 阅读全文 »
 mathjax: false
 archive_yearly: true
 

@@ -10,6 +10,7 @@
         mask = $('#mask'),
         menuToggle = $('#menu-toggle'),
         menuOff = $('#menu-off'),
+        title=$('.header-title'),
         loading = $('#loading'),
         animate = w.requestAnimationFrame,
         scrollSpeed = 200 / (1000 / 60),
@@ -180,6 +181,8 @@
                 titles = $('#post-content').querySelectorAll('h1, h2, h3, h4, h5, h6');
 
             toc.querySelector('a[href="#' + titles[0].id + '"]').parentNode.classList.add('active');
+
+            title.classList.add('toc');
 
             return {
                 fixed: function (top) {
@@ -554,12 +557,25 @@
     }, false);
 
     menuToggle.addEventListener(even, function (e) {
+        if(!title.classList.contains('toc')){
+            title.classList.toggle('hide');
+        }
+        else{
+            title.classList.toggle('tochide');
+        }
         Blog.toggleMenu(true);
         e.preventDefault();
     }, false);
 
     menuOff.addEventListener(even, function () {
         menu.classList.add('hide');
+        
+        if(!title.classList.contains('toc')){
+            title.classList.toggle('hide');
+        }
+        else{
+            title.classList.toggle('tochide');
+        }
     }, false);
 
     mask.addEventListener(even, function (e) {

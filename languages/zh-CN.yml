@@ -2,7 +2,7 @@ global:
   search_input_hint: "输入感兴趣的关键字"
 
 post:
-  continue_reading: "阅读全文…"
+  continue_reading: "阅读全文 »"
   last_updated: "最后更新时间："
 
 footer:

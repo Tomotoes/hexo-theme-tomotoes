@@ -15,6 +15,7 @@
     &.expand {
         overflow: visible;
         text-shadow: none;
+        text-align:left;
         .tags-list {
             position: absolute;
             top: 0;
@@ -29,8 +30,10 @@
         }
         
         .tags-list .tags-list-item {
+            display:inline-block;
+            height:35px;
             padding: 6px 1em;
-            margin-bottom: 6px;
+             margin-bottom: 6px;
             //列表项颜色
             color: #52616a;
             text-decoration: none;
@@ -40,7 +43,7 @@
             }
             &.active {
                 font-weight: bold;
-                color:#252c41;
+                color:#000;
                 border-radius: .2em;
             }
         }
@@ -75,7 +78,10 @@
     padding: 12px 1em;
     line-height: 20px;
     border-radius: .2em .2em 0 0;
-    color:#f4f5f9;
+    color:#000;
+    font-size:18px;
+    font-weight: bold;
+    
     &:after {
         content: '';
         position: absolute;
@@ -85,15 +91,16 @@
         height: 3px;
     }
     &.active {
-        color:#252c41;
         &:after {
-            background: #e4e7ec;
+            background: #999;
+        }
+        &:hover{
+            color:#000;
         }
     }
     &:not(.active):hover{
-        font-weight: bold;
-        color:#252c41;
-        transform: scale(0.95);
+        color:#f6f6f6;
+        transform: scale(0.9);
     }
 
     -webkit-transition: color 0.3s;
@@ -118,8 +125,9 @@
     
     &:not(.active):not(.action):hover::before,
     &:not(.active):not(.action):focus::before {
-        color: #fff;
-        text-shadow: 10px 0 #fff, -10px 0 #fff;
+        z-index:9999 !important;
+        color: #999;
+        text-shadow: 10px 0 #999, -10px 0 #999;
     }
 }
 
@@ -140,8 +148,11 @@
         line-height: 20px;
         border-radius: 50%;
         .transition(.2s);
+        &:hover{
+            color:#999 !important;
+        }
     }
-    
+
 }
 .card-pool{
     columns: 200px;
@@ -150,6 +161,7 @@
     -o-column: 200px;
 }
 .card-card {
+    text-align:center;
     border-radius: 10px;
     width: 200px;
     min-height: 100px;

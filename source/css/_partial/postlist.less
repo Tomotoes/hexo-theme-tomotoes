@@ -15,8 +15,12 @@
 
 
 .post-title-link {
-    color: @primaryColor;
-    .hoverLine(@primaryColor);
+    color: #37474f;
+    .hoverLine(#37474f);
+    font-size:30px;
+    &:hover{
+        color:#37474f;
+    }
 }
 
 .post-meta {
@@ -55,9 +59,13 @@
 }
 
 .article-category-list-link {
-    color: @accentColor;
+    color: #ccc;
+    text-decoration: none;
+    border-bottom: 1px dotted #ccc;
     &:hover {
-        color: @accentColor;
+        text-decoration: none;
+        border-bottom:1px solid #999;
+        color:#999;
     }
 }
 
@@ -106,15 +114,27 @@
 
 .post-more {
     display: inline-block;
-    padding: 0 6px;
-    font-weight: 500;
-    color: @primaryColor!important;
-    border: none!important;
-    border-radius: 3px;
+    padding: 0 20px;
+    
+    color: #555;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 2px;
+    line-height: 2;
+    
+    border: 2px solid #555;
+    text-decoration: none;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
 
+    
     &:hover,
     &:active {
-        background: lighten(@lightPrimaryColor, 10%);
+        border-color: #222;
+        color: #fff;
+        background: #222;
     }
 }
 
