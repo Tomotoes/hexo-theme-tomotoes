@@ -1,21 +1,35 @@
 ﻿<footer class="footer">
     <div id="hitokoto">
         <span id="hitokoto_p"></span>
-        <a href="javascript:;" title="换一句吧" id="refresh"><img class="refresh" src="<%- url_for(theme.refresh) %>" alt ></a>
-	</div>
+        <a href="javascript:;" title="换一句吧" id="refresh">
+            <img class="refresh" src="<%- url_for(theme.refresh) %>" alt>
+        </a>
+    </div>
     <br/>
     <div class="footertop">
+        <span id="RunTime" style="color:#a7a7a2;"></span>
+        <br/>
+        <a href="javascript:;">
+            <span>
+                &copy; 2017&nbsp;
+                <i class="icon icon-lg icon-heart"></i>&nbsp; XXXXX.com
+            </span>&nbsp;·&nbsp;
+        </a>
+         <% if(theme.ICP_license) {%>
+            <a href="http://www.miitbeian.gov.cn/" target="_blank"><%- theme.ICP_license %></a>
+        <% } %>
+        <br/>
         
-        <a href="javascript:;"><span>
-        &copy; 2017&nbsp;
-        <i class="icon icon-lg icon-heart"></i>&nbsp;
-        XXXXX.com
-        </span></a>
+        <a href="javascript:;">
+            <span>
+                <%- partial('plugins/site-visit') %>
+            </span>
+        </a>
         <br/>
-        <a href="javascript:;"><span><%- partial('plugins/site-visit') %></span></a>
-        <br/>
+        <span style="color=""><%- __('footer.license') %></span>
+        <br/>        
         <span id="power">
-            Power by 
+            Power by
             <a href="https://hexo.io/" target="_blank">Hexo</a>
             Theme
             <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
@@ -23,6 +37,7 @@
             <a href="https://pages.coding.net/" target="_blank">Coding Pages</a>
             &nbsp;
             <a href="https://pages.github.com/" target="_blank">Github Pages</a>
+        <span/>
     </div>
     <br/>
 </footer>
