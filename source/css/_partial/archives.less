@@ -42,6 +42,24 @@
         width: 100% !important;
     }
 }
+@keyframes animation-show {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(80px);
+        transform: translateY(80px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.animation-show {
+    animation: animation-show .5s;
+    -webkit-animation: animation-show .5s;
+    opacity: 1;
+}
 
 .archive-article {
     .post-title {

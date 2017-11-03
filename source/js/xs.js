@@ -1874,4 +1874,20 @@
     })
     get_hitokoto();
 
+    function xl() {
+
+        $(".article-card").each(function (i) {
+            var article_height = $(".article-card").eq(i).offset().top;
+            if ($(window).height() + $(window).scrollTop() >= article_height)
+                $(".article-card").eq(i).addClass("animation-show");
+            $(window).scroll(function () {
+                var window_height = $(window).height();
+                var scrolltop = $(window).scrollTop();
+                if (scrolltop + window_height >= article_height && scrolltop) {
+                    $(".article-card").eq(i).addClass("animation-show");
+                }
+            });
+        });
+    }
+    xl();
 }());
