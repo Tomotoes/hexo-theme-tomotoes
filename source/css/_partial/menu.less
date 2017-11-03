@@ -24,6 +24,21 @@
         }
         +#main {
             padding-left: 0;
+            .header-title{
+                    margin-right:-4%;
+            }
+        }
+    }
+    &.hastochide {
+        .transform(translateX(-100%));
+        #menu-off {
+            .transform(scale(0));
+        }
+        +#main {
+            .container{
+                .transition(.4s, cubic-bezier(.18, .81, .3, .89));
+                width:101%;
+            }
         }
     }
 
@@ -81,7 +96,7 @@
 
     .scroll-wrap {
         position: relative;
-        overflow-y: auto;
+        overflow-y: hidden;
         overflow-x: hidden;
     }
 
@@ -136,6 +151,7 @@
 
 #otext2{
     margin-top:24.2px;
+    font-family: Georgia, "Times New Roman";
 }
 /*文字音效*/
 #otext2 .eBox span{

@@ -20,9 +20,6 @@ menu:
   th-list:
     text: 分 类
     url: /categories
-  send-o:
-    text: 留 言
-    url: /messages
   smile-o:
     text: 关 于
     url: /about

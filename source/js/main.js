@@ -131,7 +131,13 @@
         toggleMenu: function (flag) {
             var main = $('#main');
             if (flag) {
-                menu.classList.remove('hide');
+                
+                if(!title.classList.contains('toc')){
+                    menu.classList.remove('hide');
+                }
+                else{
+                    menu.classList.remove('hastochide');
+                }
 
                 if (w.innerWidth < 1241) {
                     mask.classList.add('in');
@@ -557,22 +563,17 @@
     }, false);
 
     menuToggle.addEventListener(even, function (e) {
-        if (!title.classList.contains('toc')) {
-            title.classList.toggle('hide');
-        } else {
-            title.classList.toggle('tochide');
-        }
         Blog.toggleMenu(true);
         e.preventDefault();
     }, false);
 
     menuOff.addEventListener(even, function () {
-        menu.classList.add('hide');
-
+        /* 没有toc的文章 */
         if (!title.classList.contains('toc')) {
-            title.classList.toggle('hide');
+            /* 关闭按钮时 菜单隐藏 标题移动 */
+            menu.classList.add('hide');
         } else {
-            title.classList.toggle('tochide');
+            menu.classList.add('hastochide');
         }
     }, false);
 
@@ -618,35 +619,37 @@
     } else {
         console.error('Waves loading failed.')
     }
-    /*3D文字*/
-    var text = document.getElementById('text'),
-        body = document.body,
-        steps = 7;
+    if (w.screen.width > 600) {
+        /*3D文字*/
+        var text = document.getElementById('text'),
+            body = document.body,
+            steps = 7;
 
-    function threedee(e) {
-        var x = Math.round(steps / (window.innerWidth / 2) * (window.innerWidth / 2 - e.clientX)),
-            y = Math.round(steps / (window.innerHeight / 2) * (window.innerHeight / 2 - e.clientY)),
-            shadow = '',
-            color = 190,
-            radius = 3,
-            i;
+        function threedee(e) {
+            var x = Math.round(steps / (window.innerWidth / 2) * (window.innerWidth / 2 - e.clientX)),
+                y = Math.round(steps / (window.innerHeight / 2) * (window.innerHeight / 2 - e.clientY)),
+                shadow = '',
+                color = 190,
+                radius = 3,
+                i;
 
-        for (i = 0; i < steps; i++) {
-            tx = Math.round(x / steps * i);
-            ty = Math.round(y / steps * i);
-            if (tx || ty) {
-                color -= 3 * i;
-                shadow += tx + 'px ' + ty + 'px 0 rgb(' + color + ', ' + color + ', ' + color + '), ';
+            for (i = 0; i < steps; i++) {
+                tx = Math.round(x / steps * i);
+                ty = Math.round(y / steps * i);
+                if (tx || ty) {
+                    color -= 3 * i;
+                    shadow += tx + 'px ' + ty + 'px 0 rgb(' + color + ', ' + color + ', ' + color + '), ';
+                }
             }
+
+            shadow += x + 'px ' + y + 'px 1px rgba(0,0,0,.2), ' + x * 2 + 'px ' + y * 2 + 'px 6px rgba(0,0,0,.3)';
+
+            text.style.textShadow = shadow;
+            text.style.webkitTransform = 'translateZ(0) rotateX(' + y * 1.5 + 'deg) rotateY(' + -x * 1.5 + 'deg)';
+            text.style.MozTransform = 'translateZ(0) rotateX(' + y * 1.5 + 'deg) rotateY(' + -x * 1.5 + 'deg)';
         }
-
-        shadow += x + 'px ' + y + 'px 1px rgba(0,0,0,.2), ' + x * 2 + 'px ' + y * 2 + 'px 6px rgba(0,0,0,.3)';
-
-        text.style.textShadow = shadow;
-        text.style.webkitTransform = 'translateZ(0) rotateX(' + y * 1.5 + 'deg) rotateY(' + -x * 1.5 + 'deg)';
-        text.style.MozTransform = 'translateZ(0) rotateX(' + y * 1.5 + 'deg) rotateY(' + -x * 1.5 + 'deg)';
+        /*var 3dtext=document.querySelector(".content-header")*/
+        document.querySelectorAll("header")[1].addEventListener('mousemove', threedee, false);
     }
-    /*var 3dtext=document.querySelector(".content-header")*/
-    document.querySelectorAll("header")[1].addEventListener('mousemove', threedee, false);
 
 })(window, document);
