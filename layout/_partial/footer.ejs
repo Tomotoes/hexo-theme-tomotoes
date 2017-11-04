@@ -9,6 +9,12 @@
     <div class="footertop">
         <span id="RunTime" style="color:#a7a7a2;"></span>
         <br/>
+         <a href="javascript:;">
+            <span>
+                <%- partial('plugins/site-visit') %>
+            </span>
+        </a>
+        <br/>
         <a href="javascript:;">
             <span>
                 &copy; 2017&nbsp;
@@ -19,16 +25,9 @@
             <a href="http://www.miitbeian.gov.cn/" target="_blank"><%- theme.ICP_license %></a>
         <% } %>
         <br/>
-        
-        <a href="javascript:;">
-            <span>
-                <%- partial('plugins/site-visit') %>
-            </span>
-        </a>
-        <br/>
-        <span style="color=""><%- __('footer.license') %></span>
+        <span class="license" style="color=""><%- __('footer.license') %></span>
         <br/>        
-        <span id="power">
+        <span class="power">
             Power by
             <a href="https://hexo.io/" target="_blank">Hexo</a>
             Theme
