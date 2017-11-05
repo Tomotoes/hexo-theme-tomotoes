@@ -1,3 +1,4 @@
+/* 点击爱心 */
 ! function (e, t, a) {
     function n() {
         c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), o(), r()
@@ -231,12 +232,6 @@ var G = function (a, b, c) {
 var a = $('.post-content');
 G(a, location.href, "Simon Ma");
 
-if (window.console && window.console.log) {
-    setTimeout(function () {
-        console.log('\n %c 全栈之路 %c  © Simon Ma  http://xxxxx.com \n\n', 'color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;', 'color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;');
-    }, 0);
-}
-
 $('body').on('input', function () {
     return (function (c) {
         var b = {};
@@ -434,3 +429,18 @@ $('body').on('input', function () {
         }())
     }])
 }());
+
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(╯▔皿▔)╯死鬼去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(✿◡‿◡) 哼 回来就好!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
