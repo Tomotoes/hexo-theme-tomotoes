@@ -26,7 +26,7 @@
                     <%- partial('card', {
                             name: category.name,
                             slug: category.slug,
-                            link: category.permalink,
+                            link: url_for(category.path),
                             count: category.length
                         }) %>
                     <% }

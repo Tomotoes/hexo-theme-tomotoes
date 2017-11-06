@@ -138,36 +138,36 @@
 
 }
 .card-pool{
-    columns: 200px;
-    -moz-column: 200px;
-    -webkit-column: 200px;
-    -o-column: 200px;
+    columns: 180px 4;
+    -moz-column: 180px 4;
+    -webkit-column: 180px 4;
+    -o-column: 180px 4;
 }
 .card-card {
     text-align:center;
     border-radius: 10px;
-    width: 200px;
+    width: 180px;
     min-height: 100px;
-    box-shadow: 2px 2px 6px #b5b5b5;
-    padding: 20px 15px;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+    
+    padding: 10px 5px;
     margin: 10px;
     display: inline-block;
     font-size: 15px;
     background-color:#FFFFF3;
     overflow: hidden;
-    canvas{
-        height: 100% !important;
-        width: 100% !important;
+    &:hover{
+        transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        box-shadow: 2px 2px 6px #b5b5b5;
     }
 }
 .card-head {
+    font-size:13px;
     padding: 10px;
-    font-size: 13px;
 }
 .card-container {
-    padding: 10px;
-}
-.card-foot {
+    font-weight: bold;
+    font-size: 30px !important;
     padding: 10px;
 }
 @media screen and (max-width:760px) {
