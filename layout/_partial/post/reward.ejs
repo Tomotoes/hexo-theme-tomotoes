@@ -10,9 +10,10 @@
         <%
             var wechat = theme.reward.wechat;
             var alipay = theme.reward.alipay;
+            var img = theme.reward.wechatalipay;
         %>
         <div class="reward-code">
-            <img id="rewardCode" src="<%- theme.reward.wechatalipay %>" alt="打赏二维码">
+            <img id="rewardCode" data-img="<%- url_for(img) %>" alt="打赏二维码">
         </div>
         <% if(!!wechat && !!alipay) { %>
         <label class="reward-toggle">

@@ -81,7 +81,7 @@
         toggleMenu: function (flag) {
             var main = $('#main');
             if (flag) {
-                
+
                 if (!title.classList.contains('toc')) {
                     menu.classList.remove('hide');
                 } else {
@@ -229,18 +229,24 @@
         },
         reward: function () {
             var modal = new this.modal('#reward');
-            $('#rewardBtn').addEventListener(even, modal.toggle);
+            var $rewardCode = $('#rewardCode');
+
+            $('#rewardBtn').addEventListener(even, function () {
+                $rewardCode.src = $rewardCode.dataset.img;
+                modal.toggle();
+            });
 
             var $rewardToggle = $('#rewardToggle');
 
-            var tip_first=false;
+            var tip_first = false;
 
-            var $rewardCode = $('#rewardCode');
-            var wechat_pay=$(".wechat_pay");
-            var alipay_pay=$(".alipay_pay");
-            var caret=$(".icon-caret-up");
+            var wechat_pay = $(".wechat_pay");
+            var alipay_pay = $(".alipay_pay");
+            var caret = $(".icon-caret-up");
 
-            wechat_pay.onclick=function(){tip_first=true};
+            wechat_pay.onclick = function () {
+                tip_first = true
+            };
 
             if ($rewardToggle) {
                 $rewardToggle.addEventListener('change', function () {
@@ -249,18 +255,18 @@
                         alipay_pay.classList.add('show');
                         wechat_pay.classList.remove('show');
                         caret.style = "margin-left:20%;";
-                        
+
                     } else {
                         if (!tip_first) {
                             $rewardCode.src = this.dataset.alipay;
                             alipay_pay.classList.add('show');
                             wechat_pay.classList.remove('show');
                             caret.style = "margin-left:20%;";
-                            this.checked=false;
-                           
+                            this.checked = false;
+
                         } else {
                             $rewardCode.src = this.dataset.wechat;
-                            
+
                             alipay_pay.classList.remove('show');
                             wechat_pay.classList.add('show');
                             caret.style = "margin-left:-20%;";
@@ -273,7 +279,11 @@
         },
         weixin: function () {
             var modal = new this.modal('#wechat');
-            $('#wechat_icon').addEventListener(even, modal.toggle);
+            var wechat_img = $('#wechat_img');
+            $('#wechat_icon').addEventListener(even, function () {
+                wechat_img.src = wechat_img.dataset.img;
+                modal.toggle()
+            });
         },
         tabBar: function (el) {
             el.parentNode.parentNode.classList.toggle('expand')
@@ -448,7 +458,7 @@
             ignoreUnload = true;
         });
     }
-   
+
     /* 页面关闭 刷新事件 */
     w.addEventListener('beforeunload', function (e) {
         if (!ignoreUnload) {
