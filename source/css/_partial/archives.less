@@ -1,21 +1,20 @@
 .archive-separator {
     margin: 35px 0 13px;
-    color: @primaryColor;
+    // color: @primaryColor;
     font-size: 16px;
     font-weight: bold;
-
+    margin-left:5%;
     &:first-child {
         margin-top: 10px;
     }
 }
 
-.MyPostDiv{
-    text-align:center;
-}
-
 .article-card {
     padding: 16px 20px 0;
-    .card();
+    // .card();
+    background: transparent;
+    border-bottom: solid 1px #e0e0e0;
+    
 
     .post-content {
         word-break: break-all;
@@ -36,10 +35,6 @@
     .post-footer {
         margin: 0 -20px;
         padding: 12px 20px 8px;
-    }
-    canvas{
-        height: 100% !important;
-        width: 100% !important;
     }
 }
 @keyframes animation-show {
@@ -62,23 +57,38 @@
 }
 
 .archive-article {
-    .post-title {
+    .post-title-link {
         font-size: 18px;
-        margin-bottom: 0;
-        padding-bottom: 16px;
     }
+   
 }
 .waterfall {
-    position: relative;
-    margin: 0 -10px -20px;
-    .fade;
+    margin-left:5%;
+    opacity: 1;
+    display: flex;
+    flex-wrap: wrap;
 }
 .waterfall-item {
-    position: absolute;
-    width: 50%;
-    padding: 0 10px 20px;
+    width:33%;
+    line-height: 20px;
+    padding: 20px 50px;
 }
-
+.my-post-time{
+    color: #999;
+    text-decoration: none;
+    font-size: 0.85em;
+    line-height: 1em;
+}
+.my-post-title{
+    text-decoration: none;
+    font-weight: bold;
+    color: #555;
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    -ms-transition: color 0.2s;
+    transition: color 0.2s;
+    line-height: 1.6em;
+}
 @media screen and (max-width:760px) {
     .archive-article {
         display: block;

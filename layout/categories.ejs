@@ -12,7 +12,7 @@
                 }
             }) 
         %>
-        <h5>该分类文章数: <%-category_num %></h5>
+        <h5 style="margin-left:5%">该分类文章数: <%-category_num %></h5>
         <div class="waterfall">
             <% page.posts.each(function(post){ %>
                 <%- partial('_partial/archive', {post: post, date_format: config.date_format}) %>

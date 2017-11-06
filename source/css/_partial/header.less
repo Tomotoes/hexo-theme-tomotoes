@@ -9,7 +9,7 @@
     transition: padding-left .6s ease-in-out, background-color .3s cubic-bezier(.4, 0, .2, 1), box-shadow .15s linear;
     z-index: 30;
     &.fixed {
-        background-image: linear-gradient(273deg, #79D5E4 1%, #A0C1EA 66%, #BE8F75 90%);        
+        background-image: linear-gradient(-90deg, #77ACDC 0%, #77AAFF 100%);        
         box-shadow: @boxShadow;
         .header-title {
             visibility: visible;
@@ -27,6 +27,9 @@
         color: @textPrimaryColor;
     }
 }
+#menu-toggle{
+    opacity: 0;
+}
 
 .header-title {
     visibility: hidden;
@@ -35,9 +38,9 @@
     font-size: 24px;
     white-space: nowrap;
     text-align:center;
-    margin-right:-20%;
+    margin-right:-23%;
     &.toc{
-        margin-right:-3%;
+        margin-right:-5%;
     }
 }
 

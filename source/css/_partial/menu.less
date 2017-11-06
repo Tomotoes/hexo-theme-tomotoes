@@ -6,7 +6,7 @@
 }
 
 #menu {
-    background: #f6f6f6;
+    padding: 0 auto;
     position: fixed;
     top: 0;
     left: 0;
@@ -24,8 +24,13 @@
         +#main {
             padding-left: 0;
             .header-title {
-                .transition(.5s, cubic-bezier(.18, .81, .3, .89));
-                margin-right: -4%;
+                /*菜单关闭时 标题关闭会停留*/
+                .transition(.4s, cubic-bezier(.18, .81, .3, .89));
+                margin-right: -8%;
+            }
+            #menu-toggle{
+                opacity: 1;
+                transition: all 1s;
             }
         }
     }
@@ -39,24 +44,36 @@
                 .transition(.4s, cubic-bezier(.18, .81, .3, .89));
                 width: 101%;
             }
+            #menu-toggle{
+                opacity: 1;
+                transition: all 1s;
+            }
         }
+       
     }
     .inner {
         position: relative;
         height: 100%;
     }
     .brand-wrap {
+        top:0%;
         background-size: 100% 100%;
+        background-image: linear-gradient(0deg, #F5F1F1 0%, #77AAFF 100%);
+        
     }
     .brand {
-        padding: 20px @menuPadding 2em;
+        // position: absolute;
+        text-align:center;
+        // padding: 20px @menuPadding 2em;
+        margin-top:25%;
+        margin-bottom:20px;
     }
-    .brand>a>img:hover {
+    .avatar img:hover {
         transform: scale(1.8);
         transition: all 0.1s;
     }
     .avatar {
-        display: block;
+        display: inline-block;
         width: 80px;
         height: 80px;
         border-radius: 50%;
@@ -65,21 +82,21 @@
         -o-transition: 500ms;
         -moz-transition: 500ms;
         -webkit-transition: 500ms;
-        box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
-        -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px #f6f6f6;
+        -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px #f6f6f6;
         &:hover {
             transform: none;
             -o-transform: none;
             -ms-transform: none;
             -moz-transform: none;
             -webkit-transform: none;
-            box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.5);
-            -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px #f6f6f6;
+            -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px #f6f6f6;
         }
     }
     .introduce {
         margin: 1em 0 0;
-        color: @textPrimaryColor;
+        // color: @textPrimaryColor;
         .nickname {
             font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
             font-weight: bold;
@@ -91,6 +108,8 @@
         overflow-x: hidden;
     }
     .nav {
+        border-top: 1px solid #e0e0e0;
+        
         margin: 0;
         padding: 0;
         height: 300px;
@@ -102,13 +121,13 @@
             .icon {
                 position: absolute;
                 top: 0;
-                left: @menuPadding;
+                left: 30px;
                 line-height: inherit;
             }
         }
         a {
             display: block;
-            padding-left: @menuPadding*2.4;
+            padding-left: 70px;
             height: @navH;
             line-height: @navH;
             font-weight: 500;
@@ -117,6 +136,7 @@
         }
     }
     .nav2 {
+        border-top: 1px solid #e0e0e0;
         padding: 0;
         li {
             margin: 0;
@@ -134,6 +154,7 @@
 }
 
 #otext2 {
+    display:inline-block;
     margin-top: 24.2px;
     white-space: nowrap;
 }
@@ -142,14 +163,13 @@
 /*文字音效*/
 
 #otext2 .eBox span {
-    color: #F0E5DE !important;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    // color: #F0E5DE !important;
+    color:#999;
     font-size: 13px;
     letter-spacing: 2px;
     font-weight: bold;
 }
-
-
-/*文字跳动*/
 
 .bumpy-char {
     position: relative;
@@ -161,11 +181,6 @@
         transform: scale(1.3);
         transition: all 0.1s;
     }
-}
-
-.scroll-wrap canvas {
-    width: 100% !important;
-    height: 100% !important;
 }
 
 #menuitems li a {
@@ -201,91 +216,16 @@
 }
 
 #menuitems li:hover {
+    background:#ccc;
     a,
     .icon {
         color: #000;
-    }
-    b:after {
-        content: "♥";
-        color: red;
     }
 }
 
 #menuitems li.active {
     & b:after {
-        content: "♥";
-    }
-}
-
-#followme {
-    font-family: Arial, Helvetica, sans-serif;
-    display: inline-block;
-    padding-top: 4px;
-    color: gray;
-    letter-spacing: 1.5px;
-    margin-left: 8%;
-    margin-bottom: 3%;
-    &:hover {
-        animation: 0.8s followme infinite;
-        &::after {
-            content: "!";
-        }
-    }
-}
-
-@keyframes followme {
-    75% {
-        color: #3f4040;
-        transform: scale(1.5) translate(10px) skew(0deg, -10deg);
-        text-shadow: 2px 2px 2px gray;
-    }
-}
-
-@-webkit-keyframes followme {
-    75% {
-        color: #3f4040;
-        transform: scale(1.5) translate(10px) skew(0deg, -10deg);
-        text-shadow: 2px 2px 2px gray;
-    }
-}
-
-
-/*狮子*/
-
-#world canvas {
-    width: 100% !important;
-    height: 100% !important;
-    z-index: 9999 !important;
-    animation: 2s shizi ease-in infinite alternate;
-    animation-play-state: paused;
-    &:hover {
-        animation-play-state: running;
-    }
-}
-
-@keyframes shizi {
-    100% {
-        transform: scale(2);
-        -ms-transform: scale(2);
-        /* IE 9 */
-        -moz-transform: scale(2);
-        /* Firefox */
-        -webkit-transform: scale(2);
-        /* Safari 和 Chrome */
-        -o-transform: scale(2);
-    }
-}
-
-@-webkit-keyframes shizi {
-    100% {
-        transform: scale(2);
-        -ms-transform: scale(2);
-        /* IE 9 */
-        -moz-transform: scale(2);
-        /* Firefox */
-        -webkit-transform: scale(2);
-        /* Safari 和 Chrome */
-        -o-transform: scale(2);
+        content: "◂";
     }
 }
 

@@ -3,7 +3,7 @@
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
     </a>
-    <div class="brand-wrap" style="background-image:url(<%- url_for(theme.brand) %>)">
+    <div class="brand-wrap" >
       <div class="brand">
         <a href="<%- url_for(theme.avatar_link) %>" class="avatar waves-effect waves-circle waves-light">
           <img src="<%- url_for(theme.avatar) %>" style="background-color: rgba(255,255,255,1)">
@@ -31,14 +31,13 @@
                     <span data-hover="<%=(menuItem.text || _.startCase(i)) %>"><%=(menuItem.text || _.startCase(i)) %></span>
                     <% if(menuItem.num) {%>
                       <span id="<%- menuItem.num %>" class="digit"></span>
-                    <% } %><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                    <% } %><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
                   </a>
 
               </li>
             <% } %>
           </div>
-
-      <strong id="followme">follow me</strong>
+          <p></p>
       <ul class="nav2" id="nav2icons">
           <%
             var menuItem, isActive = function(item) {
@@ -60,7 +59,6 @@
       </ul>
 
     </div>
-  <iframe class="music" frameborder="no" border="0" marginwidth="0" marginheight="0" width=210 height=52 src="//music.163.com/outchain/player?type=2&id=26562739&auto=0&height=32"></iframe>
   </div>
 
 </aside>

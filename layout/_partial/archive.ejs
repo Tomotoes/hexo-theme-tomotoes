@@ -1,16 +1,14 @@
 <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <%- partial('post/date', { post: post, date_format: date_format}) %>
-      <%- partial('post/category', { post: post }) %>
-    </div>
-    <%- partial('post/title', {
-        hasLink: true
-      }) %>
-    <% if(post.tags && post.tags.length){ %>
-    <div class="post-footer">
-        <%- partial('post/tag') %>
-    </div>
-    <% } %>
+  <article class="archive-article">
+  <%
+    var format='YYYY-MM-DD';
+    if(is_archive()){
+      format='MM-DD';
+    }
+  %>
+  <time class="my-post-time">
+      <%- post.date.format(format) %>
+  </time><br/>
+    <a class="post-title-link my-post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
   </article>
 </div>

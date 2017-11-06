@@ -1,13 +1,4 @@
-# hexo-theme-indigo
-# https://github.com/yscoder/hexo-theme-indigo
-
-# 添加新菜单项遵循以下规则
-# menu:
-#  link:               fontawesome图标，省略前缀，本主题前缀为 icon-，必须
-#    text: About       菜单显示的文字，如果省略即默认与图标一致，首字母会转大写
-#    url: /about       链接，绝对或相对路径，必须。
-#    target: _blank    是否跳出，省略则在当前页面打开
-menu:
+﻿menu:
   home:
     text: 主 页
     url: /
@@ -25,10 +16,6 @@ menu:
     url: /about
 
 menu2:
-  rss:
-    text: Rss
-    url: atom.xml
-    target: _blank
   envelope-o:
     text: 邮箱
     url: mailto:1755811882@qq.com
@@ -37,25 +24,15 @@ menu2:
     text: 欢迎关注全栈之路公众号！
     url: javascript:;
     target: false
-  weibo:
-    text: 微博
-    url: http://weibo.com/p/1005056179399347/home
-    target: _blank
   github:
     text: github
     url: https://github.com/JinmaQAQ
-    target: _blank
-  stack-overflow:
-    text: 掘金
-    url: https://juejin.im/user/599b6d255188252447222dfd
     target: _blank
 
 # 你的头像url
 avatar: /img/avatar.jpg
 # avatar link
 avatar_link: /
-# 头像背景图
-brand: /img/background.jpg
 # favicon
 favicon: /img/favicon.ico
 # 微信公众号
@@ -127,9 +104,6 @@ less:
   paths:
     - source/css/style.less
 
-# 是否开启友言评论, 填写友言用户id2146950
-uyan_uid: false
-
 # 是否使用 gitment，https://github.com/imsun/gitment
 gitment:
   owner: JinmaQAQ
@@ -153,11 +127,6 @@ about: 业精于勤荒于嬉，行成于思毁于随。
 visit_counter:
   site_pv: 访问次数：
   site_uv: 访问用户：
-
-# 动态定义title
-title_change:
-  normal: (✿◡‿◡) 哼 回来就好!
-  leave: (╯▔皿▔)╯死鬼去哪里了！
 
 # 设置为 true 发布后将使用 unpkg cdn
 cdn: false

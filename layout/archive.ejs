@@ -20,17 +20,15 @@
         var ny = post.date.year();
         var nm = post.date.month();
         
-        if(ny !== y || nm !== m) {
-
+        if(ny !== y ) {
             y = ny;
-            m = nm;
-    %>
+         %>
             <% if(i > 0){%></div> <% } %>
-            <h3 class="archive-separator"><%=dt.format('MMMM, YYYY')%></h3>
+            <h3 class="archive-separator"><%=dt.format('YYYY')%></h3>
             <div class="waterfall">
     <%    } %>
 
-        <%- partial('_partial/archive', {post: post, date_format: 'MMM D'}) %>
+        <%- partial('_partial/archive', {post: post, date_format: 'MM-DD'}) %>
 
     <%})%>
     </div>

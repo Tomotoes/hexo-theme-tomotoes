@@ -13,7 +13,7 @@
                     }
                 }) 
             %>
-            <h5>该标签文章数: <%-tag_num %></h5>
+            <h5 style="margin-left:5%;">该标签文章数: <%-tag_num %></h5>
             <div class="waterfall">
             <% page.posts.each(function(post){ %>
                 <%- partial('_partial/archive', {post: post, date_format: config.date_format}) %>
