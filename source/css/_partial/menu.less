@@ -26,9 +26,9 @@
             .header-title {
                 /*菜单关闭时 标题关闭会停留*/
                 .transition(.4s, cubic-bezier(.18, .81, .3, .89));
-                margin-right: -3%;
+                margin-right: -8%;
             }
-            #menu-toggle{
+            #menu-toggle {
                 opacity: 1;
                 transition: all 1s;
             }
@@ -44,29 +44,26 @@
                 .transition(.4s, cubic-bezier(.18, .81, .3, .89));
                 width: 101%;
             }
-            #menu-toggle{
+            #menu-toggle {
                 opacity: 1;
                 transition: all 1s;
             }
         }
-       
     }
     .inner {
         position: relative;
         height: 100%;
     }
     .brand-wrap {
-        top:0%;
+        top: 0%;
         background-size: 100% 100%;
-        background-image: linear-gradient(0deg, #F5F1F1 0%, #77AAFF 100%);
-        
+        background-image: @bg-brand;
     }
     .brand {
         // position: absolute;
-        text-align:center;
-        // padding: 20px @menuPadding 2em;
-        margin-top:25%;
-        margin-bottom:20px;
+        text-align: center; // padding: 20px @menuPadding 2em;
+        margin-top: 25%;
+        margin-bottom: 20px;
     }
     .avatar img:hover {
         transform: scale(1.8);
@@ -95,8 +92,7 @@
         }
     }
     .introduce {
-        margin: 1em 0 0;
-        // color: @textPrimaryColor;
+        margin: 1em 0 0; // color: @textPrimaryColor;
         .nickname {
             font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
             font-weight: bold;
@@ -109,7 +105,6 @@
     }
     .nav {
         border-top: 1px solid #e0e0e0;
-        
         margin: 0;
         padding: 0;
         height: 300px;
@@ -136,16 +131,17 @@
         }
     }
     .nav2 {
+        
         border-top: 1px solid #e0e0e0;
         padding: 0;
         li {
-            top:8px;
+            top: 8px;
             margin: 0;
             float: left;
             display: block;
             .icon {
-                left:30px;
-                position: absolute;
+                left: 30px;
+                // position: absolute;
                 color: #6d819c;
             }
             a {
@@ -156,7 +152,7 @@
 }
 
 #otext2 {
-    display:inline-block;
+    display: inline-block;
     margin-top: 24.2px;
     white-space: nowrap;
 }
@@ -165,9 +161,8 @@
 /*文字音效*/
 
 #otext2 .eBox span {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    // color: #F0E5DE !important;
-    color:#999;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; // color: #F0E5DE !important;
+    color: #999;
     font-size: 13px;
     letter-spacing: 2px;
     font-weight: bold;
@@ -218,7 +213,7 @@
 }
 
 #menuitems li:hover {
-    background:#ccc;
+    background: #ccc;
     a,
     .icon {
         color: #000;
@@ -230,14 +225,40 @@
         content: "◂";
     }
 }
-#menu-toggle{
+
+#menu-toggle {
     opacity: 0;
 }
+
+@keyframes odsoky {
+    0% {
+        transform: translateY(6px);
+    }
+    100% {
+        transform: translateY(1px);
+    }
+}
+
+.bottom:hover {
+    transform: translateY(6px);
+}
+
+.bottom .tooltip {
+    top: 115%;
+    left: -20%;
+}
+
+.bottom .tooltip::after {
+    top: -17%;
+    left: 40%;
+    transform: rotate(180deg);
+}
+
 @media screen and (max-width:1240px) {
     #menu-off {
         display: none;
     }
-    #menu-toggle{
+    #menu-toggle {
         opacity: 1 !important;
     }
     #menu {
@@ -249,8 +270,8 @@
             .transform(translateX(0));
         }
         .brand {
-            margin-top:5%;
-            margin-bottom:20px;
+            margin-top: 5%;
+            margin-bottom: 20px;
         }
     }
 }

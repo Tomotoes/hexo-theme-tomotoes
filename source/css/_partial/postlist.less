@@ -115,27 +115,67 @@
 }
 
 .post-more {
-    display: inline-block;
-    padding: 0 20px;
-    
-    color: #555;
-    font-size: 14px;
-    background: #fff;
-    border-radius: 2px;
-    line-height: 2;
-    
-    border: 2px solid #555;
-    text-decoration: none;
-    transition-property: background-color;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
 
-    &:hover,
-    &:active {
-        border-color: #222;
+    width:10%;
+    overflow: visible;  
+    border: 0;
+    -moz-user-select: text;
+    display: inline-block;
+    text-decoration: none;
+    padding: 6px 20px;
+    padding-top:1px;
+    background-color: #fff;
+    color: #666;
+    border: 2px solid #666;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    
+    &:after{
+        content: '';
+        display: block;
+        height: 7px;
+        width: 100%;
+        background-image: -webkit-repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
+        background-image: repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-top: 1px solid #666;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-size: 7px 7px;
+    }
+    &:hover{
+        background-color: #666;
         color: #fff;
-        background: #222;
+        border-color: #000;
+    }
+    &:hover:after{
+        background-image: -webkit-repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+        background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+        border-top: 1px solid #000;
+        -webkit-animation: stripe-slide 12s infinite linear forwards;
+        animation: stripe-slide 12s infinite linear forwards;
+    }
+}
+
+@-webkit-keyframes stripe-slide {
+    0% {
+        background-position: 0% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes stripe-slide {
+    0% {
+        background-position: 0% 0;
+    }
+    100% {
+        background-position: 100% 0;
     }
 }
 

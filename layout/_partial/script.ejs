@@ -6,12 +6,13 @@ var BLOG = { ROOT: '<%= config.root %>', SHARE: <%- theme.share %>, REWARD: <%- 
 lazyScripts.push('//s95.cnzz.com/z_stat.php?id=<%-theme.cnzz %>&web_id=<%-theme.cnzz %>')
 <% } %>
 </script>
+<script src="<%- url_for(theme_js('/js/jquery', cache)) %>"></script>
+<script src="<%- url_for(theme_js('/js/cookie', cache)) %>"></script>
 <script src="<%- url_for(theme_js('/js/main', cache)) %>"></script>
 <% if (theme.search){ %>
 <%- partial('search') %>
 <script src="<%- url_for(theme_js('/js/search', cache)) %>" async></script>
 <% } %>
-<script src="<%- url_for(theme_js('/js/jquery', cache)) %>"></script>
 <script src="<%- url_for(theme_js('/js/bumpyText', cache)) %>"></script>
 <script src="<%- url_for(theme_js('/js/elasticText', cache)) %>"></script>
 <script src="<%- url_for(theme_js('/js/hover', cache)) %>"></script>

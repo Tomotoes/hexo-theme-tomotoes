@@ -102,7 +102,7 @@ google_site_verification: false
 less:
   compress: true
   paths:
-    - source/css/style.less
+    - source/css/light.less
 
 # 是否使用 gitment，https://github.com/imsun/gitment
 gitment:

@@ -31,7 +31,6 @@ if (window.innerWidth > 600) {
     $(".footer").xs999(2);
 
     $("#gotop").xs999(1);
-    $(".header-icon").xs999(1);
 
     $("#reward").xs999(7);
 
@@ -59,8 +58,6 @@ function setTime(a) {
     mySeconds = parseInt(mydate.getSeconds()) < 10 ? "0" + mydate.getSeconds() : mydate.getSeconds();
     if (!isNaN(day))
         RunTime.innerHTML = "本网站已运行：" + day + "天 " + myHours + "小时 " + myMinutes + "分 " + mySeconds + "秒 ";
-    else
-        alert(1);
     return false;
 }
 
