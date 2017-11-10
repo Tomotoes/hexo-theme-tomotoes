@@ -25,18 +25,24 @@
 }
 
 .post-meta {
+    font-family:"黑体";
+    color: #ccc;
     margin: 0 0 10px;
     line-height: 14px;
     font-size: 13px;
     font-weight: bold;
     color: @secondaryTextColor;
     overflow: hidden;
-    >*:not(:first-child) {
+    >*:not(:first-child):not(.post-count) {
         &:before {
             content: "·";
-            padding: 0 .5em;
         }
     }
+}
+
+.post-count-custom{
+    margin:15px 0;
+    font-weight: bold;    
 }
 
 .article-category-list {
@@ -110,11 +116,10 @@
     color:#999;
     .transition(.2s);
     &:hover {
-        background:#999;
+        background:#ccc;
         color: #fff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .26);
-        text-shadow: 0 0 6px rgba(253, 253, 253, 0.92), 0 0 30px rgba(250, 247, 247, 0.34), 0 0 12px rgba(244, 246, 248, 0.52), 0 0 21px rgba(247, 247, 248, 0.92), 0 0 34px rgba(234, 237, 240, 0.78), 0 0 54px rgba(244, 247, 250, 0.92);
-        
+        text-shadow: 0 0 6px rgba(204, 201, 201, 0.92), 0 0 30px rgba(250, 247, 247, 0.34), 0 0 12px rgba(244, 246, 248, 0.52), 0 0 21px rgba(247, 247, 248, 0.92), 0 0 34px rgba(234, 237, 240, 0.78), 0 0 54px rgba(192, 195, 199, 0.92);
     }
 }
 
@@ -150,9 +155,8 @@
         background-size: 7px 7px;
     }
     &:hover{
-        background-color: #666;
+        background-color: rgb(182, 178, 178);
         color: #fff;
-        border-color: #000;
     }
     &:hover:after{
         background-image: -webkit-repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
