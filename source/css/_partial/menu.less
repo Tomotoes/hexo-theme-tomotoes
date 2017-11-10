@@ -1,10 +1,10 @@
+
 #menu-off {
     position: absolute;
     top: 0;
     left: 100%;
     .transition(.4s);
 }
-
 #menu {
     padding: 0 auto;
     position: fixed;
@@ -26,7 +26,7 @@
             .header-title {
                 /*菜单关闭时 标题关闭会停留*/
                 .transition(.4s, cubic-bezier(.18, .81, .3, .89));
-                margin-right: -8%;
+                margin-right: -3%;
             }
             #menu-toggle {
                 opacity: 1;
@@ -150,16 +150,12 @@
         }
     }
 }
-
 #otext2 {
     display: inline-block;
     margin-top: 24.2px;
     white-space: nowrap;
 }
-
-
 /*文字音效*/
-
 #otext2 .eBox span {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; // color: #F0E5DE !important;
     color: #999;
@@ -167,11 +163,9 @@
     letter-spacing: 2px;
     font-weight: bold;
 }
-
 .bumpy-char {
     position: relative;
 }
-
 #nav2icons li:hover {
     .icon {
         color: #000;
@@ -179,13 +173,11 @@
         transition: all 0.1s;
     }
 }
-
 #menuitems li a {
     overflow: hidden;
     padding: 0 4px;
     height: 1em;
 }
-
 #menuitems li a span {
     font-weight: 700;
     position: relative;
@@ -194,42 +186,19 @@
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
 }
-
-#menuitems li a span::before {
-    position: absolute;
-    top: 100%;
-    content: attr(data-hover);
-    font-weight: 700;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-
-#menuitems li a:hover span,
-#menuitems li a:focus span {
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    transform: translateY(-100%);
-}
-
 #menuitems li:hover {
     background: #ccc;
     a,
     .icon {
         color: #000;
+        span{
+            transform: scale(1.4);
+        }
     }
 }
-
-#menuitems li.active {
-    & b:after {
-        content: "◂";
-    }
-}
-
 #menu-toggle {
     opacity: 0;
 }
-
 @keyframes odsoky {
     0% {
         transform: translateY(6px);
@@ -238,22 +207,18 @@
         transform: translateY(1px);
     }
 }
-
 .bottom:hover {
     transform: translateY(6px);
 }
-
 .bottom .tooltip {
     top: 115%;
     left: -20%;
 }
-
 .bottom .tooltip::after {
     top: -17%;
     left: 40%;
     transform: rotate(180deg);
 }
-
 @media screen and (max-width:1240px) {
     #menu-off {
         display: none;
@@ -275,7 +240,6 @@
         }
     }
 }
-
 @media screen and (max-width:760px) {
     #menu {
         .brand {

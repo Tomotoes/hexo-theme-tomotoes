@@ -127,10 +127,10 @@
 
 .page-share {
     position: absolute;
-    bottom: @share-fab-size + 6px;
-    right: 4px;
+    right: @share-fab-size + 8px;
+    top: ( @share-fab-size - @share-icon-size ) / 2;
     text-align: center;
-    width: @share-icon-size;
+    width: (@share-icon-size + 4px) * 6;
 
     &.in {
         visibility: visible;
@@ -141,18 +141,20 @@
     }
 
     .share-icons {
+        text-align: right;
+        font-size: 0;
         a {
             width: @share-icon-size;
             height: @share-icon-size;
             line-height: @share-icon-size;
-            font-size: 1.33333em;
+            font-size: 1.33333rem;
             border-radius: 50%;
-            .tip-left();
+            .tip-top();
             .boxShadow(.3s);
             opacity: 0;
             .transform(scale(0));
-            -webkit-transform-origin: center bottom;
-            transform-origin: center bottom;
+            -webkit-transform-origin: right center;
+            transform-origin: right center;
 
             &:before {
                 content: '分享到'attr(data-title)
@@ -161,7 +163,7 @@
         }
 
         li {
-            margin-bottom: 10px;
+            margin-left: 4px;
         }
 
     }

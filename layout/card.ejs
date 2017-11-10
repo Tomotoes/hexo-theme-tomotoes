@@ -7,14 +7,14 @@
     }
     var color = "rgb("+get()+','+get()+','+get()+")"
 %>
-
 <a class="MyTagLink" href="<%=link %>" itemprop="url">
     <div class="card-card">
         <div class="card-head">
             <%-slug %> · <span style="color:#fff;background: <%-color %>;padding: 2px 5px"><%-count %></span>
         </div>
+        
         <div class="card-container">
-            <span style="font-size: 20px" class="post-title-link"><%-name %></span>
+            <span style="font-size: 20px" href="<%=link %>" class="card-link"><%-name %></span>
         </div>
     </div>
 </a>

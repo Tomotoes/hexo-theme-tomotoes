@@ -1,5 +1,4 @@
 (function (w, d) {
-
     var body = d.body,
         $ = d.querySelector.bind(d),
         $$ = d.querySelectorAll.bind(d),
@@ -21,24 +20,19 @@
         offset = function (el) {
             var x = el.offsetLeft,
                 y = el.offsetTop;
-
             if (el.offsetParent) {
                 var pOfs = arguments.callee(el.offsetParent);
                 x += pOfs.x;
                 y += pOfs.y;
             }
-
             return {
                 x: x,
                 y: y
             };
         };
-
-
     var docEl = d.documentElement;
     /*电脑*/
     if (w.innerWidth > 600) {
-
         /*360，搜狗，QQ，Edge，IE9，排除IE11*/
         if (((window.navigator.userAgent.indexOf("WOW") > -1) || (window.navigator.userAgent.indexOf("Edge") > -1) || (window.navigator.userAgent.indexOf("MSIE") > -1)) && (window.navigator.userAgent.indexOf("Trident") == -1)) {
             docEl = body;
@@ -55,12 +49,10 @@
         }
         /*IOS等..*/
     }
-
     var Blog = {
         goTop: function (end) {
             var top = docEl.scrollTop;
             var interval = arguments.length > 2 ? arguments[1] : Math.abs(top - end) / scrollSpeed;
-
             if (top && top > end) {
                 docEl.scrollTop = Math.max(top - interval, 0);
                 animate(arguments.callee.bind(this, end, interval));
@@ -81,17 +73,14 @@
         toggleMenu: function (flag) {
             var main = $('#main');
             if (flag) {
-
                 if (!title.classList.contains('toc')) {
                     menu.classList.remove('hide');
                 } else {
                     menu.classList.remove('hastochide');
                 }
-
                 if (w.innerWidth < 1241) {
                     mask.classList.add('in');
                     menu.classList.add('show');
-
                     if (isWX) {
                         var top = docEl.scrollTop;
                         main.classList.add('lock');
@@ -100,7 +89,6 @@
                         root.classList.add('lock');
                     }
                 }
-
             } else {
                 menu.classList.remove('show');
                 mask.classList.remove('in');
@@ -111,7 +99,6 @@
                 } else {
                     root.classList.remove('lock');
                 }
-
             }
         },
         fixedHeader: function (top) {
@@ -123,23 +110,18 @@
         },
         toc: (function () {
             var toc = $('#post-toc');
-
             if (!toc || !toc.children.length) {
                 return {
                     fixed: noop,
                     actived: noop
                 }
             }
-
             var bannerH = $('.post-header').clientHeight,
                 headerH = header.clientHeight,
                 titles = $('#post-content').querySelectorAll('h1, h2, h3, h4, h5, h6');
-
             toc.querySelector('a[href="#' + titles[0].id + '"]').parentNode.classList.add('active');
-
             title.classList.add('toc');
             $('.footer').classList.add('toc');
-
             return {
                 fixed: function (top) {
                     top >= bannerH - headerH ? toc.classList.add('fixed') : toc.classList.remove('fixed');
@@ -148,12 +130,10 @@
                     for (i = 0, len = titles.length; i < len; i++) {
                         if (top > offset(titles[i]).y - headerH - 5) {
                             toc.querySelector('li.active').classList.remove('active');
-
                             var active = toc.querySelector('a[href="#' + titles[i].id + '"]').parentNode;
                             active.classList.add('active');
                         }
                     }
-
                     if (top < offset(titles[0]).y) {
                         toc.querySelector('li.active').classList.remove('active');
                         toc.querySelector('a[href="#' + titles[0].id + '"]').parentNode.classList.add('active');
@@ -165,9 +145,7 @@
         modal: function (target) {
             this.$modal = $(target);
             this.$off = this.$modal.querySelector('.close');
-
             var _this = this;
-
             this.show = function () {
                 mask.classList.add('in');
                 _this.$modal.classList.add('ready');
@@ -175,9 +153,7 @@
                     _this.$modal.classList.add('in');
                 }, 0)
             }
-
             this.onHide = noop;
-
             this.hide = function () {
                 _this.onHide();
                 mask.classList.remove('in');
@@ -186,69 +162,52 @@
                     _this.$modal.classList.remove('ready');
                 }, 300)
             }
-
             this.toggle = function () {
                 return _this.$modal.classList.contains('in') ? _this.hide() : _this.show();
             }
-
             Blog.hideOnMask.push(this.hide);
             this.$off && this.$off.addEventListener(even, this.hide);
         },
         share: function () {
-
             var pageShare = $('#pageShare'),
                 fab = $('#shareFab');
-
             var shareModal = new this.modal('#globalShare');
-
             if (fab) {
                 fab.addEventListener(even, function () {
                     pageShare.classList.toggle('in')
                 }, false)
-
                 d.addEventListener(even, function (e) {
                     !fab.contains(e.target) && pageShare.classList.remove('in')
                 }, false)
             }
-
             var wxModal = new this.modal('#wxShare');
             wxModal.onHide = shareModal.hide;
-
             forEach.call($$('.wxFab'), function (el) {
                 el.addEventListener(even, wxModal.toggle)
             })
-
         },
         search: function () {
             var searchWrap = $('#search-wrap');
-
             function toggleSearch() {
                 searchWrap.classList.toggle('in');
             }
-
             $('#search').addEventListener(even, toggleSearch);
         },
         reward: function () {
             var modal = new this.modal('#reward');
             var $rewardCode = $('#rewardCode');
-
             $('#rewardBtn').addEventListener(even, function () {
                 $rewardCode.src = $rewardCode.dataset.img;
                 modal.toggle();
             });
-
             var $rewardToggle = $('#rewardToggle');
-
             var tip_first = false;
-
             var wechat_pay = $(".wechat_pay");
             var alipay_pay = $(".alipay_pay");
             var caret = $(".icon-caret-up");
-
             wechat_pay.onclick = function () {
                 tip_first = true
             };
-
             if ($rewardToggle) {
                 $rewardToggle.addEventListener('change', function () {
                     if (!this.checked) {
@@ -256,7 +215,6 @@
                         alipay_pay.classList.add('show');
                         wechat_pay.classList.remove('show');
                         caret.style = "margin-left:20%;";
-
                     } else {
                         if (!tip_first) {
                             $rewardCode.src = this.dataset.alipay;
@@ -264,17 +222,13 @@
                             wechat_pay.classList.remove('show');
                             caret.style = "margin-left:20%;";
                             this.checked = false;
-
                         } else {
                             $rewardCode.src = this.dataset.wechat;
-
                             alipay_pay.classList.remove('show');
                             wechat_pay.classList.add('show');
                             caret.style = "margin-left:-20%;";
                         }
-
                     }
-
                 })
             }
         },
@@ -292,7 +246,6 @@
         page: (function () {
             var $elements = $$('.fade, .fade-scale');
             var visible = false;
-
             return {
                 loaded: function () {
                     forEach.call($elements, function (el) {
@@ -308,19 +261,15 @@
                 },
                 visible: visible
             }
-
         })(),
         lightbox: (function () {
-
             function LightBox(element) {
                 this.$img = element.querySelector('img');
                 this.$overlay = element.querySelector('overlay');
                 this.margin = 40;
                 this.title = this.$img.title || this.$img.alt || '';
                 this.isZoom = false;
-
                 var naturalW, naturalH, imgRect, docW, docH;
-
                 this.calcRect = function () {
                     docW = body.clientWidth;
                     docH = body.clientHeight;
@@ -332,10 +281,8 @@
                     var sw = w > docW ? docW / w : 1;
                     var sh = h > inH ? inH / h : 1;
                     var s = Math.min(sw, sh);
-
                     w = w * s;
                     h = h * s;
-
                     return {
                         w: w,
                         h: h,
@@ -343,11 +290,9 @@
                         l: (docW - w) / 2 - imgRect.left + this.$img.offsetLeft
                     }
                 }
-
                 this.setImgRect = function (rect) {
                     this.$img.style.cssText = 'width: ' + rect.w + 'px; max-width: ' + rect.w + 'px; height:' + rect.h + 'px; top: ' + rect.t + 'px; left: ' + rect.l + 'px';
                 }
-
                 this.setFrom = function () {
                     this.setImgRect({
                         w: imgRect.width,
@@ -356,11 +301,9 @@
                         l: (element.offsetWidth - imgRect.width) / 2
                     })
                 }
-
                 this.setTo = function () {
                     this.setImgRect(this.calcRect());
                 }
-
                 this.addTitle = function () {
                     if (!this.title) {
                         return;
@@ -370,13 +313,10 @@
                     this.$caption.className = 'overlay-title';
                     element.appendChild(this.$caption);
                 }
-
                 this.removeTitle = function () {
                     this.$caption && element.removeChild(this.$caption)
                 }
-
                 var _this = this;
-
                 this.zoomIn = function () {
                     naturalW = this.$img.naturalWidth || this.$img.width;
                     naturalH = this.$img.naturalHeight || this.$img.height;
@@ -386,14 +326,12 @@
                     this.setFrom();
                     this.addTitle();
                     this.$img.classList.add('zoom-in');
-
                     setTimeout(function () {
                         element.classList.add('active');
                         _this.setTo();
                         _this.isZoom = true;
                     }, 0);
                 }
-
                 this.zoomOut = function () {
                     this.isZoom = false;
                     element.classList.remove('active');
@@ -407,21 +345,17 @@
                         element.removeAttribute('style');
                     }, 300);
                 }
-
                 element.addEventListener('click', function (e) {
                     _this.isZoom ? _this.zoomOut() : e.target.tagName === 'IMG' && _this.zoomIn()
                 })
-
                 d.addEventListener('scroll', function () {
                     _this.isZoom && _this.zoomOut()
                 })
-
                 w.addEventListener('resize', function () {
                     // _this.isZoom && _this.updateSize()
                     _this.isZoom && _this.zoomOut()
                 })
             }
-
             forEach.call($$('.img-lightbox'), function (el) {
                 new LightBox(el)
             })
@@ -435,32 +369,19 @@
             })
         }
     };
-
     /* 页面加载第二个执行的事件 */
     w.addEventListener('load', function () {
+        loading.classList.remove('active');
         Blog.page.loaded();
-        
-        jQuery("#loading").animate({
-            opacity:'0',
-        },0);
-        setTimeout(function(){
-            loading.style="display:none";
-        },500)
-        
-        
         w.lazyScripts && w.lazyScripts.length && Blog.loadScript(w.lazyScripts)
     });
-
     /* 页面加载第一个执行的事件 */
     w.addEventListener('DOMContentLoaded', function () {
-        useDarkTheme(getThemeCSSName() == 'dark');
         var top = docEl.scrollTop;
         Blog.toc.fixed(top);
         Blog.toc.actived(top);
         Blog.page.loaded();
-       
     });
-
     /* 打开邮箱时，不触发关闭页面事件 */
     var ignoreUnload = false;
     var $mailTarget = $('a[href^="mailto"]');
@@ -469,7 +390,6 @@
             ignoreUnload = true;
         });
     }
-
     /* 页面关闭 刷新事件 */
     w.addEventListener('beforeunload', function (e) {
         if (!ignoreUnload) {
@@ -478,28 +398,23 @@
             ignoreUnload = false;
         }
     });
-
     /* 页面加载第三个执行的事件 */
     w.addEventListener('pageshow', function () {
         // fix OSX safari #162
         !Blog.page.visible && Blog.page.loaded();
     });
-
     /* 调整窗口大小时，自动 */
     w.addEventListener('resize', function () {
         w.BLOG.even = even = 'ontouchstart' in w ? 'touchstart' : 'click';
         Blog.toggleMenu();
     });
-
     gotop.addEventListener(even, function () {
         animate(Blog.goTop.bind(Blog, 0));
     }, false);
-
     menuToggle.addEventListener(even, function (e) {
         Blog.toggleMenu(true);
         e.preventDefault();
     }, false);
-
     menuOff.addEventListener(even, function () {
         /* 没有toc的文章 */
         if (!title.classList.contains('toc')) {
@@ -509,7 +424,6 @@
             menu.classList.add('hastochide');
         }
     }, false);
-
     mask.addEventListener(even, function (e) {
         Blog.toggleMenu();
         Blog.hideOnMask.forEach(function (hide) {
@@ -517,7 +431,6 @@
         });
         e.preventDefault();
     }, false);
-
     d.addEventListener('scroll', function () {
         var top = docEl.scrollTop;
         Blog.toggleGotop(top);
@@ -525,26 +438,22 @@
         Blog.toc.fixed(top);
         Blog.toc.actived(top);
     }, false);
-
     if (w.BLOG.SHARE) {
         Blog.share()
     }
-
     if (w.BLOG.REWARD) {
         Blog.reward()
     }
     Blog.weixin();
-
     Blog.noop = noop;
     Blog.even = even;
     Blog.$ = $;
     Blog.$$ = $$;
-
     Object.keys(Blog).reduce(function (g, e) {
         g[e] = Blog[e];
         return g
     }, w.BLOG);
-
+    
     if (w.Waves) {
         Waves.init();
         Waves.attach('.global-share li', ['waves-block']);
@@ -552,41 +461,5 @@
     } else {
         console.error('Waves loading failed.')
     }
-
-    var style=document.getElementById('style');
     
-    // 获取cookie中选中的主题名称，没有就给个默认的
-    function getThemeCSSName() {
-        return Cookies.get('theme') || "light";
-    }
-   
-    // 使用暗色主题(记录选择到cookie中)
-    function useDarkTheme(useDark) {
-      
-        Cookies.set('theme', useDark ? "dark" : "light");
-        if (useDark) {
-            style.href = '/css/dark.css';
-        } else {
-
-            style.href = '/css/light.css';
-        }
-   
-    }
-
-    var light=document.getElementById('mylight');
-    light.onclick=function(){
-        history.go(0);
-
-        if(getThemeCSSName() == 'dark'){
-        
-            style.href = '/css/light.css';
-            Cookies.set('theme', "light");
-        }
-        else{
-        
-            style.href = '/css/dark.css';
-            Cookies.set('theme', "dark");
-        }
-    }
-
 })(window, document);
