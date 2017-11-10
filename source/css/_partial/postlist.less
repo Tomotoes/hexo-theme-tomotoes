@@ -106,17 +106,19 @@
     display: block;
     padding: 0 16px;
     line-height: 28px;
-    color: rgba(255, 255, 255, .8);
+    // color: rgba(255, 255, 255, .8);
+    color:#999;
     .transition(.2s);
     &:hover {
+        background:#999;
         color: #fff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .26);
+        text-shadow: 0 0 6px rgba(253, 253, 253, 0.92), 0 0 30px rgba(250, 247, 247, 0.34), 0 0 12px rgba(244, 246, 248, 0.52), 0 0 21px rgba(247, 247, 248, 0.92), 0 0 34px rgba(234, 237, 240, 0.78), 0 0 54px rgba(244, 247, 250, 0.92);
+        
     }
 }
 
 .post-more {
-
-    width:10%;
     overflow: visible;  
     border: 0;
     -moz-user-select: text;
@@ -220,11 +222,7 @@
         line-height: 24px;
     }
     .post-more {
-    
         font-size: 13px;
-        width:24%;
-        padding: 1px 13px;
-        padding-bottom:4px;
     }
     .post-list {
         margin: 0 -16px
