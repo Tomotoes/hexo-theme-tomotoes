@@ -120,8 +120,10 @@
                 headerH = header.clientHeight,
                 titles = $('#post-content').querySelectorAll('h1, h2, h3, h4, h5, h6');
             toc.querySelector('a[href="#' + titles[0].id + '"]').parentNode.classList.add('active');
+            
             title.classList.add('toc');
             $('.footer').classList.add('toc');
+            
             return {
                 fixed: function (top) {
                     top >= bannerH - headerH ? toc.classList.add('fixed') : toc.classList.remove('fixed');
@@ -185,13 +187,6 @@
             forEach.call($$('.wxFab'), function (el) {
                 el.addEventListener(even, wxModal.toggle)
             })
-        },
-        search: function () {
-            var searchWrap = $('#search-wrap');
-            function toggleSearch() {
-                searchWrap.classList.toggle('in');
-            }
-            $('#search').addEventListener(even, toggleSearch);
         },
         reward: function () {
             var modal = new this.modal('#reward');

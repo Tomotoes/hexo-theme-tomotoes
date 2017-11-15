@@ -4,9 +4,18 @@
         <a href="javascript:;" title="换一句吧" id="refresh">
             <img class="refresh" src="<%- url_for(theme.refresh) %>">
         </a>
+        <p class="coding">Hosted by <a href="https://pages.coding.me" target="_blank" style="font-weight: bold;color:#999;">Coding Pages</a></p>
+        
     </div>
-    <br/>
     <div class="footertop">
+      <a href="javascript:;">
+            <span>
+                &copy; 2017 &nbsp;
+                <i class="icon icon-lg icon-heart"></i>
+                &nbsp; tomotoes.com
+            </span>
+        </a>
+        <br/>
         <span id="RunTime" style="color:#a7a7a2;"></span>
         <br/>
          <a href="javascript:;">
@@ -14,16 +23,6 @@
                 <%- partial('plugins/site-visit') %>
             </span>
         </a>
-        <br/>
-        <a href="javascript:;">
-            <span>
-                &copy; 2017&nbsp;
-                <i class="icon icon-lg icon-heart"></i>&nbsp; XXXXX.com
-            </span>&nbsp;·&nbsp;
-        </a>
-         <% if(theme.ICP_license) {%>
-            <a href="http://www.miitbeian.gov.cn/" target="_blank"><%- theme.ICP_license %></a>
-        <% } %>
         <br/>
         <span class="license" style="color=""><%- __('footer.license') %></span>
         <br/>        
@@ -37,6 +36,6 @@
             &nbsp;
             <a href="https://pages.github.com/" target="_blank">Github Pages</a>
         <span/>
+        <br/>
     </div>
-    <br/>
 </footer>

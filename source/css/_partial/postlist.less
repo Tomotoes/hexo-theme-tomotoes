@@ -41,6 +41,8 @@
 }
 
 .post-count-custom{
+    padding-bottom:10px;
+    border-bottom:1px dashed #ccc;
     margin:15px 0;
     font-weight: bold;    
 }
@@ -60,7 +62,7 @@
 .article-category-list-child {
     &:before {
         content: "›";
-        padding: 0 .3em;
+        padding: 0.3em;
         font-size: 120%;
     }
 }
@@ -155,7 +157,8 @@
         background-size: 7px 7px;
     }
     &:hover{
-        background-color: rgb(182, 178, 178);
+        background-color: rgb(160, 158, 158);
+        // background:#999;
         color: #fff;
     }
     &:hover:after{
@@ -221,6 +224,17 @@
 }
 
 @media screen and (max-width:760px) {
+    .post-count-custom{
+        text-align:center;   
+    }
+    .post-meta {
+        >*:not(:first-child):not(.post-count) {
+            &:before {
+                content: "·";
+                padding: 0.2em;
+            }
+        }
+    }
     .post-title {
         font-size: 20px;
         line-height: 24px;

@@ -27,10 +27,9 @@ if (window.innerWidth > 600) {
     $("#gotop").xs999(1);
     $("#reward").xs999(7);
     $("#wechat").xs999(8);
-    $('#example').bumpyText();
-    $('.post-card-title').bumpyText();
-    $('#hitokoto_p').bumpyText();
 }
+$('#example').bumpyText();
+$('#hitokoto_p').bumpyText();
 setInterval(function () {
     setTime('2017/10/11')
 }, 1000);
@@ -46,7 +45,7 @@ function setTime(a) {
     myMinutes = parseInt(mydate.getMinutes()) < 10 ? "0" + mydate.getMinutes() : mydate.getMinutes();
     mySeconds = parseInt(mydate.getSeconds()) < 10 ? "0" + mydate.getSeconds() : mydate.getSeconds();
     if (!isNaN(day))
-        RunTime.innerHTML = "本网站已运行：" + day + "天 " + myHours + "小时 " + myMinutes + "分 " + mySeconds + "秒 ";
+        RunTime.innerHTML = "网站已存活：" + day + "天 " + myHours + "小时 " + myMinutes + "分 " + mySeconds + "秒 ";
     return false;
 }
 function get_hitokoto() {
@@ -127,12 +126,3 @@ var G = function (a, b, c) {
 }
 var a = $('.post-content');
 G(a, location.href, "Simon Ma");
-
-if (window.location.href.indexOf("http://jinmaqaq.coding.me/")!=-1)  {
-    (function(){
-        var bp = document.createElement('script');
-        bp.src = '//push.zhanzhang.baidu.com/push.js';
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-}

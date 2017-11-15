@@ -44,7 +44,7 @@ refresh: /img/refresh.png
 email: 少年锦时.
 
 # 设置 Android L Chrome 浏览器状态栏颜色
-color: '#2b90d9'
+color: '#77AAFF'
 
 # 页面标题
 tags_title: 标签
@@ -108,8 +108,8 @@ less:
 gitment:
   owner: JinmaQAQ
   repo: JinmaQAQ.github.io
-  client_id: 57b2bf7c5af44e329e4b
-  client_secret: 47a4a9026c7f22e4a4fc916c962248d73ed492e0
+  client_id: 694df1779e48d5a450d3
+  client_secret: 66cd18c65e4b5cacf99293c740b6d3c38454099e
 
 # 规范网址
 # 让搜索引擎重定向你的不同域名、不同子域、同域不同目录的站点到你期望的路径
