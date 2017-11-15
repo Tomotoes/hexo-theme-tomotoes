@@ -1,13 +1,20 @@
-﻿menu:
+﻿# 例子
+# home 就是图标的标识 从这里挑选http://fontawesome.io/icons/ 图标，把图标下面的文字替换即可使用
+#   text ：显示文本
+#   url ： 链接
+#   target: 链接的锚点 是否在本站中打开链接
+
+# 主菜单
+menu:
   home:
     text: 主 页
     url: /
   archives:
-    url: /archives
     text: 归 档
+    url: /archives
   tags:
-    url: /tags
     text: 标 签
+    url: /tags
   th-list:
     text: 分 类
     url: /categories
@@ -15,6 +22,7 @@
     text: 关 于
     url: /about
 
+# 图标菜单
 menu2:
   envelope-o:
     text: 邮箱
@@ -37,11 +45,6 @@ avatar_link: /
 favicon: /img/favicon.ico
 # 微信公众号
 wechat: /img/wechat.jpg
-# 刷新
-refresh: /img/refresh.png
-
-# email
-email: 少年锦时.
 
 # 设置 Android L Chrome 浏览器状态栏颜色
 color: '#77AAFF'
@@ -66,10 +69,10 @@ share: true
 
 # 是否开启打赏，关闭 reward: false
 reward:
-  title: 感谢您的鼓励支持！
+  title: 感谢您的鼓励支持！     #打赏回馈话语
   wechat: /img/wechat.png     #微信，关闭设为 false
   alipay: /img/alipay.png     #支付宝，关闭设为 false
-  wechatalipay: /img/dog.png
+  wechatalipay: /img/dog.png  #点击打赏时显示的图片
 
 # 是否开启搜索
 search: true
@@ -85,11 +88,8 @@ toc:
 # 文章页留言内容，hexo中所有变量及辅助函数等均可调用，具体请查阅 hexo.io
 postMessage: 文章标题：  <a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.title %></a><br>创建时间：  <%- date(page.date) %><br>更新时间：  <%- date(page.updated) %>
 
-# 站长统计，如要开启，输入CNZZ站点id，如 cnzz: 1255152447
-cnzz: false
-
 # 百度统计，如要开启，改为你的 key
-baidu_tongji: false
+baidu_tongji: ac588a7c3137281d3c4f1032a9e4e46e
 
 # 腾讯分析，如要开启，输入站点id
 tajs: false
