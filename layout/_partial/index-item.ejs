@@ -20,10 +20,11 @@
             length: theme.excerpt_length
         }) %>
     <% } %>
-
-        <a href="<%- url_for(post.path) %>" class="post-more waves-button">
-            <%= __('post.continue_reading') %>
-        </a>
+        <div>
+            <a href="<%- url_for(post.path) %>" class="post-more waves-button">
+                <%= __('post.continue_reading') %>
+            </a>
+        </div>
     </div>
     <% if(post.tags && post.tags.length){ %>
     <div class="post-footer">
