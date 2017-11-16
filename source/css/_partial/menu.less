@@ -150,18 +150,18 @@
         }
     }
 }
-#motto {
-    display: inline-block;
+.motto {
     margin-top: 24.2px;
     white-space: nowrap;
+    display: inline-block;
 }
 /*文字音效*/
-#motto .eBox span {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; // color: #F0E5DE !important;
+.motto .eBox span {
     color: #999;
     font-size: 13px;
     letter-spacing: 2px;
-    font-weight: bold;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    text-shadow: rgb(134, 116, 111) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
 }
 .bumpy-char {
     position: relative;
@@ -187,8 +187,7 @@
     transition: transform 0.3s;
 }
 #menuitems li:hover {
-    box-shadow: 0 0 5px 1px #ccc;
-    // box-shadow: 0 5px 30px rgba(109, 108, 108, 0.3);
+    box-shadow: 0 0 10px 1px #ccc;
     background: #ccc;
     a,
     .icon {
@@ -202,26 +201,7 @@
 #menu-toggle {
     opacity: 0;
 }
-@keyframes odsoky {
-    0% {
-        transform: translateY(6px);
-    }
-    100% {
-        transform: translateY(1px);
-    }
-}
-.bottom:hover {
-    transform: translateY(6px);
-}
-.bottom .tooltip {
-    top: 115%;
-    left: -20%;
-}
-.bottom .tooltip::after {
-    top: -17%;
-    left: 40%;
-    transform: rotate(180deg);
-}
+
 @media screen and (max-width:1240px) {
     #menu-off {
         display: none;

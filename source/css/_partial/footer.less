@@ -1,29 +1,22 @@
 .footer {
     text-align:center;
+    font-size: 15px;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    text-shadow: rgb(134, 116, 111) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
+    color:#999;
+   
+    a{
+        color:#999;
+    }
+    .icon{
+        font-size: 15px;
+    }
     span{
         line-height: 2;
-        color: #a7a7a2;
-    }
-    .coding{
-        color:#999;
-        margin:3px auto !important;
     }
     canvas{
         z-index:333 !important;
     }
-    .footertop {
-        font-size: 14px;
-        .icon{
-            font-size: 14px;
-        }
-
-        a {
-            text-decoration:none;
-            color: #a7a7a2;
-            opacity: .85;
-        }
-    }
-    /*句子*/
     .refresh {
         vertical-align: middle;
         width: 16px;
@@ -35,15 +28,41 @@
         transform: rotateZ(360deg);
     }
 
-    #hitokoto{
+    .footer-content{
         display:inline-block;
         z-index: 999 !important;
-        font-size: 15px;
-        font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-        text-shadow: rgb(134, 116, 111) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
     }
     &.toc{
         margin-right:16%;
+    }
+   
+}
+.power{
+    margin:3px auto !important;
+    a{
+        font-weight: bold;
+            position: relative;
+            white-space: normal;
+            border-bottom: .0625rem dashed #ccc;
+            background: transparent;
+            text-decoration: none;
+        &:after {
+            position: absolute;
+            bottom: -0.0625rem;
+            left: 100%;
+            width: 0;
+            border-bottom: .0625rem solid #999;
+            content: "";
+            transition: width 350ms, left 350ms;
+        }
+    
+        &:hover:after {
+            left: 0;
+            width: 100%;
+            transition: width 350ms;
+            text-decoration: underline;
+            outline: 0;
+        }
     }
 }
 
@@ -52,14 +71,15 @@
         &.toc{
             margin-right:0%;
         }
+       
     }
-    .footer:not(#hitokoto){
+    .footer{
         font-size:11px;
+        .icon{
+            font-size: 11px;
+        }
     }
-    .coding{
-        font-size:11px;
-    }
-    .power,.license{
+    .license{
         display: none;
     }
 }

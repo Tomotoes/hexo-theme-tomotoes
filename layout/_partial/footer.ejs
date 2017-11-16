@@ -1,41 +1,25 @@
 ﻿<footer class="footer">
-    <div id="hitokoto">
-        <span id="hitokoto_p"></span>
-        <a href="javascript:;" title="换一句吧" id="refresh">
-            <img class="refresh" src="/img/refresh.png" alt="refresh">
-        </a>
-        <p class="coding" style="color:#999;">Hosted by <a href="https://pages.coding.me" target="_blank" style="font-weight: bold;color:#999;" rel="external nofollow">Coding Pages</a></p>
+    <div class="footer-content">
+        <p class="power">Hosted by <a href="https://pages.coding.me" target="_blank" rel="external nofollow">Coding Pages</a></p>
         
-    </div>
-    <div class="footertop">
-      <a href="javascript:;">
-            <span>
-                &copy; 2017 &nbsp;
-                <i class="icon icon-lg icon-heart"></i>
-                &nbsp; tomotoes.com
-            </span>
-        </a>
-        <br/>
-        <span id="RunTime" style="color:#a7a7a2;"></span>
-        <br/>
-         <a href="javascript:;">
-            <span>
-                <%- partial('plugins/site-visit') %>
-            </span>
-        </a>
-        <br/>
-        <span class="license" style="color=""><%- __('footer.license') %></span>
-        <br/>        
         <span class="power">
             Power by
-            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
             Theme
-            <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="external nofollow">indigo</a>
-            · Hosted by
-            <a href="https://pages.coding.net/" target="_blank" rel="external nofollow">Coding Pages</a>
-            &nbsp;
-            <a href="https://pages.github.com/" target="_blank" rel="external nofollow">Github Pages</a>
-        <span/>
+            <a onclick="alert('主题建设中，敬请期待...')" target="_blank" rel="external nofollow">tomotoes</a>
+        </span>
+    
         <br/>
-    </div>
+
+        <span id="RunTime" style="color:#a7a7a2;"></span>
+        <br/>
+        
+        <span>
+            <%- partial('plugins/site-visit') %>
+        </span>
+        <br/>
+        
+        <span class="license"><%- __('footer.license') %></span>
+        <br/>  
+    </div>      
 </footer>

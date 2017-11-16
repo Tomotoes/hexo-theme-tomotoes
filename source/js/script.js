@@ -582,7 +582,7 @@ function setTime(a) {
     myMinutes = parseInt(mydate.getMinutes()) < 10 ? "0" + mydate.getMinutes() : mydate.getMinutes();
     mySeconds = parseInt(mydate.getSeconds()) < 10 ? "0" + mydate.getSeconds() : mydate.getSeconds();
     if (!isNaN(day))
-        RunTime.innerHTML = "网站已存活：" + day + "天 " + myHours + "小时 " + myMinutes + "分 " + mySeconds + "秒 ";
+        RunTime.innerHTML = "网站已运行：" + day + "天 " + myHours + "小时 " + myMinutes + "分 " + mySeconds + "秒 ";
     return false;
 }
 
@@ -594,15 +594,25 @@ function get_hitokoto() {
         dataType: 'json',
         timeout: 4000,
         success: function (data) {
-            if (data.hitokoto.length + data.from.length > 20 && window.innerWidth < 600) {
+            if (data.hitokoto.length> 13) {
                 get_hitokoto();
             } else {
-                $("#hitokoto_p").html(data.hitokoto + " --" + data.from);
-                $('#hitokoto_p').bumpyText();
+                /* 签名 */
+                elasticText({
+                    id: 'yiyanmotto',
+                    duration: 100,
+                    effact: 'easeOut',
+                    content: data.hitokoto
+                });
             }
         },
         error: function () {
-            $("#hitokoto_p").html("我好像又抽风了~ (゜-゜)つロ ");
+            elasticText({
+                id: 'yiyanmotto',
+                duration: 100,
+                effact: 'easeOut',
+                content: '生活不止眼前的苟且'
+            });
         }
     });
 }

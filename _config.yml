@@ -46,6 +46,15 @@ favicon: /img/favicon.ico
 # 微信公众号
 wechat: /img/wechat.jpg
 
+# 座右铭
+# mymotto:  关闭一言
+#  content: 用此内容代替一言
+mymotto: false
+# content: 我的座右铭
+
+# 网站开启时间
+startime: 2017/10/11
+
 # 设置 Android L Chrome 浏览器状态栏颜色
 color: '#77AAFF'
 
@@ -76,9 +85,6 @@ reward:
 
 # 是否开启搜索
 search: true
-
-# 是否大屏幕下文章页隐藏导航
-hideMenu: false
 
 # 是否开启toc
 # toc: true
@@ -139,6 +145,3 @@ cdn: false
 
 # 设置为 true 将使用 lightbox render 图片
 lightbox: true
-
-# icp备案号  ICP_license: 京ICP备1234556号-1
-ICP_license: 京ICP备1234567号-1
