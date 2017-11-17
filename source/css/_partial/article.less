@@ -266,9 +266,13 @@
 }
 
 .post-content {
+    letter-spacing: 2px;
     padding-bottom: 10px;
     line-height: 1.8;
-
+    font-size: 140%;
+    &.about{
+        padding:0 10px;
+    }
     >.highlight,
     >.image-bubble,
     >pre {
@@ -324,8 +328,7 @@
     }
 
     strong {
-        font-weight: 600;
-        color: @primaryColor;
+        font-weight: bold;
         a {
             border-color: @accentColor
         }
@@ -392,7 +395,7 @@
     h4,
     h5,
     h6 {
-        color: @primaryColor;
+        color: #000;
         &:hover {
             .headerlink {
                 visibility: visible
@@ -536,6 +539,9 @@
 }
 
 @media screen and (max-width:760px) {
+    .post-content{
+        font-size: 100%;
+    }
     .post-widget {
         display: none
     }

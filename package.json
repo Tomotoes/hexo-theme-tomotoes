@@ -1,19 +1,19 @@
 {
-  "name": "hexo-theme-material-indigo",
-  "version": "1.6.16",
-  "description": "Material Design theme for Hexo.",
+  "name": "hexo-theme-tomatoes",
+  "version": "1.0",
+  "description": "Light Design theme for Hexo.",
   "keywords": [
     "hexo",
     "theme",
-    "material design"
+    "Light"
   ],
   "author": {
-    "name": "yusen",
-    "email": "634206017@qq.com"
+    "name": "Simon Ma",
+    "email": "1755811882@qq.com"
   },
   "license": "MIT",
   "repository": {
-    "url": "git+https://github.com/yscoder/hexo-theme-indigo.git",
+    "url": "git+https://github.com/jinmaqaq/hexo-theme-tomatoes.git",
     "type": "git"
   }
 }

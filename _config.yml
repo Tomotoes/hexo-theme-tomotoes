@@ -23,6 +23,7 @@ menu:
     url: /about
 
 # 图标菜单
+# 如果您没有微信公众号 您完全可以更改为 其他的链接 比如微博
 menu2:
   envelope-o:
     text: 邮箱
@@ -54,6 +55,12 @@ mymotto: false
 
 # 网站开启时间
 startime: 2017/10/11
+
+# 首页副标题
+homesubtitle: 在Web全栈的道路上努力前行...
+
+# 归档页标题
+archivestitle: 路漫漫其修远兮
 
 # 设置 Android L Chrome 浏览器状态栏颜色
 color: '#77AAFF'

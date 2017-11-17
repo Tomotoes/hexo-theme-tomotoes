@@ -116,6 +116,7 @@
     line-height: 28px;
     // color: rgba(255, 255, 255, .8);
     color:#999;
+    text-shadow: rgb(150, 147, 147) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
     .transition(.2s);
     &:hover {
         background:#ccc;
@@ -131,7 +132,7 @@
     -moz-user-select: text;
     display: inline-block;
     text-decoration: none;
-    padding: 6px 20px;
+    padding: 6px 15px;
     padding-top:1px;
     background-color: #fff;
     color: #666;
@@ -140,7 +141,8 @@
     margin-top:20px;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
-    
+    font-size:15px !important;
+    text-shadow: rgb(150, 147, 147) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
     &:after{
         content: '';
         display: block;
@@ -212,14 +214,14 @@
     a {
         &:hover,
         &:active {
-            color: @primaryColor;
+            color: #999;
             background: @borderColor;
         }
     }
 
     .current {
         color: #fff;
-        background: @primaryColor;
+        background:#999;
     }
 }
 
@@ -240,7 +242,7 @@
         line-height: 24px;
     }
     .post-more {
-        font-size: 13px;
+        font-size: 13px !important;
     }
     .post-list {
         margin: 0 -16px

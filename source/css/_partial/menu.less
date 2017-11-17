@@ -119,14 +119,19 @@
                 left: 45px;
                 line-height: inherit;
             }
+            &.active{
+                b:after{
+                    content:"◂";
+                }
+            }
         }
         a {
+            color:rgb(114, 114, 114);
             display: block;
             padding-left: 80px;
             height: @navH;
             line-height: @navH;
             font-weight: 500;
-            color: @secondaryTextColor;
             text-decoration: none;
         }
     }
@@ -161,7 +166,7 @@
     font-size: 13px;
     letter-spacing: 2px;
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    text-shadow: rgb(134, 116, 111) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
+    text-shadow: rgb(150, 147, 147) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
 }
 .bumpy-char {
     position: relative;
@@ -191,7 +196,7 @@
     background: #ccc;
     a,
     .icon {
-        color: #000;
+        color: #000 !important;
         span{
             transform: scale(1.4);
         }

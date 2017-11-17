@@ -1,5 +1,13 @@
 <script>
-
+var myhref=location.href
+if(myhref.indexOf('about')!=-1){
+    if(window.innerWidth>600){
+        document.querySelector('.body-wrap').classList.add('about');
+    }
+    else{
+        document.querySelector('.post-content').classList.add('about');
+    }
+}
 if(window.innerWidth > 600){
     /* 3D标题 */
     $('.content-header').on('mousemove', threedee);

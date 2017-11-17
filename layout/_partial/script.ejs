@@ -9,12 +9,11 @@ var BLOG = { ROOT: '<%= config.root %>', SHARE: <%- theme.share %>, REWARD: <%- 
 <!-- jquery -->
 <script src="<%- url_for(theme_js('/js/jquery', cache)) %>"></script>
 
-<!-- main博客脚本 -->
-<script src="<%- url_for(theme_js('/js/main', cache)) %>" ></script>
-
 <!-- 搜索 -->
 <%- partial('search') %>
-<script src="<%- url_for(theme_js('/js/search', cache)) %>" async></script>
+
+<!-- main博客脚本 -->
+<script src="<%- url_for(theme_js('/js/main', cache)) %>" ></script>
 
 <!-- 动画&配置 -->
 <script src="<%- url_for(theme_js('/js/script', cache)) %>" ></script>

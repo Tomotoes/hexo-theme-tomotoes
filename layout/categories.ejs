@@ -12,14 +12,14 @@
                 }
             }) 
         %>
-        <h5 style="margin-left:5%">该分类文章数: <%-category_num %></h5>
+        <h5 class="tag-tip">该分类文章数: <%-category_num %></h5>
         <div class="waterfall">
             <% page.posts.each(function(post){ %>
                 <%- partial('_partial/archive', {post: post, date_format: config.date_format}) %>
             <% }) %>
         </div>
     <% } else { %>
-    	<h5>分类数: <%-site.categories.length %></h5>
+    	<h5 class="tag-tip" style="margin-left:0">分类数: <%-site.categories.length %></h5>
         <div class="card-pool">
             <% site.categories.each(function(category){
                 if(category.length){ %>

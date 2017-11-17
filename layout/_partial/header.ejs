@@ -25,14 +25,20 @@
     
     <div class="container fade-scale">
         <div id="myheader">
-            <h1 class="title"> <% if(!is_archive()){ %><%=title %> <% } %> </h1>
+            <h1 class="title">
+                <% if(is_home()){ %> 
+                    <%=title %>
+                <% } else if(!is_archive()){ %>
+                    &nbsp;
+                <% } %>
+            </h1>
             <h5 class="subtitle">
                 <% if(is_post()){ %>
                     <%- partial('post/head-meta') %>
                 <% } else if(is_home()){ %>
-                    在Web全栈的道路上努力前行...
+                    <%= theme.homesubtitle %>
                 <% } else if(is_archive()){ %>
-                    <h1 style="font-size:60px;">路漫漫其修远兮</h1>
+                    <h1 class="archivestitle"><%= theme.archivestitle %></h1>
                 <% } else if (page.layout === 'page' && page.description) {%>
                     <%- page.description %>
                 <% } %>
@@ -40,7 +46,6 @@
         </div>
     </div>
     
-
     <%- partial('tags-bar', {
         type: hdClass.split('-')[0]
     }) %>

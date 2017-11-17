@@ -8,7 +8,7 @@
   %>
   <time class="my-post-time">
       <%- post.date.format(format) %>
-  </time><br/>
+  </time><br id="break"/>
     <a class="post-title-link my-post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
   </article>
 </div>
