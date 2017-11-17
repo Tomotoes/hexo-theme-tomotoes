@@ -41,8 +41,32 @@
         }
         +#main {
             .container {
+                width: 98%;
+            }
+            #menu-toggle {
+                opacity: 1;
+                transition: all 1s;
+            }
+        }
+    }
+    &.show{
+        +#main {
+            padding-left: 0;
+            .header-title {
+                /*菜单关闭时 标题关闭会停留*/
                 .transition(.4s, cubic-bezier(.18, .81, .3, .89));
-                width: 101%;
+                margin-right: -3%;
+            }
+            #menu-toggle {
+                opacity: 1;
+                transition: all 1s;
+            }
+        }
+    }
+    &.hastocshow{
+        +#main {
+            .container {
+                width: 98%;
             }
             #menu-toggle {
                 opacity: 1;

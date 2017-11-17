@@ -90,6 +90,9 @@ reward:
   alipay: /img/alipay.png     #支付宝，关闭设为 false
   wechatalipay: /img/dog.png  #点击打赏时显示的图片
 
+# 是否大屏幕下文章页隐藏导航
+hideMenu: true
+
 # 是否开启搜索
 search: true
 

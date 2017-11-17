@@ -1,10 +1,13 @@
 <script>
-var myhref=location.href
-if(myhref.indexOf('about')!=-1){
-    if(window.innerWidth>600){
+
+/* 关于页面 布局优化 */
+if(location.href.indexOf('about')!=-1){
+    if(window.innerWidth>800){
+        /*PC设备 关于页面的内容位置会上升*/
         document.querySelector('.body-wrap').classList.add('about');
     }
     else{
+        /*移动设备 内容会出现内边距*/
         document.querySelector('.post-content').classList.add('about');
     }
 }

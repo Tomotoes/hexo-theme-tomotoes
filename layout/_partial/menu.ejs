@@ -1,4 +1,4 @@
-<aside id="menu">
+<aside id="menu" <% if((is_post() || page.layout === 'page') && theme.hideMenu){ %>class="hide"<% } %> >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
