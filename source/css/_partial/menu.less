@@ -104,19 +104,9 @@
         -moz-transition: 500ms;
         -webkit-transition: 500ms;
         box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px #f6f6f6;
-        -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px #f6f6f6;
-        &:hover {
-            transform: none;
-            -o-transform: none;
-            -ms-transform: none;
-            -moz-transform: none;
-            -webkit-transform: none;
-            box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px #f6f6f6;
-            -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px #f6f6f6;
-        }
     }
     .introduce {
-        margin: 1em 0 0; // color: @textPrimaryColor;
+        margin: 1em 0 0;
         .nickname {
             font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
             font-weight: bold;
@@ -155,7 +145,6 @@
             padding-left: 80px;
             height: @navH;
             line-height: @navH;
-            font-weight: 500;
             text-decoration: none;
         }
     }
@@ -170,7 +159,6 @@
             display: block;
             .icon {
                 left: 30px;
-                // position: absolute;
                 color: #6d819c;
             }
             a {
@@ -189,8 +177,9 @@
     color: #999;
     font-size: 13px;
     letter-spacing: 2px;
-    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    text-shadow: rgb(150, 147, 147) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
+    font-family: Josefin Sans,PingFang SC,Microsoft JhengHei,Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    text-shadow: rgb(180, 177, 177) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
 }
 .bumpy-char {
     position: relative;
@@ -208,7 +197,8 @@
     height: 1em;
 }
 #menuitems li a span {
-    font-weight: 700;
+    font-size:16px;
+    font-weight: 600;
     position: relative;
     display: inline-block;
     -webkit-transition: -webkit-transform 0.3s;
@@ -216,11 +206,10 @@
     transition: transform 0.3s;
 }
 #menuitems li:hover {
-    box-shadow: 0 0 10px 1px #ccc;
     background: #ccc;
     a,
     .icon {
-        color: #000 !important;
+        color: #000;
         span{
             transform: scale(1.4);
         }

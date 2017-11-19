@@ -1,14 +1,21 @@
-<div class="waterfall-item">
-  <article class="archive-article">
-  <%
-    var format='YYYY-MM-DD';
-    if(is_archive()){
-      format='MM-DD';
-    }
-  %>
-  <time class="my-post-time">
-      <%- post.date.format(format) %>
-  </time><br id="break"/>
-    <a class="post-title-link my-post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+<article class="archive-article" onclick="location.href='<%- url_for(post.path) %>'">
+    <div class="archive-article-date">
+      <%
+          var format='YYYY-MM-DD';
+          if(is_archive()){
+            format='MM-DD';
+          }
+      %>
+      <time class="my-post-time">
+        <i class="icon icon-lg icon-file-text-o"></i>
+        &nbsp;
+          <%- post.date.format(format) %>
+      </time>
+    </div>
+    <div class="archive-article-inner">
+      <%- partial('post/title', {
+        hasLink: true
+      }) %>
+      <%- partial('post/tag') %>
+    </div>
   </article>
-</div>

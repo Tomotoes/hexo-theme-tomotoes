@@ -194,24 +194,6 @@
     }
 }
 
-@media screen and(max-width: 480px) {
-    .page-content {
-        margin-left: -16px;
-        margin-right: -16px;
-        .column {
-            display: block;
-        }
-    }
-    .page-about-me {
-        padding: 15px 20px!important;
-        .avatar {
-            margin-right: 20px;
-            width: 60px;
-            height: 60px;
-        }
-    }
-}
-
 .page-modal {
     display: none;
     position: fixed;
@@ -249,6 +231,31 @@
         line-height: 20px;
         &:hover, &:active {
             color: rgba(0, 0, 0, .4);
+        }
+    }
+}
+
+@media screen and(max-width: 760px) {
+    .page-modal{
+       .wechatshare{
+           font-size:12px;
+       }
+    }
+}
+@media screen and(max-width: 480px) {
+    .page-content {
+        margin-left: -16px;
+        margin-right: -16px;
+        .column {
+            display: block;
+        }
+    }
+    .page-about-me {
+        padding: 15px 20px!important;
+        .avatar {
+            margin-right: 20px;
+            width: 60px;
+            height: 60px;
         }
     }
 }

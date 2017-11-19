@@ -164,7 +164,9 @@
             this.onHide = noop;
             this.hide = function () {
                 _this.onHide();
-                mask.classList.remove('in');
+                if(w.innerWidth>1200 || target!='#wechat'){
+                    mask.classList.remove('in');
+                }
                 _this.$modal.classList.remove('in');
                 setTimeout(function () {
                     _this.$modal.classList.remove('ready');

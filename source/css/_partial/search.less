@@ -54,17 +54,17 @@
     top: 50px;
     right: 65px;
     z-index: 36;
-    width: 400px;
+    width: 323px;
     max-height: 70%;
     overflow-y: auto;
     background: #fff;
-    border-radius: 2px;
+    border-radius: 5px;
     box-shadow: @boxShadow;
     opacity: 0;
     visibility: hidden;
     .transform(translateY(-50%) scale(.5));
     .transition(.3s, ease-in);
-
+    
     &.in {
         opacity: 1;
         visibility: visible;
@@ -75,39 +75,67 @@
 .search-result {
     margin: 0;
     padding: 0;
+    text-align:center;
     .item {
+    
         line-height: 1.6em;
         border-top: 1px solid @borderColor;
         &:first-child {
             border-top: none;
         }
-        a {
-            padding: 10px 20px;
+        vertical-align: middle;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        background: #2098d1;
+        -webkit-transition-property: color;
+        transition-property: color;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 50%;
+            transform-origin: 50%;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-duration: .3s;
+            transition-duration: .3s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out
         }
+        
+        &:active,
+        &:focus,
+        &:hover {
+            color: #fff
+        }
+        
+        &:active:before,
+        &:focus:before,
+        &:hover:before {
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0)
+        }
+        
     }
     .title {
-        color: #4158ca;
-        &:hover {
-            color: @lightPrimaryColor
-        }
+        height:40px;
+        line-height:50px;
+        font-size:20px;
+        .hoverLine(#fff);
     }
-
-    .tags span, .time {
-        font-size: 13px;
-        color: @secondaryTextColor;
-    }
-
-    .tags {
-        margin-right: 1em;
-        span {
-            margin-right: .5em;
-        }
-    }
-
-    .time {
-        padding-left: 1em;
-    }
-
     .tips {
         padding: 30px 0;
         text-align: center;

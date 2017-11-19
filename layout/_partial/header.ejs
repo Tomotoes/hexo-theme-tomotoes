@@ -28,26 +28,33 @@
             <h1 class="title">
                 <% if(is_home()){ %> 
                     <%=title %>
-                <% } else if(!is_archive()){ %>
-                    &nbsp;
                 <% } %>
             </h1>
             <h5 class="subtitle">
                 <% if(is_post()){ %>
-                    <%- partial('post/head-meta') %>
                 <% } else if(is_home()){ %>
                     <%= theme.homesubtitle %>
                 <% } else if(is_archive()){ %>
                     <h1 class="archivestitle"><%= theme.archivestitle %></h1>
                 <% } else if (page.layout === 'page' && page.description) {%>
                     <%- page.description %>
+                <% } else { %>
+                    <h1 id="pagetitle" class="archivestitle"></h1>
+                    <script>
+                        if(location.href.indexOf('about')!=-1){
+                            pagetitle.textContent = '<%= theme.aboutitle %>';
+                        }else if(location.href.indexOf('tags')!=-1||location.href.indexOf('categories')!=-1){
+                            var a=location.href.substring(location.href.length-5,location.href.length-1);
+                            if(a==='tags'){
+                                pagetitle.textContent = '<%= theme.tagstitle %>';
+                            }else if(a==='ries'){
+                                pagetitle.textContent = '<%= theme.categoriestitle %>';
+                            }
+                        }
+                    </script>
                 <% } %>
             </h5>
         </div>
     </div>
-    
-    <%- partial('tags-bar', {
-        type: hdClass.split('-')[0]
-    }) %>
 
 </header>

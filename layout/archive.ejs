@@ -24,7 +24,10 @@
             y = ny;
          %>
             <% if(i > 0){%></div> <% } %>
-            <h3 class="archive-separator"><%=dt.format('YYYY')%></h3>
+            <h3 class="archive-separator">
+                <i class="icon icon-lg icon-folder-o"></i>&nbsp;&nbsp;
+                <%=dt.format('YYYY')%>
+            </h3>
             <div class="waterfall">
     <%    } %>
 

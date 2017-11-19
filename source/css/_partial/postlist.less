@@ -19,9 +19,6 @@
     color: #37474f;
     .hoverLine(#37474f);
     font-size:30px;
-    &:hover{
-        color:#37474f;
-    }
 }
 
 .post-meta {
@@ -114,9 +111,8 @@
     display: block;
     padding: 0 16px;
     line-height: 28px;
-    // color: rgba(255, 255, 255, .8);
-    color:#999;
-    text-shadow: rgb(206, 206, 206) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
+    color:rgb(133, 133, 133);
+    // text-shadow:  rgb(161, 161, 161) 0px 0px 1px;
     .transition(.2s);
     &:hover {
         background:#ccc;
@@ -139,9 +135,10 @@
     border: 2px solid #666;
     border-radius: 6px;
     margin-top:20px;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
     font-size:15px !important;
+
     &:after{
         content: '';
         display: block;
@@ -225,7 +222,9 @@
 
 @media screen and (max-width:760px) {
     .post-count-custom{
-        text-align:center;   
+        margin:0; 
+        margin-top:-10px; 
+        font-size:13px;
     }
     .post-meta {
         >*:not(:first-child):not(.post-count) {
@@ -237,7 +236,7 @@
     }
     .post-title {
         font-size: 20px;
-        line-height: 24px;
+        line-height: 25px;
     }
     .post-more {
         font-size: 13px !important;

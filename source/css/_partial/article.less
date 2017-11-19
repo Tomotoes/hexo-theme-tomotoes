@@ -178,13 +178,56 @@
     .next {
         outline:none;
         height:100%;
-        border-radius: 20px;
+        border-radius: 30px;
         text-align:center;
         width: 45%;
-        background:#e3dede;
-        
+        background:#f5f4f4;
+       
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        overflow: hidden;
+        background: #e1e1e1;
+        -webkit-transition-property: color;
+        transition-property: color;
+        -webkit-transition-duration: .5s;
+        transition-duration: .5s
     }
-  
+    .prev:before,.next:before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #ccc;
+        border-radius: 100%;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: .5s;
+        transition-duration: .5s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out
+    }
+    .prev:hover,.next:hover{
+        .title{
+            color:#000;
+        }
+    }
+    .prev:active:before,.next:active:before,
+    .prev:hover:before,.next:hover:before {
+        -webkit-transform: scale(2);
+        transform: scale(2)
+    }
 
     .title{
         letter-spacing: 2px;
@@ -195,14 +238,6 @@
         transition: color 0.3s;
         .hoverLine(#000);
     }
-    
-    .title:hover,
-    .title:focus {
-        color: #000;
-    }
-    
-   
-    
 }
 
 .post-nav-link {
@@ -563,13 +598,14 @@
             margin-top: -40px;
             padding: 20px 12px;
             background: #fff;
-            box-shadow: 0 1px 4px 0 rgba(0,0,0,.16);
+            // box-shadow: 0 1px 4px 0 rgba(0,0,0,.16);
             border-radius: 2px;
         }
     }
 
     .post-card-title {
-        display: none
+        font-size:30px;
+        margin-bottom:8%;
     }
 
     .post-nav {
@@ -582,6 +618,14 @@
             background: #fff;
             border-bottom: 1px solid @borderColor;
             box-shadow: @boxShadow;
+        }
+        .prev:hover,.next:hover{
+            .title{
+                color:#999;
+            }
+        }
+        .prev:before,.next:before{
+            display: none;
         }
         h4 {
             font-size: 16px;

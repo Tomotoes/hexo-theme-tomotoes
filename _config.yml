@@ -12,12 +12,12 @@ menu:
   archives:
     text: 归 档
     url: /archives
-  tags:
-    text: 标 签
-    url: /tags
   th-list:
     text: 分 类
     url: /categories
+  tags:
+    text: 标 签
+    url: /tags
   smile-o:
     text: 关 于
     url: /about
@@ -61,6 +61,15 @@ homesubtitle: 在Web全栈的道路上努力前行...
 
 # 归档页标题
 archivestitle: 路漫漫其修远兮
+
+# 标签页标题
+tagstitle: 不积小流无以成江海
+
+# 分类页标题
+categoriestitle: 不积跬步无以至千里
+
+# 关于页标题
+aboutitle: 一个坏掉的番茄 
 
 # 设置 Android L Chrome 浏览器状态栏颜色
 color: '#77AAFF'

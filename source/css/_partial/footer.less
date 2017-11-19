@@ -1,8 +1,7 @@
 .footer {
     text-align:center;
-    font-size: 15px;
-    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    text-shadow: rgb(134, 116, 111) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
+    font-size: 14px;
+    text-shadow: rgb(160, 156, 155) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
     color:#999;
    
     a{
@@ -33,9 +32,8 @@
         z-index: 999 !important;
     }
     &.toc{
-        margin-right:21%;
+        margin-right:21% !important;
     }
-   
 }
 .power{
     margin:3px auto !important;
@@ -65,18 +63,24 @@
         }
     }
 }
-
-@media screen and (max-width:760px) {
+@media screen and (max-width:800px) {
     .footer{
         &.toc{
-            margin-right:0%;
+            margin-right:21% !important;
         }
-       
+    }
+}
+@media screen and (max-width:600px) {
+    .footer{
+        &.toc{
+            margin-right:0% !important;
+        }
+        margin-right:0% ;
     }
     .footer{
-        font-size:11px;
+        font-size:13px;
         .icon{
-            font-size: 11px;
+            font-size: 13px;
         }
     }
     .license{
