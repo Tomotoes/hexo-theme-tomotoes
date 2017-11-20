@@ -114,14 +114,14 @@ toc:
 postMessage: 文章标题：  <a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.title %></a><br>创建时间：  <%- date(page.date) %><br>更新时间：  <%- date(page.updated) %>
 
 # 百度统计，如要开启，改为你的 key
-baidu_tongji: ac588a7c3137281d3c4f1032a9e4e46e
+baidu_tongji: false
 
 # 腾讯分析，如要开启，输入站点id
 tajs: false
 
 # google
 google_analytics: false
-google_site_verification: googled42866737c84d57b.html
+google_site_verification: false
 
 # less
 less:
@@ -131,16 +131,16 @@ less:
 
 # 是否使用 gitment，https://github.com/imsun/gitment
 gitment: false
-# owner: JinmaQAQ
-# repo: JinmaQAQ.github.io
-# client_id: 7ec15d62948d49653470
-# client_secret: d6b408c735aff57de9a9d3ed58742f54b99f21f2
+# owner: xxx
+# repo: xxx
+# client_id: xxx
+# client_secret: xxx
 
-gitalk: 
-  owner: JinmaQAQ
-  repo: JinmaQAQ.github.io
-  client_id: 7ec15d62948d49653470
-  client_secret: d6b408c735aff57de9a9d3ed58742f54b99f21f2
+gitalk: false
+# owner: xxx
+# repo: xxx
+# client_id: xxx
+# client_secret: xxx
 
 # Valine Comment system. https://valine.js.org
 valine:
