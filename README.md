@@ -21,7 +21,7 @@ hexo-theme-tomotoes
 6. 基于静态数据的站内搜索，无第三方侵入。
 7. 支持文章打赏。*（好像就有人打赏似的）*
 8. **以上都是yscoder的成果，(●ˇ∀ˇ●)！**
-9. 更多令人舒服动画特效，以及漂亮的UI界面。（[Preview](http://tomotoes.com/)）
+9. 更多令人舒服动画特效，以及漂亮的UI界面。
 10. 更多已封装的自定义选项 *（取舍动画，甚至改变各个页面的标题）*。
 11. 支持多种评论插件
 12. 一言签名
@@ -32,10 +32,10 @@ hexo-theme-tomotoes
 
 ## Useage
 
-[文档 | Document](https://github.com/yscoder/hexo-theme-tomotoes/wiki)
+[文档 | Document](https://github.com/jinmaqaq/hexo-theme-tomotoes/wiki)
 
 ## ChangeLog
 
 升级前请仔细查看更改内容，如非必要可不升级。
 
-[ChangeLog](https://github.com/yscoder/hexo-theme-tomotoes/releases)
+[ChangeLog](https://github.com/jinmaqaq/hexo-theme-tomotoes/releases)
