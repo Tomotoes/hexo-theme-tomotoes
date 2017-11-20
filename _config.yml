@@ -29,13 +29,13 @@ menu2:
     text: 邮箱
     url: mailto:1755811882@qq.com
     target: _parent
-  weixin:
-    text: 欢迎关注全栈之路公众号！
-    url: javascript:;
-    target: false
   github:
     text: github
     url: https://github.com/JinmaQAQ
+    target: _blank
+  weibo:
+    text: weibo
+    url: https://weibo.com/u/6179399347
     target: _blank
 
 # 你的头像url
@@ -44,8 +44,6 @@ avatar: /img/avatar.jpg
 avatar_link: /
 # favicon
 favicon: /img/favicon.ico
-# 微信公众号
-wechat: /img/wechat.jpg
 
 # 座右铭
 # mymotto:  关闭一言

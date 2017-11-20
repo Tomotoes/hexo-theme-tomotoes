@@ -164,9 +164,7 @@
             this.onHide = noop;
             this.hide = function () {
                 _this.onHide();
-                if(w.innerWidth>1200 || target!='#wechat'){
-                    mask.classList.remove('in');
-                }
+                mask.classList.remove('in');
                 _this.$modal.classList.remove('in');
                 setTimeout(function () {
                     _this.$modal.classList.remove('ready');
@@ -234,14 +232,6 @@
                     }
                 })
             }
-        },
-        weixin: function () {
-            var modal = new this.modal('#wechat');
-            var wechat_img = $('#wechat_img');
-            $('#wechat_icon').addEventListener(even, function () {
-                wechat_img.src = wechat_img.dataset.img;
-                modal.toggle()
-            });
         },
         tabBar: function (el) {
             el.parentNode.parentNode.classList.toggle('expand')
@@ -447,7 +437,6 @@
     if (w.BLOG.REWARD) {
         Blog.reward()
     }
-    Blog.weixin();
     Blog.noop = noop;
     Blog.even = even;
     Blog.$ = $;
