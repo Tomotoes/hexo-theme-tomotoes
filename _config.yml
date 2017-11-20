@@ -31,7 +31,7 @@ menu2:
     target: _parent
   github:
     text: github
-    url: https://github.com/JinmaQAQ
+    url: https://github.com/tomotoes
     target: _blank
   weibo:
     text: weibo
