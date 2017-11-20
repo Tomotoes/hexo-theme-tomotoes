@@ -142,6 +142,18 @@ gitalk:
   client_id: 7ec15d62948d49653470
   client_secret: d6b408c735aff57de9a9d3ed58742f54b99f21f2
 
+# Valine Comment system. https://valine.js.org
+valine:
+  enable: false # 如果你想使用valine，请将值设置为 true
+  appId:  # your leancloud appId
+  appKey:  # your leancloud appKey
+  notify: false # Mail notify
+  verify: false # Verify code
+  avatar: mm # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
+  placeholder: Just go go # Comment Box placeholder
+  guest_info: nick,mail,link # Comment header info
+  pageSize: 10 # comment list page size
+
 # 规范网址
 # 让搜索引擎重定向你的不同域名、不同子域、同域不同目录的站点到你期望的路径
 # https://support.google.com/webmasters/answer/139066

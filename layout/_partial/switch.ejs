@@ -1,12 +1,11 @@
 <script>
 
 /* 关于页面 布局优化 */
-if(location.href.indexOf('about')!=-1){
-    if(window.innerWidth<800){
+if(location.href.indexOf('about')!=-1&&window.innerWidth<1200){
         /*移动设备 内容会出现内边距*/
         document.querySelector('.post-content').classList.add('about');
-    }
 }
+
 if(window.innerWidth > 600){
     /* 3D标题 */
     $('.content-header').on('mousemove', threedee);
@@ -56,7 +55,7 @@ G($('.post-content'), location.href, '<%- config.author %>');
 /* 控制台 */
 if (window.console && window.console.log) {
     setTimeout(function () {
-        console.log('\n %c 全栈之路 %c  © Simon Ma  http://tomotoes.com \n\n', 'color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;', 'color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;');
+        console.log('\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n', 'color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;', 'color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;');
     }, 0);
 }
 </script>
