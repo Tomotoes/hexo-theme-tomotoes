@@ -6,11 +6,6 @@ hexo-theme-tomotoes
 
 > Nicholas Zhao Si 说：“这是一款让人感到舒服的主题 **[Preview](http://tomotoes.com/)**”
 
-## 特此感谢
-
-- [yscoder](http://imys.net/)：indigo主题作者
-- [OhYee](https://www.oyohyee.com)：同名主题indigo作者  
-
 ## Feature
 1. 仅支持 IE10+ 等现代浏览器 *（向下兼容需要做大量工作，我就是懒啊）*。
 2. 使用 Less 作为 css 预处理器，需要安装 `hexo-renderer-less`*（Get Less）*。
@@ -39,15 +34,14 @@ hexo-theme-tomotoes
 
 [ChangeLog](https://github.com/tomotoes/hexo-theme-tomotoes/releases)
 
-## 其他
+
+## Other
 
 上个月自从接触个人博客，便一发不可收拾，反复折腾了一个多月。  
 
-在此期间，虽身心俱乏，但最终实现了自己的大部分预期功能，心里还有点小成就呢。
+在此期间 可谓身心俱乏，但最终还是实现了大部分预期功能。  
 
-温馨提示：暗色主题，无刷新网站，这两个别乱碰，详情就参见 [常见问题](https://github.com/tomotoes/hexo-theme-tomotoes/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
 
-如果真的喜欢这款主题，希望大家能在下方评论区提出你的建议和想法。  
+如果你真的喜欢这款主题，希望能在提出你的建议和想法。  
 
-另外，请大家尊重下我一个小小博主的劳动成果，保留页脚下面的`tomotoes`超链接。其他，随意啦~
-
+另外，请尊重下我一个小小博主的劳动成果，保留页脚下面的`tomotoes`超链接，点个star。其他，随意啦~
