@@ -594,7 +594,7 @@ function get_hitokoto() {
         dataType: 'json',
         timeout: 4000,
         success: function (data) {
-            if (data.hitokoto.length> 13) {
+            if (data.hitokoto.length> 12) {
                 get_hitokoto();
             } else {
                 /* 签名 */

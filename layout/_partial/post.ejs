@@ -5,8 +5,12 @@
     <div class="post-card">
         <h1 class="post-card-title"><%- post.title %></h1>
         <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
             <%- partial('post/date', {date_format: config.date_format}) %>
+            <br id="mybreak"/>
             <%- partial('post/category') %>
+            <i>·</i>
             <%- partial('plugins/page-visit') %>
         </div>
         <div class="post-count-custom">

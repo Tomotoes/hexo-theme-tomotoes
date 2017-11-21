@@ -25,7 +25,6 @@
             padding-left: 0;
             .header-title {
                 /*菜单关闭时 标题关闭会停留*/
-                .transition(.4s, cubic-bezier(.18, .81, .3, .89));
                 margin-right: -3%;
             }
             #menu-toggle {
@@ -54,7 +53,6 @@
             padding-left: 0;
             .header-title {
                 /*菜单关闭时 标题关闭会停留*/
-                .transition(.4s, cubic-bezier(.18, .81, .3, .89));
                 margin-right: -3%;
             }
             #menu-toggle {
@@ -125,17 +123,42 @@
         min-height: ~"calc(100% - 115px)";
         list-style: none;
         line-height: @navH;
+        overflow: hidden;
         li {
             padding: 0 @menuPadding;
-            .icon {
+            .icon:not(.icon-caret-left){
                 position: absolute;
                 top: 0;
                 left: 45px;
                 line-height: inherit;
             }
+            .icon-caret-left{
+                display:none;
+            }
             &.active{
-                b:after{
-                    content:"◂";
+                .icon-caret-left{
+                    transform:scale(.7);
+                    padding-left:40px;
+                    display:inline-block;
+                }
+            }
+            span{
+                font-size:16px;
+                font-weight: 600;
+                position: relative;
+                display: inline-block;
+                -webkit-transition: -webkit-transform 0.3s;
+                -moz-transition: -moz-transform 0.3s;
+                transition: transform 0.3s;
+            }
+            &:not(.nav2li):hover{
+                background: #ccc;
+                a,
+                .icon{
+                    color: #000;
+                    span{
+                        transform: scale(1.4);
+                    }
                 }
             }
         }
@@ -149,10 +172,10 @@
         }
     }
     .nav2 {
-        
         border-top: 1px solid #e0e0e0;
         padding: 0;
         li {
+            position: relative;
             top: 8px;
             margin: 0;
             float: left;
@@ -164,6 +187,15 @@
             a {
                 padding: 10px;
             }
+            &:hover{
+                .icon {
+                    color: #000;
+                    transform: scale(1.3);
+                    transition: all 0.1s;
+                    -webkit-transition: all 0.1s;
+                    -moz-transition: all 0.1s;
+                }
+            }
         }
     }
 }
@@ -171,51 +203,17 @@
     margin-top: 24.2px;
     white-space: nowrap;
     display: inline-block;
+    font-weight: bold;
+    font-family: Josefin Sans,PingFang SC,Microsoft JhengHei,Helvetica,Arial,sans-serif;
+    text-shadow: rgb(180, 177, 177) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
 }
 /*文字音效*/
 .motto .eBox span {
     color: #999;
-    font-size: 13px;
     letter-spacing: 2px;
-    font-family: Josefin Sans,PingFang SC,Microsoft JhengHei,Helvetica,Arial,sans-serif;
-    font-weight: bold;
-    text-shadow: rgb(180, 177, 177) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
 }
 .bumpy-char {
     position: relative;
-}
-#nav2icons li:hover {
-    .icon {
-        color: #000;
-        transform: scale(1.3);
-        transition: all 0.1s;
-        -webkit-transition: all 0.1s;
-        -moz-transition: all 0.1s;
-    }
-}
-#menuitems li a {
-    overflow: hidden;
-    padding: 0 4px;
-    height: 1em;
-}
-#menuitems li a span {
-    font-size:16px;
-    font-weight: 600;
-    position: relative;
-    display: inline-block;
-    -webkit-transition: -webkit-transform 0.3s;
-    -moz-transition: -moz-transform 0.3s;
-    transition: transform 0.3s;
-}
-#menuitems li:hover {
-    background: #ccc;
-    a,
-    .icon {
-        color: #000;
-        span{
-            transform: scale(1.4);
-        }
-    }
 }
 
 #menu-toggle {

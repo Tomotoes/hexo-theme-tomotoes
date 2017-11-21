@@ -11,10 +11,13 @@
 }
 
 .post-toc-wrap {
+    display:none;
     position: fixed;
     overflow-x: hidden;
     width: 20%;
+    height:110%;
     &.fixed {
+        display:block;
         top: @headerH + 20px;
         bottom: 140px;
         overflow-y: auto;
@@ -37,6 +40,7 @@
     padding-left: 10px;
 }
 .post-toc {
+    text-shadow: rgb(214, 214, 214) 0px 0px 1px;
     display: inline-block;
     padding: 0;
     font-size: 13px;
@@ -45,13 +49,10 @@
     }
 }
 .post-toc-item {
-    font-weight: 400;
-    color: @secondaryTextColor;
-
+    color: rgb(85, 85, 85);
     &.active {
         >.post-toc-link {
-            font-weight: 600;
-            color: #4158ca;
+            color: #000;
             &:before {
                 background: rgba(0, 0, 0, .06);
             }
@@ -70,9 +71,18 @@
     line-height: 1.5rem;
     color: inherit;
     word-break: break-all;
+    text-decoration: none;
 
     &:hover {
-        opacity: .8;
+        text-decoration: none;
+        color:#000;
+        &:before {
+            background: rgba(0, 0, 0, .06);
+        }
+
+        &:after {
+            border-left: 3px solid #4158ca;
+        }
     }
 
     &:before,
@@ -84,7 +94,7 @@
         right: 0;
         width: 100%;
         height: 100%;
-        transition:  all 0.3s ease-in;
+        transition:  all 0.2s ease-in;
     }
 }
 
@@ -108,22 +118,37 @@
    
     border: 1px solid #eee;
     .post-meta {
-        color:#ccc;
+        text-shadow: rgb(202, 202, 202) 0px 0px 1px;
         text-align:center;
         margin-top: 8px;
         a{
+            border-bottom: 1px dotted lighten(#999, 20%);
+            &:after{
+                border-bottom: .0625rem solid #999;
+            }
+        }
+    }
+    .post-content{
+        a{
+            border-bottom: 1px dotted lighten(@accentColor, 20%);
+            &:after{
+                border-bottom: .0625rem solid @accentColor;
+            }
+        }
+    }
+    .post-content,.post-meta{
+        a {
             position: relative;
             white-space: normal;
-            border-bottom: .0625rem dashed #ccc;
             background: transparent;
             text-decoration: none;
         }
+    
         a:after {
             position: absolute;
             bottom: -0.0625rem;
             left: 100%;
             width: 0;
-            border-bottom: .0625rem solid #999;
             content: "";
             transition: width 350ms, left 350ms;
         }
@@ -136,37 +161,10 @@
             outline: 0;
         }
     }
-    .post-content{
-        a:not(.headerlink) {
-            position: relative;
-            white-space: normal;
-            border-bottom: .0625rem dashed @accentColor;
-            background: transparent;
-            text-decoration: none;
-        }
-    
-        a:not(.headerlink):after {
-            position: absolute;
-            bottom: -0.0625rem;
-            left: 100%;
-            width: 0;
-            border-bottom: .0625rem solid @accentColor;
-            content: "";
-            transition: width 350ms, left 350ms;
-        }
-    
-        a:not(.headerlink):hover:after {
-            left: 0;
-            width: 100%;
-            transition: width 350ms;
-            text-decoration: underline;
-            outline: 0;
-        }
-    }
   
 }
 .post-card-title {
-    font-size: 32px;
+    font-size: 30px;
     text-align:center;
 }
 .post-nav {
@@ -213,8 +211,8 @@
         transform: scale(0);
         -webkit-transition-property: transform;
         transition-property: transform;
-        -webkit-transition-duration: .5s;
-        transition-duration: .5s;
+        -webkit-transition-duration: .8s;
+        transition-duration: .8s;
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out
     }
@@ -260,6 +258,7 @@
     font-size: 14px;
 
     .content {
+        text-shadow: rgb(207, 207, 207) 0px 0px 1px;
         margin-bottom: 1em;
         padding: 20px 30px;
         word-break: break-all;
@@ -271,9 +270,8 @@
     footer {
         float: right;
 
-        a {
+        div{
             position: relative;
-            display: block;
             overflow: hidden;
             padding: 0 16px 0 42px;
             height: 28px;
@@ -289,6 +287,29 @@
             width: 28px;
             height: 28px;
             border-radius: 50%;
+        }
+    }
+    a{
+        position: relative;
+        white-space: normal;
+        background: transparent;
+        text-decoration: none;
+        &:after {
+            position: absolute;
+            bottom: -0.0625rem;
+            left: 100%;
+            width: 0;
+            border-bottom: .0625rem solid #000;
+            content: "";
+            transition: width 350ms, left 350ms;
+        }
+    
+        &:hover:after {
+            left: 0;
+            width: 100%;
+            transition: width 350ms;
+            text-decoration: underline;
+            outline: 0;
         }
     }
 }
@@ -336,9 +357,10 @@
         margin-left: -1em;
         padding-right: 5px;
         color: @lightPrimaryColor;
-
-        &:before {
-            content: "#";
+        border-bottom:none !important;
+        &:hover{
+            text-decoration: none;
+            border: none;
         }
     }
 
@@ -350,20 +372,15 @@
     li {
         a {
             color: @accentColor;
-            border-bottom: 1px dotted lighten(@accentColor, 20%);
             word-break: break-all;
-
-            &:hover,
-            &:active {
-                text-decoration: none;
-                border-bottom-style: solid;
-                opacity: .7;
-            }
         }
     }
 
     strong {
         font-weight: bold;
+        color:rgb(39, 39, 39);
+        text-shadow: rgb(158, 158, 158) 0px 0px 1px;
+        
         a {
             border-color: @accentColor
         }
@@ -373,37 +390,19 @@
         color: @secondaryTextColor
     }
 
-    h1 {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    h3 {
-        font-size: 20px;
-    }
-
-    h4 {
-        font-size: 18px;
-    }
-
-    h5 {
-        font-size: 16px;
-    }
-
-    h6 {
-        font-size: 14px;
-    }
-
     h1,
     h2,
     h3,
     h4,
-    h5 {
+    h5,
+    h6{
+        margin-left:10px;
+        font-weight: bold;
+        color:@primaryTextColor;
         padding-top: @headerH;
         margin-top: @headerH * -1;
+        padding-bottom:8px;
+        text-shadow: rgb(187, 186, 186) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
     }
 
     h1,
@@ -423,14 +422,13 @@
     .video-container iframe {
         max-width: 100%;
     }
-
+    
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        color: #000;
         &:hover {
             .headerlink {
                 visibility: visible
@@ -451,7 +449,6 @@
 
     ol,
     ul {
-        font-size: 14px;
         line-height: 30px;
     }
 
@@ -463,11 +460,10 @@
 
     blockquote {
         position: relative;
-        padding: 16px 20px;
+        padding: 6px 14px;
         border-left: 3px solid #ccc;
-        color: lighten(@primaryTextColor, 30%);
+        color: #999;
         background: @codeBg;
-        font-size: 14px;
         border-radius: 0 2px 2px 0;
 
         p {
@@ -477,7 +473,6 @@
         footer {
             margin-top: 10px;
             text-align: right;
-            font-size: 80%;
         }
     }
 
@@ -547,10 +542,8 @@
 
     p code,
     li code {
-        color: @accentColor;
         line-height: 1;
         margin: 0 4px;
-        font-size: 80%;
         padding: 3px 5px;
         border: 1px solid #eee;
         border-radius: 2px;
@@ -590,7 +583,6 @@
     .post-card {
         position: relative;
         margin: -20px -16px 0;
-        //margin-top: -50px;
         border-radius: 0;
         padding: 16px;
 
@@ -598,13 +590,12 @@
             margin-top: -40px;
             padding: 20px 12px;
             background: #fff;
-            // box-shadow: 0 1px 4px 0 rgba(0,0,0,.16);
             border-radius: 2px;
         }
     }
 
     .post-card-title {
-        font-size:30px;
+        font-size:27px;
         margin-bottom:8%;
     }
 

@@ -22,26 +22,26 @@
 }
 
 .post-meta {
-    font-family:"黑体";
-    color: #ccc;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #999;
     margin: 0 0 10px;
-    line-height: 14px;
+    line-height: 19px;
     font-size: 13px;
-    font-weight: bold;
-    color: @secondaryTextColor;
     overflow: hidden;
-    >*:not(:first-child):not(.post-count) {
-        &:before {
-            content: "·";
-        }
+    a{
+        color:#999;
+    }
+    .icon{
+        margin-bottom:10px;
+        font: normal normal normal 14px/1 FontAwesome;
+    }
+    i{
+        margin: 0 4px;
     }
 }
-
 .post-count-custom{
-    padding-bottom:10px;
-    border-bottom:1px dashed #ccc;
-    margin:15px 0;
-    font-weight: bold;    
+    font-weight: bold;
+    margin-bottom:50px;
 }
 
 .article-category-list {
@@ -61,18 +61,6 @@
         content: "›";
         padding: 0.3em;
         font-size: 120%;
-    }
-}
-
-.article-category-list-link {
-    font-family:"黑体";
-    color: #ccc;
-    text-decoration: none;
-    border-bottom: 1px dotted #ccc;
-    &:hover {
-        text-decoration: none;
-        border-bottom:1px solid #999;
-        color:#999;
     }
 }
 
@@ -112,13 +100,9 @@
     padding: 0 16px;
     line-height: 28px;
     color:rgb(133, 133, 133);
-    // text-shadow:  rgb(161, 161, 161) 0px 0px 1px;
     .transition(.2s);
     &:hover {
-        background:#ccc;
-        color: #fff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .26);
-        text-shadow: 0 0 6px rgba(204, 201, 201, 0.92), 0 0 30px rgba(250, 247, 247, 0.34), 0 0 12px rgba(244, 246, 248, 0.52), 0 0 21px rgba(247, 247, 248, 0.92), 0 0 34px rgba(234, 237, 240, 0.78), 0 0 54px rgba(192, 195, 199, 0.92);
     }
 }
 
@@ -134,7 +118,6 @@
     color: #666;
     border: 2px solid #666;
     border-radius: 6px;
-    margin-top:20px;
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
     font-size:15px !important;
@@ -222,17 +205,12 @@
 
 @media screen and (max-width:760px) {
     .post-count-custom{
-        margin:0; 
-        margin-top:-10px; 
         font-size:13px;
+        margin-top:-15px;
+        margin-bottom:30px;
     }
-    .post-meta {
-        >*:not(:first-child):not(.post-count) {
-            &:before {
-                content: "·";
-                padding: 0.2em;
-            }
-        }
+    .post-meta{
+        font-size:12px; 
     }
     .post-title {
         font-size: 20px;

@@ -3,7 +3,7 @@ global:
 
 post:
   continue_reading: "阅读全文 »"
-  last_updated: "最后更新时间："
+  last_updated: "最后更新："
 
 footer:
   license: '<a  target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">博客内容遵循 知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a>'

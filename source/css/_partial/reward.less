@@ -1,6 +1,6 @@
 
 .page-reward {
-    margin: 0px 0;
+    margin: 20px 0;
     text-align: center;
 }
 .myreward{
@@ -17,6 +17,7 @@
     font-size: 1.35em;
     padding: 18px 20px;
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    text-shadow: rgb(187, 186, 186) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
 }
 
 .myreward a::before,
@@ -55,8 +56,7 @@
 	z-index: 1;
 	display: block;
 	padding: 8px 0 0 0;
-	color: rgba(0,0,0,0.4);
-	text-shadow: none;
+	color: rgba(77, 77, 77, 0.4);
 	text-transform: none;
 	font-style: italic;
 	font-size: 0.75em;
@@ -123,11 +123,8 @@
 
 }
 @-webkit-keyframes shine {
-
-        from {background-position: 100%;}
-
-        to {background-position: 0;}
-
+    from {background-position: 100%;}
+    to {background-position: 0;}
 }
 
 .reward-lay {
@@ -212,6 +209,7 @@
 @media screen and (max-width:760px) {
     .myreward{
         padding:0;
+        margin:0 auto;
         margin-bottom:7%;
         width:100px;
         height:50px;

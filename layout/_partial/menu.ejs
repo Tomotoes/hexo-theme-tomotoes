@@ -13,14 +13,13 @@
           <% if(theme.mymotto) { %>
             <div id="mymotto" class="motto"></div>
           <% } else { %>
-            <div id="yiyanmotto" class="motto"></div>
+            <div id="yiyanmotto" class="motto">&nbsp;</div>
           <% } %>
         </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
-      <div id="menuitems">
         <%
           var menuItem, isActive = function(item) {
               var pageUrl = url_for(page.path)
@@ -32,17 +31,11 @@
               <li class="waves-block waves-effect<% if(isActive(menuItem)){ %> active<% } %>">
                   <a href="<%- url_for(menuItem.url) %>" <% if(menuItem.target){ %>target="_blank"<% } %> >
                     <i class="icon icon-lg icon-<%= i %>"></i>
-                    <span data-hover="<%=(menuItem.text || _.startCase(i)) %>"><%=(menuItem.text || _.startCase(i)) %></span>
-                    <% if(menuItem.num) {%>
-                      <span id="<%- menuItem.num %>" class="digit"></span>
-                    <% } %><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                    <span><%=(menuItem.text || _.startCase(i)) %></span><i class="icon icon-lg icon-caret-left"></i>
                   </a>
-
               </li>
             <% } %>
-          </div>
-          <p></p>
-      <ul class="nav2" id="nav2icons">
+      <ul class="nav2">
           <%
             var menuItem, isActive = function(item) {
                 var pageUrl = url_for(page.path)
@@ -51,8 +44,8 @@
             for (var i in theme.menu2) {
               menuItem = theme.menu2[i];
             %>
-              <li class="waves-block waves-effect<% if(isActive(menuItem)){ %> active<% } %>">
-                <a href="<%- url_for(menuItem.url) %>" <% if(menuItem.target){ %>target="<%- menuItem.target %>"<% } if(menuItem.text){ %>title="<%-menuItem.text %>"<% } %> >
+              <li class="nav2li">
+                  <a href="<%- url_for(menuItem.url) %>" <% if(menuItem.target){ %>target="<%- menuItem.target %>"<% } if(menuItem.text){ %>title="<%-menuItem.text %>"<% } %> >
                   <i class="icon icon-lg icon-<%= i %> <%= i %>"></i>
                 </a>
               </li>

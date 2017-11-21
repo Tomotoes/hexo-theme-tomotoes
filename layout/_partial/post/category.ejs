@@ -1,8 +1,12 @@
 <% if (post.categories && post.categories.length){ %>
-	<%- list_categories(post.categories, {
+	<i class="icon icon-lg icon-folder-o"></i>
+	分类：<%- list_categories(post.categories, {
 	  show_count: false,
 	  class: 'article-category',
 		style: 'list'
 	}) %>
+<% } else { %>
+<script>
+	mybreak.style="display:none";
+</script>
 <% } %>
-

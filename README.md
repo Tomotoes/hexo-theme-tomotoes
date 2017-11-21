@@ -33,15 +33,3 @@ hexo-theme-tomotoes
 升级前请仔细查看更改内容，如非必要可不升级。
 
 [ChangeLog](https://github.com/tomotoes/hexo-theme-tomotoes/releases)
-
-
-## Other
-
-上个月自从接触个人博客，便一发不可收拾，反复折腾了一个多月。  
-
-在此期间 可谓身心俱乏，但最终还是实现了大部分预期功能。  
-
-
-如果你真的喜欢这款主题，希望能在提出你的建议和想法。  
-
-另外，请尊重下我一个小小博主的劳动成果，保留页脚下面的`tomotoes`超链接，点个star。其他，随意啦~
