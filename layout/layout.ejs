@@ -4,10 +4,13 @@
 <body>
     <%- partial('_partial/loading') %>
     <%- partial('_partial/menu') %>
-    <main id="main">
+    <main id="main"  <% if((is_post() || page.layout === 'page') ){ %>class="hide"<% } %> >
         <%- body %>
         <%- partial('_partial/footer') %>
     </main>
+    <% if(is_post()){ %>
+        <%- partial('_partial/post/reward') %>
+    <% } %>
     <%- partial('_partial/after-footer') %>
     <%- partial('_partial/script') %>
 </body>

@@ -1,4 +1,4 @@
-<aside id="menu" <% if((is_post() || page.layout === 'page') && theme.hideMenu){ %>class="hide"<% } %> >
+<aside id="menu"  <% if((is_post() || page.layout === 'page') && theme.hideMenu){ %>class="hide"<% } %> >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -35,7 +35,7 @@
                   </a>
               </li>
             <% } %>
-      <ul class="nav2">
+      <div class="nav2">
           <%
             var menuItem, isActive = function(item) {
                 var pageUrl = url_for(page.path)
@@ -44,14 +44,12 @@
             for (var i in theme.menu2) {
               menuItem = theme.menu2[i];
             %>
-              <li class="nav2li">
-                  <a href="<%- url_for(menuItem.url) %>" <% if(menuItem.target){ %>target="<%- menuItem.target %>"<% } if(menuItem.text){ %>title="<%-menuItem.text %>"<% } %> >
-                  <i class="icon icon-lg icon-<%= i %> <%= i %>"></i>
-                </a>
-              </li>
+              <a class="nav2item" data-title="<%-menuItem.text %>" href="<%- url_for(menuItem.url) %>" <% if(menuItem.target){ %>target="<%- menuItem.target %>"<% } if(menuItem.text){ %>title="<%-menuItem.text %>"<% } %> >
+                <i class="icon icon-lg icon-<%= i %> <%= i %>"></i>
+              </a>
           <% } %>
 
-        </ul>
+            </div>
         
       </ul>
         

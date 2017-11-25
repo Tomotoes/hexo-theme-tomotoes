@@ -34,7 +34,47 @@
         width: 1124px;
     }
 }
-
+#main{
+    &.hide{
+        .container {
+            width: 72%;
+            -moz-filter: blur(2px);
+            -webkit-filter: blur(2px);
+            -ms-filter: blur(2px);
+            filter: blur(2px);
+        }
+    }
+    &.menuoff{
+        .transition(.4s, cubic-bezier(.18, .81, .3, .89));
+        padding-left: 0;
+    }
+    &.show{
+        padding-left: 0;
+        transition: padding-left 0s;
+        .container {
+            filter: blur(0px);
+            -moz-filter: blur(0px);
+            -webkit-filter: blur(0px);
+            -ms-filter: blur(0px);
+            transition: filter .8s ease-in,.5s width .5s ease;
+            width: 62%;
+        }
+        .header-title {
+            margin-right: -3%;
+        }
+    }
+    &.tocshow{
+        .container {
+            width: 92%;
+            filter: blur(0px);
+            -moz-filter: blur(0px);
+            -webkit-filter: blur(0px);
+            -ms-filter: blur(0px);
+            transition: filter .8s ease-in,.5s width .5s ease;
+        }
+    }
+   
+}
 .mask {
     visibility: hidden;
     position: fixed;
@@ -47,18 +87,54 @@
     background: #000;
     opacity: 0;
     pointer-events: none;
-    .transition(.3s);
+    .transition(.4s);
 
     &.in {
         visibility: visible;
         pointer-events: auto;
         opacity: .3;
-        -webkit-filter: blur(5px);
-        filter: blur(5px);
+    }
+}
+.Mask{
+    -moz-filter: blur(3px);
+    -webkit-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+.imgShow{
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 50px rgb(233, 233, 233);
+    opacity: 0;
+    &:hover{    
+        box-shadow: 0 10px 50px rgb(102, 102, 102);
+        transition: all .5s;
     }
 }
 
 @media screen and (max-width:1240px) {
+    #main{
+        &.hide{
+            .container {
+                width: 100%;
+                -moz-filter: blur(0px);
+                -webkit-filter: blur(0px);
+                -ms-filter: blur(0px);
+                filter: blur(0px);
+            }
+        }
+        &.show,&.tocshow{
+        }
+    }
+    .Mask{
+        -moz-filter: blur(0px);
+        -webkit-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
     #main {
         padding-left: 0;
     }
