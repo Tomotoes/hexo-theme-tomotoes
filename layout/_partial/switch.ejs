@@ -1,12 +1,11 @@
 <script>
-
 /* 关于页面 布局优化 */
 if(location.href.indexOf('about')!=-1&&window.innerWidth<1200){
         /*移动设备 内容会出现内边距*/
         document.querySelector('.post-content').classList.add('about');
 }
 
-if(window.innerWidth > 600){
+if(window.innerWidth > 800){
     /* 3D标题 */
     $('.content-header').on('mousemove', threedee);
 
@@ -16,8 +15,39 @@ if(window.innerWidth > 600){
     /* gotop键的涟漪 */
     $("#gotop").hover(1);
 
-    /* 赞赏粒子雨 */
+    /* 赞赏的粒子雨 */
     $("#reward").hover(3);
+
+    /* 微信公众号的底部渲染 */
+    $("#wechat").hover(4);
+
+    /* 图片点击放大 */
+    var postimg = jQuery('.post-content img');
+    postimg.on('click',function(){
+        
+        mask.classList.add('in');
+        main.classList.add('Mask');
+        menu.classList.add('Mask');
+        var myimg = this.cloneNode(true);
+        myimg.classList.add('imgShow');
+        
+        setTimeout(function(){
+            jQuery(myimg).animate({
+                opacity:"1"
+            },1500);
+        },0)
+        
+        document.body.appendChild(myimg);
+        
+        myimg.onclick=function(){
+            document.body.removeChild(myimg);
+            mask.classList.remove('in');
+            main.classList.remove('Mask');
+            menu.classList.remove('Mask');
+        }
+
+    })
+
 }
 
 /* 名字跳动 */

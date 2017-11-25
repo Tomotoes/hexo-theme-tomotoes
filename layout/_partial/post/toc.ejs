@@ -5,14 +5,6 @@
         })
     if(topic) {
     %>
-    <script>
-        <% if(theme.hideMenu){ %>
-            menu.classList.remove('hide');
-            menu.classList.add('hastochide');
-        <% } else { %>
-            menu.classList.add('hastocshow');
-        <% } %>
-    </script>
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
@@ -22,5 +14,5 @@
             }) %>
         </nav>
     </aside>
-    <% }
+   <% }
 } %>

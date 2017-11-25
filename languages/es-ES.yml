@@ -1,0 +1,13 @@
+global:
+  search_input_hint: "Búsqueda"
+
+post:
+  continue_reading: "Leer más"
+  last_updated: "Última actualización"
+
+footer:
+  license: 'Este blog está licenciado bajo una <a rel="license" rel="external nofollow" href="https://creativecommons.org/licenses/by/4.0/">licencia internacional Creative Commons Attribution 4.0</a>.'
+
+tag:
+  all: "Todo"
+  tags: "Etiquetas"

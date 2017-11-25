@@ -21,8 +21,6 @@
 }
 
 .container {
-    .transition(.4s, cubic-bezier(.18, .81, .3, .89));
-    
     width: @contentWidth;
     margin: 0 auto;
     &:after {
@@ -30,11 +28,29 @@
         display: table;
         clear: both;
     }
-    &.nopost{
-        width: 1124px;
-    }
 }
-
+#main{
+    &.menuoff{
+        .transition(.4s, cubic-bezier(.18, .81, .3, .89));
+        padding-left: 0;
+    }
+    &.show{
+        padding-left: 0;
+        transition: padding-left 0s;
+        .container {
+            width: 62%;
+        }
+        .header-title {
+            margin-right: -3%;
+        }
+    }
+    &.tocshow{
+        .container {
+            width: 92%;
+        }
+    }
+   
+}
 .mask {
     visibility: hidden;
     position: fixed;
@@ -47,18 +63,54 @@
     background: #000;
     opacity: 0;
     pointer-events: none;
-    .transition(.3s);
+    .transition(.4s);
 
     &.in {
         visibility: visible;
         pointer-events: auto;
         opacity: .3;
-        -webkit-filter: blur(5px);
-        filter: blur(5px);
+    }
+}
+.Mask{
+    -moz-filter: blur(3px);
+    -webkit-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.imgShow{
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 50px rgb(233, 233, 233);
+    opacity: 0;
+    &:hover{    
+        box-shadow: 0 10px 50px rgb(102, 102, 102);
+        transition: all .5s;
     }
 }
 
 @media screen and (max-width:1240px) {
+    #main{
+        &.show,&.tocshow{
+            .container {
+                width: 100%;
+            }
+        }
+    }
+    .Mask{
+        -moz-filter: blur(0px);
+        -webkit-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
     #main {
         padding-left: 0;
     }

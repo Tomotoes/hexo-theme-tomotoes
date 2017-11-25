@@ -26,15 +26,15 @@ menu:
 # 如果您没有微信公众号 您完全可以更改为 其他的链接 比如微博
 menu2:
   envelope-o:
-    text: 邮箱
+    text: Email
     url: mailto:1755811882@qq.com
     target: _parent
   github:
-    text: github
+    text: Github
     url: https://github.com/tomotoes
     target: _blank
   weibo:
-    text: weibo
+    text: 微博
     url: https://weibo.com/u/6179399347
     target: _blank
 
@@ -111,6 +111,7 @@ toc:
 # 文章页留言内容，hexo中所有变量及辅助函数等均可调用，具体请查阅 hexo.io
 postMessage: 原文链接：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, '') %></a>
 
+
 # 百度统计，如要开启，改为你的 key
 baidu_tongji: false
 
@@ -165,14 +166,15 @@ since_year: 2017
 site: tomotoes.com
 
 # 用户页面中作者相关的描述性文字，如不需要设为 false
-about: 业精于勤荒于嬉，行成于思毁于随。
+about: 业精于勤荒于嬉，行成于思毁于随
 
 # “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
 visit_counter:
   site_pv: 访问次数：
   site_uv: 访问用户：
 
-# 设置为 true 发布后将使用 unpkg cdn
+# 设置为 true 发布后将使用 unpkg cdn 最新的主题样式
+# 如果想让你的自定义样式生效，把此项设为 false
 cdn: false
 
 # 设置为 true 将使用 lightbox render 图片

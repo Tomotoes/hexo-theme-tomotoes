@@ -15,7 +15,6 @@
     position: fixed;
     overflow-x: hidden;
     width: 20%;
-    height:110%;
     &.fixed {
         display:block;
         top: @headerH + 20px;
@@ -265,6 +264,10 @@
         color: @secondaryTextColor;
         background: lighten( @lightPrimaryColor, 12%);
         border-radius: 30px 30px 0;
+        .post-time{
+            display: block;
+            margin-bottom: 10px;
+        }
     }
 
     footer {
@@ -318,7 +321,6 @@
     position: relative;
     margin: 0 -35px;
     padding: 20px 35px 0;
-    // border-top: 1px solid #ddd;
 }
 
 .post-content {
@@ -340,7 +342,7 @@
     >pre {
         padding: 20px 35px;
     }
-
+    
     .image-bubble {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -351,7 +353,6 @@
         margin-top: 10px;
         color: @secondaryTextColor;
     }
-
     .headerlink {
         visibility: hidden;
         margin-left: -1em;
@@ -363,7 +364,6 @@
             border: none;
         }
     }
-
     p {
         word-wrap: break-word;
     }
@@ -567,6 +567,9 @@
 }
 
 @media screen and (max-width:760px) {
+    .post-copyright{
+        font-size:11px;
+    }
     .post-content{
         font-size: 100%;
     }
@@ -603,16 +606,25 @@
         padding: 0;
         margin-left: -16px;
         margin-right: -16px;
+        display: block;
+        text-align:center;
+        .prev{
+            margin-bottom:10px;
+        }
         .prev,
         .next {
-            width: 50%;
-            background: #fff;
+            padding-left:5%;
+            text-align:left;
+            width: 95%;
+            border-radius: 10px;
+            background:#f6f6f6;
             border-bottom: 1px solid @borderColor;
             box-shadow: @boxShadow;
         }
         .prev:hover,.next:hover{
             .title{
                 color:#999;
+                .hoverLine(#999);
             }
         }
         .prev:before,.next:before{

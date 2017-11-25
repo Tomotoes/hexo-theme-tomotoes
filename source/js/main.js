@@ -5,12 +5,14 @@
         root = $('html'),
         gotop = $('#gotop'),
         menu = $('#menu'),
+        main = $('#main'),
         header = $('#header'),
         mask = $('#mask'),
         menuToggle = $('#menu-toggle'),
         menuOff = $('#menu-off'),
         title = $('.header-title'),
         loading = $('#loading'),
+        isPost = location.href.indexOf('post')!=-1,
         animate = w.requestAnimationFrame,
         scrollSpeed = 200 / (1000 / 60),
         forEach = Array.prototype.forEach,
@@ -71,22 +73,18 @@
             }
         },
         toggleMenu: function (flag) {
-            var main = $('#main');
             if (flag) {
-                if (!title.classList.contains('toc')) {
-                    menu.classList.remove('hide');
-                    if(location.href.indexOf('post')!=-1){
-                        menu.classList.add('show'); 
-                    }
-                } else {
-                    menu.classList.remove('hastochide'); 
-                    if(location.href.indexOf('post')!=-1){
-                        menu.classList.add('hastocshow'); 
-                    }
+                menu.classList.remove('hide');
+                if(!isPost){
+                    main.classList.remove('menuoff'); 
+                    jQuery(title).animate({
+                        marginRight:"-20%"
+                    });
                 }
                 if (w.innerWidth < 1241) {
                     mask.classList.add('in');
                     menu.classList.add('show');
+                    
                     if (isWX) {
                         var top = docEl.scrollTop;
                         main.classList.add('lock');
@@ -96,8 +94,9 @@
                     }
                 }
             } else {
-                menu.classList.remove('show');
                 mask.classList.remove('in');
+                menu.classList.remove('show');
+                
                 if (isWX) {
                     var top = main.scrollTop;
                     main.classList.remove('lock');
@@ -117,6 +116,10 @@
         toc: (function () {
             var toc = $('#post-toc');
             if (!toc || !toc.children.length) {
+                if (isPost) {
+                    main.classList.add('show');
+                }
+               
                 return {
                     fixed: noop,
                     actived: noop
@@ -126,7 +129,9 @@
                 headerH = header.clientHeight,
                 titles = $('#post-content').querySelectorAll('h1, h2, h3, h4, h5, h6');
             toc.querySelector('a[href="#' + titles[0].id + '"]').parentNode.classList.add('active');
-            
+           
+            main.classList.add('tocshow');
+                
             title.classList.add('toc');
             $('.footer').classList.add('toc');
 
@@ -156,6 +161,10 @@
             var _this = this;
             this.show = function () {
                 mask.classList.add('in');
+                if(w.innerWidth>800){
+                    main.classList.add('Mask');
+                    menu.classList.add('Mask');
+                }
                 _this.$modal.classList.add('ready');
                 setTimeout(function () {
                     _this.$modal.classList.add('in');
@@ -165,6 +174,15 @@
             this.hide = function () {
                 _this.onHide();
                 mask.classList.remove('in');
+                if(w.innerWidth>800){
+                    main.classList.remove('Mask');
+                    menu.classList.remove('Mask');
+                    var myimg = d.querySelector('.imgShow')
+                    if(myimg){
+                        document.body.removeChild(myimg);
+                    }
+                }
+               
                 _this.$modal.classList.remove('in');
                 setTimeout(function () {
                     _this.$modal.classList.remove('ready');
@@ -409,13 +427,13 @@
         e.preventDefault();
     }, false);
     menuOff.addEventListener(even, function () {
-        /* 没有toc的文章 */
-        if (!title.classList.contains('toc')) {
-            /* 关闭按钮时 菜单隐藏 标题移动 */
-            menu.classList.add('hide');
-        } else {
-            menu.classList.add('hastochide');
-        }
+        menu.classList.add('hide');
+        if (!isPost) {
+            main.classList.add('menuoff');
+            jQuery(title).animate({
+                marginRight:"-3%"
+            });
+        } 
     }, false);
     mask.addEventListener(even, function (e) {
         Blog.toggleMenu();
@@ -431,7 +449,7 @@
         Blog.toc.fixed(top);
         Blog.toc.actived(top);
     }, false);
-    if (w.BLOG.SHARE) {
+    if (w.BLOG.SHARE && isPost) {
         Blog.share()
     }
     if (w.BLOG.REWARD) {
