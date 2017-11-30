@@ -620,12 +620,12 @@ function get_hitokoto() {
 /* 粘贴提示 */
 var G = function (a, b, c) {
     function d(a, b) {
-        return ['著作权归作者所有。',
-            '商业转载请联系作者获得授权，非商业转载请注明出处。',
+        return [
+            '',
+            '',
             '作者：' + b,
             '链接：' + a,
-            '',
-            ''
+            '著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。',
         ]
     }
     function f(b, c, m) {
@@ -638,9 +638,11 @@ var G = function (a, b, c) {
         var m = window.getSelection().toString();
         if ('object' === typeof a.originalEvent.clipboardData) {
             var m = window.getSelection().toString();
-            a.originalEvent.clipboardData.setData('text/html', f(b, c));
-            a.originalEvent.clipboardData.setData('text/plain', d(b, c).join('\n') + m);
-            a.preventDefault();
+            if(m.length>42){
+                a.originalEvent.clipboardData.setData('text/html', f(b, c));
+                a.originalEvent.clipboardData.setData('text/plain', m + d(b, c).join('\n'));
+                a.preventDefault();
+            }
             return;
         }
         var n = $(f(b, c, m)).css({
