@@ -1,19 +1,17 @@
 @import "_partial/variable";
 @import "_partial/roboto";
 @import "_partial/fontawesome";
-
 *,
 *::before,
 *::after {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 8px;
     height: 8px;
-
     &-track {
         background-color: inherit;
     }
@@ -30,9 +28,15 @@
     }
 }
 
+::-moz-selection {
+    background: #6AAFE6;
+    color: #f6f6f6;
+    text-shadow: rgb(187, 186, 186) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
+}
+
 ::selection {
     background: #6AAFE6;
-    color:#f6f6f6;
+    color: #f6f6f6;
     text-shadow: rgb(187, 186, 186) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
 }
 
@@ -107,7 +111,6 @@ ol,
 ul {
     margin: 12px 0;
     padding: 0 0 0 32px;
-
     &.reset {
         margin: 0;
         padding: 0;
@@ -122,9 +125,11 @@ ul ul {
     margin-top: 0;
     margin-bottom: 0;
 }
-a{
-    color:#000;
+
+a {
+    color: #000;
 }
+
 p {
     margin: 12px 0;
 }
@@ -137,6 +142,7 @@ small {
 main {
     display: block
 }
+
 template {
     display: none
 }
@@ -231,6 +237,7 @@ hr,
 .hr {
     border: 0;
     border-top: 1px solid @borderColor;
+    -webkit-box-sizing: content-box;
     box-sizing: content-box;
     display: block;
     height: 0;
@@ -267,127 +274,129 @@ hr,
     white-space: nowrap;
 }
 
+
 /* flex布局  */
+
 .flex-row,
 .flex-column,
 .flex-row-vertical {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
+    display: flex;
 }
+
 .flex-column {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
 }
+
 .flex-row-vertical {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
+
 
 /* 多行布局 */
+
 .flex-row-wrap,
 .flex-column {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
+
 /* 子元素反向排列 */
+
 .flex-row-reverse {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
-    -webkit-flex-direction: row-reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
+
 /* 子元素默认平均分布 */
-.flex-row >* {
+
+.flex-row>* {
     display: block;
 }
 
 .flex-col {
     -webkit-box-flex: 1;
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
+
 
 /* 垂直居中 */
+
 .flex-middle {
     -webkit-box-align: center;
-    -webkit-align-items: center;
     -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
 }
+
 
 /* 底部对齐 */
+
 .flex-bottom {
     -webkit-box-align: end;
-    -webkit-align-items: flex-end;
     -ms-flex-align: end;
-            align-items: flex-end;
+    align-items: flex-end;
 }
 
+
 /* 沿主轴方向排列方式 */
+
 .flex-justify-start {
     -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
 }
 
 .flex-justify-end {
     -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 .flex-justify-between {
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
 }
 
+
 /* 沿侧轴方向排列方式 */
+
 .flex-align-start {
-    -webkit-align-content: flex-start;
     -ms-flex-line-pack: start;
-            align-content: flex-start;
+    align-content: flex-start;
 }
 
 .flex-align-end {
-    -webkit-align-content: flex-end;
     -ms-flex-line-pack: end;
-            align-content: flex-end;
+    align-content: flex-end;
 }
 
 .flex-align-around {
-    -webkit-align-content: space-around;
     -ms-flex-line-pack: distribute;
-            align-content: space-around;
+    align-content: space-around;
 }
 
 .flex-align-between {
-    -webkit-align-content: space-between;
     -ms-flex-line-pack: justify;
-            align-content: space-between;
+    align-content: space-between;
 }
 
 .flex-col-auto {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 auto;
-        -ms-flex: 0 auto;
-            flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
 }
 
 @import "_partial/loading";

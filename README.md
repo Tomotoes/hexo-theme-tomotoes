@@ -1,8 +1,8 @@
 hexo-theme-tomotoes
 ======================
-[![Join the chat at https://gitter.im/hexo-theme-tomotoes/Lobby](https://badges.gitter.im/hexo-theme-tomotoes/Lobby.svg)](https://gitter.im/hexo-theme-tomotoes/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  
+[![Join the chat at https://gitter.im/hexo-theme-tomotoes/Lobby](https://badges.gitter.im/hexo-theme-tomotoes/Lobby.svg)](https://gitter.im/hexo-theme-tomotoes/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-本主题修改自[indigo主题](https://github.com/yscoder/hexo-theme-indigo) *（已与原作者沟通，并得到其支持）*    
+本主题修改自[indigo主题](https://github.com/yscoder/hexo-theme-indigo) *（已与原作者沟通，并得到其支持）*
 
 > Nicholas Zhao Si 说：“这是一款让人感到舒服的主题 **[Preview](http://tomotoes.com/)**”
 
@@ -21,7 +21,7 @@ hexo-theme-tomotoes
 12. 一言签名
 13. 小图标菜单。By [OhYee](https://www.oyohyee.com)
 14. 网站开启时间
-15. 3D标题
+15. Emoji支持
 16. 还有很多特性留给你探索...
 
 ## Useage
@@ -33,3 +33,7 @@ hexo-theme-tomotoes
 升级前请仔细查看更改内容，如非必要可不升级。
 
 [ChangeLog](https://github.com/tomotoes/hexo-theme-tomotoes/releases)
+
+**如果你喜欢这款主题,请给我一个star吧!**
+**本主题会持续更新中,我非常期待你的反馈!**
+

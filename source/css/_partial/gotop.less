@@ -13,18 +13,20 @@
     opacity: 0;
     .boxShadow();
     .transform(translateX(200%));
-
+    -webkit-transform: scale(0);
+    transform: scale(0);
     &.in {
+        -webkit-transform: scale(1);
+        transform: scale(1);
         opacity: 1;
         .transform(none);
     }
-    &:hover{
-        -webkit-transition:all 0.5s;
-        -webkit-transform:scale(1.01);
-        transform:scale(1.01);
-        transition:all 0.5s;
+    &:hover {
+        -webkit-transition: all 0.5s;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: all 0.5s;
     }
-
 }
 
 @media screen and (max-width:760px) {
@@ -33,5 +35,4 @@
         height: 40px;
         line-height: 40px;
     }
-
 }

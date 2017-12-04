@@ -55,7 +55,7 @@ mymotto: false
 startime: 2017/10/11
 
 # 首页副标题
-homesubtitle: 在Web全栈的道路上努力前行...
+homesubtitle: 在Web全栈的道路上努力前行
 
 # 归档页标题
 archivestitle: 路漫漫其修远兮
@@ -67,7 +67,7 @@ tagstitle: 不积小流无以成江海
 categoriestitle: 不积跬步无以至千里
 
 # 关于页标题
-aboutitle: 一个坏掉的番茄 
+aboutitle: 一个坏掉的番茄
 
 # 设置 Android L Chrome 浏览器状态栏颜色
 color: '#77AAFF'
@@ -179,3 +179,11 @@ cdn: false
 
 # 设置为 true 将使用 lightbox render 图片
 lightbox: true
+
+# Emoji
+githubEmojis:
+  enable: true
+  className: github-emoji
+  unicode: false
+  styles:
+  localEmojis:

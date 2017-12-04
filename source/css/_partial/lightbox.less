@@ -23,7 +23,6 @@
             will-change: opacity;
             .transition(.3s);
         }
-
         .overlay-title {
             position: fixed;
             left: 0;
@@ -38,7 +37,6 @@
             .transition(.3s);
         }
     }
-
     &.active {
         img {
             cursor: -webkit-zoom-out;
@@ -52,16 +50,13 @@
             .transform(translate3d(0, 0, 0));
         }
     }
-
     img {
         display: inline;
         margin: 0;
         cursor: -webkit-zoom-in;
         cursor: zoom-in;
-
         &:hover {
             will-change: left, top, width, height;
         }
     }
 }
-

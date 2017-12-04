@@ -18,6 +18,7 @@
 }
 
 .waves-box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow;
     box-shadow: @shadow;
 }
 
@@ -30,44 +31,49 @@
     -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-
     .waves-ripple {
         position: absolute;
         border-radius: 50%;
         width: 100px;
         height: 100px;
-        margin-top:-50px;
-        margin-left:-50px;
+        margin-top: -50px;
+        margin-left: -50px;
         opacity: 0;
-        background: rgba(0,0,0,0.2);
-        @gradient: rgba(0,0,0,0.2) 0,rgba(0,0,0,.3) 40%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.5) 60%,rgba(255,255,255,0) 70%;
-        background: -webkit-radial-gradient(@gradient);
+        background: rgba(0, 0, 0, 0.2);
+        @gradient: rgba(0, 0, 0, 0.2) 0,
+        rgba(0, 0, 0, .3) 40%,
+        rgba(0, 0, 0, .4) 50%,
+        rgba(0, 0, 0, .5) 60%,
+        rgba(255, 255, 255, 0) 70%;
         background: radial-gradient(@gradient);
         .waves-transition(all 0.5s ease-out);
         -webkit-transition-property: -webkit-transform, opacity;
+        -webkit-transition-property: opacity, -webkit-transform;
+        transition-property: opacity, -webkit-transform;
         transition-property: transform, opacity;
-        .waves-transform(scale(0) translate(0,0));
+        transition-property: transform, opacity, -webkit-transform;
+        .waves-transform(scale(0) translate(0, 0));
         pointer-events: none;
     }
-
     &.waves-light .waves-ripple {
-        background: rgba(255,255,255,0.4);
-        @gradient: rgba(255,255,255,0.2) 0,rgba(255,255,255,.3) 40%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 60%,rgba(255,255,255,0) 70%;
-        background: -webkit-radial-gradient(@gradient);
+        background: rgba(255, 255, 255, 0.4);
+        @gradient: rgba(255, 255, 255, 0.2) 0,
+        rgba(255, 255, 255, .3) 40%,
+        rgba(255, 255, 255, .4) 50%,
+        rgba(255, 255, 255, .5) 60%,
+        rgba(255, 255, 255, 0) 70%;
         background: radial-gradient(@gradient);
     }
-
     &.waves-classic .waves-ripple {
-        background: rgba(0,0,0,0.2);
+        background: rgba(0, 0, 0, 0.2);
     }
-
     &.waves-classic.waves-light .waves-ripple {
-        background: rgba(255,255,255,0.4);
+        background: rgba(255, 255, 255, 0.4);
     }
 }
 
 .waves-notransition {
-    .waves-transition(none ~'!important');
+    .waves-transition(none ~'!important') !important;
 }
 
 .waves-button,
@@ -100,11 +106,9 @@
 .waves-input-wrapper {
     border-radius: 0.2em;
     vertical-align: bottom;
-
     &.waves-button {
         padding: 0;
     }
-
     .waves-button-input {
         position: relative;
         top: 0;
@@ -125,7 +129,6 @@
     -webkit-mask-image: none;
     .waves-box-shadow(0px 1px 1.5px 1px rgba(0, 0, 0, 0.12));
     .waves-transition(all 300ms);
-
     &:active {
         .waves-box-shadow(0px 8px 20px 1px rgba(0, 0, 0, 0.30));
     }
@@ -134,4 +137,3 @@
 .waves-block {
     display: block;
 }
-

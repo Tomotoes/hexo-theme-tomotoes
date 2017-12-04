@@ -5,8 +5,9 @@
     z-index: 70;
     width: 100%;
     height: 4px;
-    z-index:9999 !important;
-    background:rgb(211, 212, 206);
+    z-index: 9999 !important;
+    background: rgb(211, 212, 206);
+    -webkit-box-shadow: 0 0 6px rgba(253, 253, 253, 0.92), 0 0 30px rgba(235, 232, 232, 0.34), 0 0 12px rgba(244, 246, 248, 0.52), 0 0 21px rgba(247, 247, 248, 0.92), 0 0 34px rgba(234, 237, 240, 0.78), 0 0 54px rgba(244, 246, 248, 0.92);
     box-shadow: 0 0 6px rgba(253, 253, 253, 0.92), 0 0 30px rgba(235, 232, 232, 0.34), 0 0 12px rgba(244, 246, 248, 0.52), 0 0 21px rgba(247, 247, 248, 0.92), 0 0 34px rgba(234, 237, 240, 0.78), 0 0 54px rgba(244, 246, 248, 0.92);
     &.active {
         -webkit-animation: loading-anim 1s ease-in-out infinite;
@@ -20,6 +21,7 @@
         .transform(translateX(200%))
     }
 }
+
 @keyframes loading-anim {
     from {}
     to {
@@ -30,16 +32,17 @@
 .fade,
 .fade-scale {
     opacity: 0;
-
     &.in {
         opacity: 1;
         .transform(none);
     }
 }
+
 .fade {
     .transition(.4s);
     .transform(translateY(50px));
 }
+
 .fade-scale {
     .transition(.6s);
     .transform(translate(10%, 20%) scale(.6));

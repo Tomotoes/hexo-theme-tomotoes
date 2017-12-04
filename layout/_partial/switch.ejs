@@ -1,6 +1,6 @@
 <script>
 /* 关于页面 布局优化 */
-if(location.href.indexOf("about")!=-1&&window.innerWidth<1200){
+if(location.href.indexOf("about")!==-1&&window.innerWidth<1200){
 	/*移动设备 内容会出现内边距*/
 	document.querySelector(".post-content").classList.add("about");
 }
@@ -21,24 +21,27 @@ if(window.innerWidth > 800){
 	/* 微信公众号的底部渲染 */
 	$("#wechat").hover(4);
 
+    /* 标题跳动 */
+    $(".archivestitle").bumpyText();
+
 	/* 图片点击放大 */
-	var postimg = jQuery(".post-content img");
+	const postimg = jQuery(".post-content img:not(.github-emoji)");
 	postimg.on("click",function(){
-        
+
 		mask.classList.add("in");
 		main.classList.add("Mask");
 		menu.classList.add("Mask");
 		var myimg = this.cloneNode(true);
 		myimg.classList.add("imgShow");
-        
+
 		setTimeout(function(){
 			jQuery(myimg).animate({
 				opacity:"1"
-			},1500);
+			},1000);
 		},0);
-        
+
 		document.body.appendChild(myimg);
-        
+
 		myimg.onclick=function(){
 			document.body.removeChild(myimg);
 			mask.classList.remove("in");
@@ -71,7 +74,7 @@ postshow();
         content: "<%- theme.mymotto.content %>"
     });
 <% } else {%>
-   get_hitokoto();
+   getHitokoto();
 <% } %>
 
 

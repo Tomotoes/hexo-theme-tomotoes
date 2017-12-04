@@ -13,11 +13,6 @@
 .body-wrap {
     padding: 30px 0 40px;
     min-height: ~'calc(100vh - 340px)';
-    &.about{
-        padding: 0;
-        margin-top:-120px;
-        margin-left:8%;
-    }
 }
 
 .container {
@@ -29,13 +24,15 @@
         clear: both;
     }
 }
-#main{
-    &.menuoff{
+
+#main {
+    &.menuoff {
         .transition(.4s, cubic-bezier(.18, .81, .3, .89));
         padding-left: 0;
     }
-    &.show{
+    &.show {
         padding-left: 0;
+        -webkit-transition: padding-left 0s;
         transition: padding-left 0s;
         .container {
             width: 62%;
@@ -44,13 +41,13 @@
             margin-right: -3%;
         }
     }
-    &.tocshow{
+    &.tocshow {
         .container {
             width: 92%;
         }
     }
-   
 }
+
 .mask {
     visibility: hidden;
     position: fixed;
@@ -64,14 +61,14 @@
     opacity: 0;
     pointer-events: none;
     .transition(.4s);
-
     &.in {
         visibility: visible;
         pointer-events: auto;
         opacity: .3;
     }
 }
-.Mask{
+
+.Mask {
     -moz-filter: blur(3px);
     -webkit-filter: blur(2px);
     -ms-filter: blur(2px);
@@ -83,29 +80,35 @@
     left: 0;
     bottom: 0;
 }
-.imgShow{
+
+.imgShow {
     position: fixed;
     z-index: 9999;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0 10px 50px rgb(233, 233, 233);
     box-shadow: 0 10px 50px rgb(233, 233, 233);
     opacity: 0;
-    &:hover{    
+    &:hover {
+        -webkit-box-shadow: 0 10px 50px rgb(102, 102, 102);
         box-shadow: 0 10px 50px rgb(102, 102, 102);
+        -webkit-transition: all .5s;
         transition: all .5s;
     }
 }
 
 @media screen and (max-width:1240px) {
-    #main{
-        &.show,&.tocshow{
+    #main {
+        &.show,
+        &.tocshow {
             .container {
                 width: 100%;
             }
         }
     }
-    .Mask{
+    .Mask {
         -moz-filter: blur(0px);
         -webkit-filter: blur(0px);
         -ms-filter: blur(0px);
@@ -128,8 +131,7 @@
         width: 100%;
         overflow-x: hidden;
     }
-    ::-webkit-scrollbar {
+     ::-webkit-scrollbar {
         display: none;
     }
 }
-

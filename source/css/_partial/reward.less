@@ -1,19 +1,20 @@
-
 .page-reward {
     margin: 20px 0;
     text-align: center;
 }
-.myreward{
+
+.myreward {
     display: inline-block;
 }
+
 .myreward a {
-	position: relative;
-	display: inline-block;
-	outline: none;
-	color: #999;
-	text-decoration: none;
-	letter-spacing: 1px;
-	font-weight: 400;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    color: #999;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 400;
     font-size: 1.35em;
     padding: 18px 20px;
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
@@ -22,81 +23,79 @@
 
 .myreward a::before,
 .myreward a::after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 3px;
-	background: #ccc;
-	content: '';
-	opacity: 0.5;
-	-webkit-transition: opacity 0.3s, height 0.3s;
-	-moz-transition: opacity 0.3s, height 0.3s;
-	transition: opacity 0.3s, height 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ccc;
+    content: '';
+    opacity: 0.5;
+    -webkit-transition: opacity 0.3s, height 0.3s;
+    transition: opacity 0.3s, height 0.3s;
 }
 
 .myreward a::after {
-	top: 100%;
-	opacity: 0;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-	-webkit-transform: translateY(-10px);
-	-moz-transform: translateY(-10px);
-	transform: translateY(-10px);
+    top: 100%;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
 }
 
 .myreward a span:first-child {
-	z-index: 2;
-	display: block;
-	font-weight: 300;
+    z-index: 2;
+    display: block;
+    font-weight: 300;
 }
 
 .myreward a span:last-child {
-	z-index: 1;
-	display: block;
-	padding: 8px 0 0 0;
-	color: rgba(77, 77, 77, 0.4);
-	text-transform: none;
-	font-style: italic;
-	font-size: 0.75em;
-	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-	opacity: 0;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-	-webkit-transform: translateY(-100%);
-	-moz-transform: translateY(-100%);
-	transform: translateY(-100%);
+    z-index: 1;
+    display: block;
+    padding: 8px 0 0 0;
+    color: rgba(77, 77, 77, 0.4);
+    text-transform: none;
+    font-style: italic;
+    font-size: 0.75em;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 
 .myreward a:hover::before,
 .myreward a:focus::before {
-	height: 6px;
+    height: 6px;
 }
 
 .myreward a:hover::before,
 .myreward a:hover::after,
 .myreward a:focus::before,
 .myreward a:focus::after {
-	opacity: 1;
-	-webkit-transform: translateY(0px);
-	-moz-transform: translateY(0px);
-	transform: translateY(0px);
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
 }
 
 .myreward a:hover span:last-child,
 .myreward a:focus span:last-child {
-	opacity: 1;
-	-webkit-transform: translateY(0%);
-	-moz-transform: translateY(0%);
-	transform: translateY(0%);
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
 }
 
 .reward-title {
     position: relative;
     padding: 10px 30px;
-
     .icon-quote-left,
     .icon-quote-right {
         position: absolute;
@@ -111,30 +110,55 @@
         bottom: 0;
         right: 0;
     }
-    span{
-        -webkit-background-clip: text;    /*按文字裁剪*/
-        -webkit-text-fill-color: transparent;    /*文字的颜色使用背景色*/
-        background-color:#19385c;    /*设置一个背景色*/
-        background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 30%, #aff0ff 50%, rgba(0, 0, 0, 0.6) 70%);        /*设置渐变的背景，按对角线渐变*/
-        background-blend-mode: hard-light;    /*设置背景为混合模式下的强光模式*/
+    span {
+        background-clip: text;
+        /*按文字裁剪*/
+        -webkit-background-clip: text;
+        /*按文字裁剪*/
+        -webkit-text-fill-color: transparent;
+        /*文字的颜色使用背景色*/
+        background-color: #19385c;
+        /*设置一个背景色*/
+        background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 30%, #aff0ff 50%, rgba(0, 0, 0, 0.6) 70%);
+        /*设置渐变的背景，按对角线渐变*/
+        background-blend-mode: hard-light;
+        /*设置背景为混合模式下的强光模式*/
         background-size: 200%;
-        -webkit-animation: shine 4s infinite;    /*给背景添加动画改变位置*/
+        animation: shine 4s infinite;
+        /*给背景添加动画改变位置*/
+        -webkit-animation: shine 4s infinite;
+        /*给背景添加动画改变位置*/
     }
-
 }
+
 @-webkit-keyframes shine {
-    from {background-position: 100%;}
-    to {background-position: 0;}
+    from {
+        background-position: 100%;
+    }
+    to {
+        background-position: 0;
+    }
+}
+
+@keyframes shine {
+    from {
+        background-position: 100%;
+    }
+    to {
+        background-position: 0;
+    }
 }
 
 .reward-lay {
-    height:440px;
+    height: 420px;
     max-width: 100%;
     width: 360px;
 }
+
 .reward-content {
     margin: 20px 0;
 }
+
 .reward-code {
     width: 200px;
     margin: 0 auto;
@@ -148,13 +172,13 @@
     margin: 40px auto 0;
     border-radius: 3px;
     .boxShadow();
-
     &-check {
         position: absolute;
         visibility: hidden;
     }
-
     &-ctrol {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 200px;
         height: 30px;
@@ -162,73 +186,83 @@
         background: #eee;
         border-radius: 3px;
         overflow: hidden;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         user-select: none;
         .transition(.1s)
     }
-
     &-item,
     &-label {
         height: 100%;
     }
-
     &-item {
         position: relative;
         z-index: 2;
         text-align: center;
         color: #fff;
         font-size: 12px;
+        -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, .3);
         box-shadow: inset 0 0 15px rgba(0, 0, 0, .3);
         .transition(.1s);
     }
-    .alipay_pay {
-        flex-grow:1;
+    .alipayPay {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
         background: #1e88e5;
-        &.show{
-            flex-grow:4;
+        &.show {
+            -webkit-box-flex: 4;
+            -ms-flex-positive: 4;
+            flex-grow: 4;
         }
     }
-    .wechat_pay {
-        flex-grow:1;
+    .wechatPay {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
         background: #4caf50;
-        &.show{
-            flex-grow:4;
+        &.show {
+            -webkit-box-flex: 4;
+            -ms-flex-positive: 4;
+            flex-grow: 4;
         }
     }
 }
 
-#reward canvas{
-    z-index:-1 !important;
-    width:100%;
-    height:100%;
+#reward canvas {
+    z-index: -1 !important;
+    width: 100%;
+    height: 100%;
 }
 
-.icon-caret-up{
+.icon-caret-up {
     .transition(.1s);
 }
 
 @media screen and (max-width:760px) {
-    .myreward{
-        padding:0;
-        margin:0 auto;
-        margin-bottom:7%;
-        width:100px;
-        height:50px;
-        a{
-            &:before{
+    .myreward {
+        padding: 0;
+        margin: 0 auto;
+        margin-bottom: 7%;
+        width: 100px;
+        height: 50px;
+        a {
+            &:before {
                 display: none;
             }
-            &:after{
+            &:after {
                 display: none;
             }
             border:solid 1px #ccc;
             border-radius: 10px;
             height:50px;
-            span{
-                height:10px;
+            span {
+                height: 10px;
                 font-size: 16px;
                 line-height: 10px;
             }
-            span:nth-child(2){
+            span:nth-child(2) {
                 display: none;
             }
         }
@@ -240,7 +274,7 @@
 
 @media screen and (max-width: 480px) {
     .reward-lay {
-        height:370px;
+        height: 370px;
         width: 320px;
         border-radius: 0
     }

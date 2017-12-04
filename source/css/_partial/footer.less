@@ -1,89 +1,69 @@
 .footer {
-    text-align:center;
+    text-align: center;
     font-size: 14px;
     text-shadow: rgb(160, 156, 155) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
-    color:#999;
-   
-    a{
-        color:#999;
+    color: #999;
+    a {
+        color: #999;
     }
-    .icon{
+    .icon {
         font-size: 15px;
     }
-    span{
+    span {
         line-height: 2;
     }
-    canvas{
-        z-index:333 !important;
+    canvas {
+        z-index: 333 !important;
     }
     .refresh {
         vertical-align: middle;
         width: 16px;
         cursor: pointer;
+        -webkit-transition: all ease 1s;
         transition: all ease 1s;
     }
-
     .refresh:hover {
+        -webkit-transform: rotateZ(360deg);
         transform: rotateZ(360deg);
     }
-
-    .footer-content{
-        display:inline-block;
+    .footer-content {
+        display: inline-block;
         z-index: 999 !important;
     }
-    &.toc{
-        margin-right:21% !important;
+    &.toc {
+        margin-right: 21% !important;
     }
 }
-.power{
-    margin:3px auto !important;
+
+.power {
+    margin: 3px auto !important;
     a{
-        font-weight: bold;
-        position: relative;
-        white-space: normal;
-        border-bottom: .0625rem dotted #ccc;
-        background: transparent;
-        text-decoration: none;
-        &:after {
-            position: absolute;
-            bottom: -0.0625rem;
-            left: 100%;
-            width: 0;
-            border-bottom: .0625rem solid #999;
-            content: "";
-            transition: width 350ms, left 350ms;
-        }
-    
-        &:hover:after {
-            left: 0;
-            width: 100%;
-            transition: width 350ms;
-            text-decoration: underline;
-            outline: 0;
-        }
+        .hoverAnchor();
     }
 }
+
 @media screen and (max-width:800px) {
-    .footer{
-        &.toc{
-            margin-right:21% !important;
+    .footer {
+        &.toc {
+            margin-right: 21% !important;
         }
     }
 }
+
 @media screen and (max-width:600px) {
-    .footer{
-        &.toc{
-            margin-right:0% !important;
+    .footer {
+        &.toc {
+            margin-right: 0% !important;
         }
-        margin-right:0% ;
+        margin-right:0%;
     }
-    .footer{
-        font-size:13px;
-        .icon{
+    .footer {
+        font-size: 13px;
+        .icon {
             font-size: 13px;
         }
     }
-    .license{
+    .license {
         display: none;
     }
 }

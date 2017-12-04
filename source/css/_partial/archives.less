@@ -11,58 +11,44 @@
     padding: 16px 20px 0;
     background: transparent;
     border-bottom: solid 1px #e0e0e0;
-
     .post-content {
         word-break: break-all;
-
         .highlight,
-        > pre {
+        >pre {
             margin-left: -20px;
             margin-right: -20px;
             padding: 20px;
         }
-        a:not(.post-more){
-            position: relative;
-            white-space: normal;
-            background: transparent;
-            text-decoration: none;
-            border-bottom: .0625rem dotted @accentColor;
-            &:after {
-                position: absolute;
-                bottom: -0.0625rem;
-                left: 100%;
-                width: 0;
-                border-bottom: .0625rem solid @accentColor;
-                content: "";
-                transition: width 350ms, left 350ms;
-            }
-        
-            &:hover:after {
-                left: 0;
-                width: 100%;
-                transition: width 350ms;
-                text-decoration: underline;
-                outline: 0;
-            }
-        }
     }
-
     .post-time {
-        color:#999;
+        color: #999;
         line-height: 24px;
     }
-
     .post-footer {
         margin: 0 -20px;
         padding: 12px 20px 8px;
     }
-    .post-title{
-        a{
+    .post-title {
+        a {
             text-decoration: none;
         }
         .hoverLine(#000);
     }
 }
+
+@-webkit-keyframes animation-show {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(80px);
+        transform: translateY(80px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
 @keyframes animation-show {
     0% {
         opacity: 0;
@@ -83,39 +69,40 @@
 }
 
 .archive-article {
-    margin-bottom:0px;
+    margin-bottom: 0px;
     position: relative;
     padding: 25px 25px 25px 155px;
+    -webkit-box-shadow: 0 1px 2px #ccc;
     box-shadow: 0 1px 2px #ccc;
     border-left: .1em solid #ccc;
     border-right: .1em solid #ccc;
     border-top: .1em solid #ccc;
-    &:last-child{
+    &:last-child {
         border-bottom: .1em solid #ccc;
     }
- 
-    &:hover{
+    &:hover {
+        -webkit-box-shadow: 0 1px 30px rgb(180, 180, 180);
         box-shadow: 0 1px 30px rgb(180, 180, 180);
-        transition:all 0.2s;
-        -webkit-transition:all 0.2s;
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
         -moz-transition: all 0.2s;
     }
-
     .post-title,
-    .article-tag-list,icon-file-text-o {
+    .article-tag-list,
+    icon-file-text-o {
         margin: 0;
         display: inline;
     }
-    .article-tag-list{
+    .article-tag-list {
         float: right;
     }
     .post-title {
         font-size: 25px;
-        a{
+        a {
             text-decoration: none;
             .hoverLine(#000);
         }
-    }   
+    }
     .post-time {
         font-weight: bold;
     }
@@ -124,24 +111,25 @@
 .archive-article-date {
     position: absolute;
     left: 30px;
-    top:39%;
+    top: 39%;
 }
 
 @media screen and (max-width:760px) {
     .archive-article {
         display: block;
         margin: 0 -16px;
-        margin-bottom:5px;
+        margin-bottom: 5px;
         padding: 16px 16px 8px;
-        border:none;
+        border: none;
         border-bottom: 1px solid @borderColor;
         opacity: 1;
+        -webkit-box-shadow: none;
         box-shadow: none;
-        &:last-child{
+        &:last-child {
             border-bottom: 1px solid @borderColor;
         }
-    
-        &:hover{
+        &:hover {
+            -webkit-box-shadow: none;
             box-shadow: none;
         }
         .post-footer {
@@ -150,23 +138,21 @@
             padding-bottom: 0;
         }
         .post-title {
-            padding-left:110px;
+            padding-left: 110px;
             font-size: 21px;
         }
         .archive-article-date {
-            font-size:12px;
-            left:20px;
-            top:50%;
+            font-size: 12px;
+            left: 20px;
+            top: 50%;
         }
-        .article-tag-list{
+        .article-tag-list {
             display: none;
         }
     }
-
     .article-card {
         border-radius: 0
     }
-
     .archive-separator {
         margin-top: 16px;
     }
