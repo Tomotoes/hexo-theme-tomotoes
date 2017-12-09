@@ -1,6 +1,27 @@
 hexo-theme-tomotoes
 ======================
 [![Join the chat at https://gitter.im/hexo-theme-tomotoes/Lobby](https://badges.gitter.im/hexo-theme-tomotoes/Lobby.svg)](https://gitter.im/hexo-theme-tomotoes/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+<a href="https://github.com/Tomotoes/hexo-theme-tomotoes/wiki"><img src="https://camo.githubusercontent.com/f6977a970c4eaf235fb3b115069c08634611611c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f646f63756d656e742d434e2d677265656e2e7376673f7374796c653d666c61742d737175617265" alt="" data-canonical-src="https://img.shields.io/badge/document-CN-green.svg?style=flat-square" style="max-width:100%;">
+</a>
+<a href="http://tomotoes.com">
+<img src="https://img.shields.io/badge/preview-Tomotoes-red.svg" alt="" data-canonical-src="https://img.shields.io/badge/preview-Tomotoes.svg?style=flat-square" style="max-width:100%;">
+</a>
+<a href="http://tomotoes.com">
+<img src="https://img.shields.io/chrome-web-store/stars/nimelepbpejjlbmoobocpfnjhihnpked.svg" alt="" data-canonical-src="https://img.shields.io/badge/preview-Tomotoes.svg?style=flat-square" style="max-width:100%;">
+</a>
+<a href="http://tomotoes.com">
+<img src="https://img.shields.io/github/languages/count/badges/shields.svg" alt="" data-canonical-src="https://img.shields.io/badge/preview-Tomotoes.svg?style=flat-square" style="max-width:100%;">
+</a>
+<a href="http://tomotoes.com">
+<img src="https://img.shields.io/cocoapods/l/AFNetworking.svg" alt="" data-canonical-src="https://img.shields.io/badge/preview-Tomotoes.svg?style=flat-square" style="max-width:100%;">
+</a>
+<a href="http://tomotoes.com">
+<img src="https://img.shields.io/bithound/code/github/rexxars/sse-channel.svg" alt="" data-canonical-src="https://img.shields.io/badge/preview-Tomotoes.svg?style=flat-square" style="max-width:100%;">
+</a>
+<a href="http://tomotoes.com">
+<img src="https://img.shields.io/github/release/qubyte/rubidium.svg" alt="" data-canonical-src="https://img.shields.io/badge/preview-Tomotoes.svg?style=flat-square" style="max-width:100%;">
+</a>
+
 
 本主题修改自[indigo主题](https://github.com/yscoder/hexo-theme-indigo) *（已与原作者沟通，并得到其支持）*
 
@@ -14,7 +35,7 @@ hexo-theme-tomotoes
 5. 无前端依赖的分享实现。
 6. 基于静态数据的站内搜索，无第三方侵入。
 7. 支持文章打赏。*（好像就有人打赏似的）*
-8. **以上都是yscoder的成果，(●ˇ∀ˇ●)！**
+8. 以上都是**原作者yscoder**的成果，(●ˇ∀ˇ●)！
 9. 更多令人舒服动画特效，以及漂亮的UI界面。
 10. 更多已封装的自定义选项 *（取舍动画，甚至改变各个页面的标题）*。
 11. 支持多种评论插件
