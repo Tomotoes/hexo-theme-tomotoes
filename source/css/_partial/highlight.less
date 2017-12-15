@@ -10,13 +10,16 @@
 @h-aqua: #3e999f;
 @h-blue: #4271ae;
 @h-purple: #8959a8;
-@h-fs: 14px;
+
+.fontSize(@size:17px){
+    font-size: @size;
+    line-height: @size*1.6;
+    height: @size*1.6;
+}
 .codeBlock() {
     position: relative;
     overflow-x: auto;
     padding: 0px 20px 10px 20px;
-    font-size: @h-fs;
-    line-height: @h-fs*1.6;
     background: @h-background;
 }
 
@@ -41,8 +44,7 @@
             padding: 0;
         }
         .line {
-            height: @h-fs*1.6;
-            line-height: @h-fs*1.6;
+            .fontSize();
         }
         table {
             margin: 0;
@@ -185,6 +187,13 @@ pre {
 }
 
 @media screen and(max-width:760px) {
+    .post-content {
+        .highlight {
+            .line {
+                .fontSize(14px) !important;
+            }
+        }
+    }
     .post-content .highlight {
         margin-left: -16px;
         margin-right: -16px;
