@@ -1,7 +1,7 @@
 .post-widget {
     float: right;
     width: 20%;
-    padding-left: 30px;
+    padding-left: 20px;
     min-height: 1px;
     +.post-article {
         float: left;
@@ -39,9 +39,11 @@
 }
 
 .post-toc {
+    box-shadow: 0px 0px 10px rgb(225, 225, 226);
     text-shadow: rgb(214, 214, 214) 0px 0px 1px;
     display: inline-block;
     padding: 0;
+    margin-left:2% !important;
     font-size: 13px;
     >.post-toc-item {
         position: relative;
@@ -54,10 +56,8 @@
         >.post-toc-link {
             color: #000;
             &:before {
+
                 background: rgba(0, 0, 0, .06);
-            }
-            &:after {
-                border-left: 3px solid #4158ca;
             }
         }
     }
@@ -68,18 +68,19 @@
     z-index: 2;
     display: block;
     padding: 3px 20px;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
     color: inherit;
     word-break: break-all;
     text-decoration: none;
+    width:100%;
+    letter-spacing: 2px;
+    text-shadow: rgb(207, 205, 205) 0px 0px 1px;
+
     &:hover {
         text-decoration: none;
         color: #000;
         &:before {
             background: rgba(0, 0, 0, .06);
-        }
-        &:after {
-            border-left: 3px solid #4158ca;
         }
     }
     &:before,
@@ -94,7 +95,7 @@
         -webkit-transition: all 0.2s ease-in;
         transition: all 0.2s ease-in;
     }
-    .hoverAnchor(#4158ca);
+    .hoverAnchor(#aca8a8);
     border-bottom: none;
 }
 
@@ -125,7 +126,9 @@
 }
 
 .post-card-title {
-    font-size: 30px;
+    letter-spacing:4px;
+    text-shadow: rgb(78, 77, 77) 0px 0px 1px;color:rgb(61, 60, 61);
+    font-size: 28px;
     text-align: center;
 }
 
@@ -274,9 +277,6 @@
     a:not(.post-more) {
         .hoverAnchor(@accentColor);
     }
-    &.about {
-        padding: 0 10px;
-    }
     >.highlight,
     >.image-bubble,
     >pre {
@@ -340,7 +340,7 @@
         font-weight: bold;
         color: @primaryTextColor;
         padding-top: @headerH;
-        margin-top: @headerH * -1;
+        margin-top: 40px * -1;
         padding-bottom: 8px;
         text-shadow: rgb(187, 186, 186) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
     }
@@ -531,7 +531,7 @@
         }
     }
     .post-card-title {
-        font-size: 27px;
+        font-size: 24px;
         margin-bottom: 8%;
     }
     .post-nav {

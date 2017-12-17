@@ -32,7 +32,6 @@
         a {
             text-decoration: none;
         }
-        .hoverLine(#000);
     }
 }
 
@@ -74,18 +73,29 @@
     padding: 25px 25px 25px 155px;
     -webkit-box-shadow: 0 1px 2px #ccc;
     box-shadow: 0 1px 2px #ccc;
-    border-left: .1em solid #ccc;
+    border-left: .2em solid #ccc;
     border-right: .1em solid #ccc;
     border-top: .1em solid #ccc;
+    opacity: 0.7;
     &:last-child {
         border-bottom: .1em solid #ccc;
     }
     &:hover {
-        -webkit-box-shadow: 0 1px 30px rgb(180, 180, 180);
-        box-shadow: 0 1px 30px rgb(180, 180, 180);
-        transition: all 0.2s;
-        -webkit-transition: all 0.2s;
-        -moz-transition: all 0.2s;
+        border-left: .5em solid #ccc;
+        border-right: .5em solid #ccc;
+        -webkit-transform: translateY(-1px);
+        transform: translateY(-1px);
+        opacity: 1;
+        .post-title {
+            letter-spacing: 3px;
+            color: #000;
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+        -webkit-box-shadow: 0 0px 30px #ccc;
+        box-shadow: 0 0px 30px #ccc;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
     }
     .post-title,
     .article-tag-list,
@@ -97,7 +107,10 @@
         float: right;
     }
     .post-title {
-        font-size: 25px;
+        font-size: 23px;
+        letter-spacing: 4px;
+        text-shadow: rgb(158, 158, 158) 0px 0px 1px;
+        color: #222;
         a {
             text-decoration: none;
             .hoverLine(#000);
@@ -139,7 +152,8 @@
         }
         .post-title {
             padding-left: 110px;
-            font-size: 21px;
+            font-size: 20px;
+            letter-spacing: 1px;
         }
         .archive-article-date {
             font-size: 12px;
