@@ -73,14 +73,17 @@
     padding: 25px 25px 25px 155px;
     -webkit-box-shadow: 0 1px 2px #ccc;
     box-shadow: 0 1px 2px #ccc;
-    border-left: .2em solid #ccc;
+    border-left: .1em solid #ccc;
     border-right: .1em solid #ccc;
     border-top: .1em solid #ccc;
     opacity: 0.7;
+
     &:last-child {
+        box-shadow: none;
         border-bottom: .1em solid #ccc;
     }
     &:hover {
+
         border-left: .5em solid #ccc;
         border-right: .5em solid #ccc;
         -webkit-transform: translateY(-1px);
@@ -92,23 +95,34 @@
             -webkit-transition: all 0.4s;
             transition: all 0.4s;
         }
-        -webkit-box-shadow: 0 0px 30px #ccc;
-        box-shadow: 0 0px 30px #ccc;
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s;
+        -webkit-box-shadow: 0px 0px 30px #ccc;
+        box-shadow: 0px 0px 30px #ccc;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+
+        .archive-article-date{
+            left:4%;
+            transition: all 0.4s;
+        }
+        .article-tag-list {
+            margin-right:2%;
+            transition: all 0.4s;
+        }
     }
     .post-title,
     .article-tag-list,
     icon-file-text-o {
         margin: 0;
         display: inline;
+
     }
     .article-tag-list {
         float: right;
     }
     .post-title {
+        margin-left:18%;
         font-size: 23px;
-        letter-spacing: 4px;
+        letter-spacing: 5px;
         text-shadow: rgb(158, 158, 158) 0px 0px 1px;
         color: #222;
         a {
@@ -142,6 +156,20 @@
             border-bottom: 1px solid @borderColor;
         }
         &:hover {
+            border-left: none;
+            border-right: none;
+            -webkit-transform: none;
+            transform: none;
+            opacity: 1;
+            .post-title {
+                letter-spacing: 1px;
+            }
+            .archive-article-date{
+                left: 20px;
+            }
+            .article-tag-list {
+                margin-right:0%;
+            }
             -webkit-box-shadow: none;
             box-shadow: none;
         }
@@ -151,8 +179,9 @@
             padding-bottom: 0;
         }
         .post-title {
-            padding-left: 110px;
-            font-size: 20px;
+            margin-left:0%;
+            padding-left: 105px;
+            font-size: 19px;
             letter-spacing: 1px;
         }
         .archive-article-date {
