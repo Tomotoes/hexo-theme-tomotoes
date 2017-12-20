@@ -11,15 +11,19 @@
 }
 
 .post-toc-wrap {
-    display: none;
     position: fixed;
     overflow-x: hidden;
     width: 20%;
+    height:0%;
+    transition: all 0.5s;
+    bottom: 140px;
+    top: @headerH + 20px;
+    overflow-y: auto;
+    opacity: 0.5;
     &.fixed {
-        display: block;
-        top: @headerH + 20px;
-        bottom: 140px;
-        overflow-y: auto;
+        opacity: 1;
+        height:120%;
+        transition: all 0.8s;
     }
     ol,
     ul {
@@ -56,7 +60,6 @@
         >.post-toc-link {
             color: #000;
             &:before {
-
                 background: rgba(0, 0, 0, .06);
             }
         }
