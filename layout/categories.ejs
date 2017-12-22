@@ -10,13 +10,13 @@
                 if(category.name == page.category.trim()){
                     category_num = category.length
                 }
-            }) 
+            })
         %>
         <h5 class="tag-tip">
             <i class="icon icon-tag"></i>
             关于
             <span style="color:rgb(100, 100, 100)"><%-page.category.trim() %></span>
-            共<%-category_num %>篇文章</h5>
+            共&nbsp;<%-category_num %>&nbsp;篇文章</h5>
         <div class="waterfall">
             <% page.posts.each(function(post){ %>
                 <%- partial('_partial/archive', {post: post, date_format: config.date_format}) %>
@@ -25,7 +25,7 @@
     <% } else { %>
     	<h5 class="tag-tip">
             <i class="icon icon-lg icon-th-list"></i>
-            目前共<%-site.categories.length %>大分类 
+            目前共&nbsp;<%-site.categories.length %>&nbsp;大分类
         </h5>
         <div class="card-pool">
             <% site.categories.each(function(category){

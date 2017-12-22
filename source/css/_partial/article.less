@@ -119,6 +119,7 @@
     background: @bg-post;
     border: 1px solid #eee;
     .post-meta {
+        font-family: @font-content;
         text-shadow: rgb(202, 202, 202) 0px 0px 1px;
         text-align: center;
         margin-top: 8px;
@@ -273,6 +274,7 @@
 }
 
 .post-content {
+    font-family: @font-content;
     letter-spacing: 2px;
     padding-bottom: 10px;
     line-height: 1.8;
@@ -500,7 +502,9 @@
         font-size: 11px;
     }
     .post-content {
-        font-size: 100%;
+        font-family: inherit;
+        letter-spacing: 1px;
+        font-size: 105%;
         li{
             margin-bottom: 0px;
         }
@@ -536,6 +540,7 @@
     .post-card-title {
         font-size: 24px;
         margin-bottom: 8%;
+        letter-spacing: 2px;
     }
     .post-nav {
         padding: 0;

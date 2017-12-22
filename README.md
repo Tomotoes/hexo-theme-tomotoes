@@ -18,9 +18,6 @@ hexo-theme-tomotoes
 <a href="http://tomotoes.com">
 <img src="https://img.shields.io/bithound/code/github/rexxars/sse-channel.svg" alt="" data-canonical-src="https://img.shields.io/badge/preview-Tomotoes.svg?style=flat-square" style="max-width:100%;">
 </a>
-<a href="http://tomotoes.com">
-<img src="https://img.shields.io/github/release/qubyte/rubidium.svg" alt="" data-canonical-src="https://img.shields.io/badge/preview-Tomotoes.svg?style=flat-square" style="max-width:100%;">
-</a>
 
 
 本主题修改自[indigo主题](https://github.com/yscoder/hexo-theme-indigo) *（已与原作者沟通，并得到其支持）*

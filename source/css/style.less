@@ -9,6 +9,7 @@
 }
 
 ::-webkit-scrollbar {
+    @dividerColor:rgb(193, 212, 218);
     -webkit-appearance: none;
     width: 8px;
     height: 8px;
@@ -19,6 +20,7 @@
         background-color: @dividerColor;
         border: 1px solid #fff;
         border-radius: 10px;
+        -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
         &:hover {
             background-color: darken(@dividerColor, 10%)
         }
@@ -89,6 +91,8 @@ blockquote,
 button,
 input {
     margin: 0;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 input,

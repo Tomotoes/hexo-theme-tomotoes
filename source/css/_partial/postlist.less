@@ -1,18 +1,75 @@
+@titleColor:#333;
+@titleHoverColor:#fff;
 .post-list {
     padding: 0;
     margin: 0 -12px;
     list-style: none;
-    .post-title{
-        a{
-            color:#222;
+    .post-title a{
+        letter-spacing: 4px;
+        font-size: 120%;
+        color: @titleColor;
+        font-weight: 300;
+
+        text-decoration: none;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+
+        text-shadow: rgb(69, 45, 45) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 1px, rgb(255, 255, 251) 0px 0px 2px;
+        font-family: @font-custom;
+
+        &:hover{
+            color: @titleHoverColor;
+            -webkit-animation: jumpWhite 1.5s ease-in-out infinite alternate;
+            animation: jumpWhite 1.5s ease-in-out infinite alternate;
         }
-        font-size: 23px;
-        letter-spacing:4px;
-        text-shadow: rgb(158, 158, 158) 0px 0px 1px;color:rgb(169, 167, 179);
-        .hoverLine(#222);
     }
 }
 
+@-webkit-keyframes jumpWhite {
+    from {
+      text-shadow: 0 0 1px @titleHoverColor ,
+                 0 0 2px  @titleHoverColor ,
+                 0 0 3px  @titleHoverColor ,
+                 0 0 5px  @titleColor ,
+                 0 0 8px  @titleColor ,
+                 0 0 9px  @titleColor ,
+                 0 0 10px @titleColor ,
+                 0 0 15px @titleColor ;
+    }
+    to {
+      text-shadow: 0 0 .5px @titleHoverColor ,
+                 0 0 1px @titleHoverColor ,
+                 0 0 1.5px @titleHoverColor,
+                 0 0 2px @titleColor ,
+                 0 0 4px @titleColor ,
+                 0 0 5px @titleColor ,
+                 0 0 6px @titleColor ,
+                 0 0 8px @titleColor ;
+    }
+}
+
+@keyframes jumpWhite {
+    from {
+      text-shadow: 0 0 1px @titleHoverColor ,
+                 0 0 2px  @titleHoverColor ,
+                 0 0 3px  @titleHoverColor ,
+                 0 0 5px  @titleColor ,
+                 0 0 8px  @titleColor ,
+                 0 0 9px  @titleColor ,
+                 0 0 10px @titleColor ,
+                 0 0 15px @titleColor ;
+    }
+    to {
+      text-shadow: 0 0 .5px @titleHoverColor ,
+                 0 0 1px @titleHoverColor ,
+                 0 0 1.5px @titleHoverColor,
+                 0 0 2px @titleColor ,
+                 0 0 4px @titleColor ,
+                 0 0 5px @titleColor ,
+                 0 0 6px @titleColor ,
+                 0 0 8px @titleColor ;
+    }
+}
 .post-list-item {
     padding: 0 12px;
     margin-bottom: 30px;
@@ -21,12 +78,6 @@
 
 .post-title {
     margin: 0 0 16px;
-}
-
-.post-title-link {
-    color: #37474f;
-    .hoverLine(#37474f);
-    font-size: 30px;
 }
 
 .post-meta {
@@ -48,6 +99,7 @@
 }
 
 .post-count-custom {
+    letter-spacing: 1px;
     font-weight: bold;
     margin-bottom: 50px;
 }
@@ -117,6 +169,8 @@
 }
 
 .post-more {
+    @fontColor:#666;
+
     overflow: visible;
     border: 0;
     -moz-user-select: text;
@@ -125,8 +179,8 @@
     padding: 6px 15px;
     padding-top: 1px;
     background-color: #fff;
-    color: #666;
-    border: 2px solid #666;
+    color: @fontColor;
+    border: 2px solid @fontColor;
     border-radius: 6px;
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
@@ -136,11 +190,11 @@
         display: block;
         height: 7px;
         width: 100%;
-        background-image: -webkit-repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
-        background-image: repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
+        background-image: -webkit-repeating-linear-gradient(45deg, @fontColor, @fontColor 1px, transparent 2px, transparent 5px);
+        background-image: repeating-linear-gradient(45deg, @fontColor, @fontColor 1px, transparent 2px, transparent 5px);
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        border-top: 1px solid #666;
+        border-top: 1px solid @fontColor;
         position: absolute;
         left: 0;
         bottom: 0;
@@ -220,6 +274,11 @@
     .post-title {
         font-size: 20px;
         line-height: 25px;
+        a{
+            letter-spacing: 1px;
+            font-size: 110%;
+            font-family: inherit;
+        }
     }
     .post-more {
         font-size: 13px !important;
