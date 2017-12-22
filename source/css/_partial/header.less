@@ -44,6 +44,7 @@
     white-space: nowrap;
     text-align: center;
     margin-right: -20%;
+    letter-spacing: 2px;
     &.toc {
         margin-right: -2%;
     }
@@ -65,8 +66,9 @@
     text-shadow: 0 0 1px rgba(0, 0, 0, .2);
     background-image: @bg-content-header;
     text-align: center;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: @font-custom;
     .subtitle {
+        letter-spacing: 4px;
         padding-top: 40px;
         font-size: 30px;
     }
@@ -91,7 +93,8 @@
 }
 
 .archivestitle {
-    font-size: 50px;
+    letter-spacing: 5px;
+    font-size: 45px;
 }
 
 @media screen and (max-width:1240px) {
@@ -101,15 +104,20 @@
 }
 
 @media screen and (max-width:760px) {
+    .header-title{
+        letter-spacing: 0px;
+    }
     .content-header {
         margin: 0;
         min-height: auto;
         padding: 0px 16px 5px 0;
+        font-family: inherit;
         .title {
             font-size: 35px;
             line-height: 30px;
         }
         .subtitle {
+            letter-spacing: 1px;
             font-size: 20px;
             line-height: 20px
         }
@@ -122,6 +130,7 @@
         }
     }
     .archivestitle {
+        letter-spacing: 1px;
         font-size: 30px;
     }
 }
