@@ -53,5 +53,4 @@ hexo-theme-tomotoes
 [ChangeLog](https://github.com/tomotoes/hexo-theme-tomotoes/releases)
 
 **如果你喜欢这款主题,请给我一个star吧!**
-**本主题不会再更新了，实在太浪费个人时间精力，我要专心修炼了，就这样**
-
+**有技术方面的难题，请仔细阅读本项目文档。**
