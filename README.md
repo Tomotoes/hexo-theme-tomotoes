@@ -20,8 +20,6 @@ hexo-theme-tomotoes
 </a>
 
 
-本主题修改自[indigo主题](https://github.com/yscoder/hexo-theme-indigo) *（已与原作者沟通，并得到其支持）*
-
 > Nicholas Zhao Si 说：“这是一款让人感到舒服的主题 **[Preview](http://tomotoes.com/)**”
 
 ## Feature
@@ -32,15 +30,14 @@ hexo-theme-tomotoes
 5. 无前端依赖的分享实现。
 6. 基于静态数据的站内搜索，无第三方侵入。
 7. 支持文章打赏。*（好像就有人打赏似的）*
-8. 以上都是**原作者yscoder**的成果，(●ˇ∀ˇ●)！
-9. 更多令人舒服动画特效，以及漂亮的UI界面。
-10. 更多已封装的自定义选项 *（取舍动画，甚至改变各个页面的标题）*。
-11. 支持多种评论插件
-12. 一言签名
-13. 小图标菜单。By [OhYee](https://www.oyohyee.com)
-14. 网站开启时间
-15. Emoji支持
-16. 还有很多特性留给你探索...
+8. 更多令人舒服动画特效，以及漂亮的UI界面。
+9. 更多已封装的自定义选项 *（取舍动画，甚至改变各个页面的标题）*。
+10. 支持多种评论插件
+11. 一言签名
+12. 小图标菜单。By [OhYee](https://www.oyohyee.com)
+13. 网站开启时间
+14. Emoji支持
+15. 还有很多特性留给你探索...
 
 ## Useage
 
