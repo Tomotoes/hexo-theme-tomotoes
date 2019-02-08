@@ -5,7 +5,8 @@
     margin: 0 -12px;
     list-style: none;
     .post-title a{
-        letter-spacing: 4px;
+        word-break: break-all;
+        letter-spacing: 2px;
         font-size: 120%;
         color: @titleColor;
         font-weight: 300;
@@ -168,50 +169,57 @@
     }
 }
 
-.post-more {
-    @fontColor:#666;
+.post-more-div {
+    margin-top: 20px;
+    text-align: center;
 
-    overflow: visible;
-    border: 0;
-    -moz-user-select: text;
-    display: inline-block;
-    text-decoration: none;
-    padding: 6px 15px;
-    padding-top: 1px;
-    background-color: #fff;
-    color: @fontColor;
-    border: 2px solid @fontColor;
-    border-radius: 6px;
-    -webkit-transition: all .2s ease;
-    transition: all .2s ease;
-    font-size: 15px !important;
-    &:after {
-        content: '';
-        display: block;
-        height: 7px;
-        width: 100%;
-        background-image: -webkit-repeating-linear-gradient(45deg, @fontColor, @fontColor 1px, transparent 2px, transparent 5px);
-        background-image: repeating-linear-gradient(45deg, @fontColor, @fontColor 1px, transparent 2px, transparent 5px);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        border-top: 1px solid @fontColor;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-size: 7px 7px;
-    }
-    &:hover {
-        background: rgb(173, 172, 172);
-        color: #fff;
-    }
-    &:hover:after {
-        background-image: -webkit-repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
-        background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
-        border-top: 1px solid #000;
-        -webkit-animation: stripe-slide 12s infinite linear forwards;
-        animation: stripe-slide 12s infinite linear forwards;
+    .post-more {
+        @fontColor:#666;
+    
+        overflow: visible;
+        border: 0;
+        -moz-user-select: text;
+        display: inline-block;
+        text-decoration: none;
+        padding: 6px 15px;
+        padding-top: 1px;
+        background-color: #fff;
+        color: @fontColor;
+        border: 2px solid @fontColor;
+        border-radius: 6px;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+        font-size: 15px !important;
+        &:after {
+            content: '';
+            display: block;
+            height: 7px;
+            width: 100%;
+            background-image: -webkit-repeating-linear-gradient(45deg, @fontColor, @fontColor 1px, transparent 2px, transparent 5px);
+            background-image: repeating-linear-gradient(45deg, @fontColor, @fontColor 1px, transparent 2px, transparent 5px);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-top: 1px solid @fontColor;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-size: 7px 7px;
+        }
+        &:hover {
+            background: rgb(173, 172, 172);
+            color: #fff;
+        }
+        &:hover:after {
+            background-image: -webkit-repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+            background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+            border-top: 1px solid #000;
+            -webkit-animation: stripe-slide 12s infinite linear forwards;
+            animation: stripe-slide 12s infinite linear forwards;
+        }
     }
 }
+
+
 
 @-webkit-keyframes stripe-slide {
     0% {
