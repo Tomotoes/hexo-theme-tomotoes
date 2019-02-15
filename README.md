@@ -20,7 +20,7 @@ hexo-theme-tomotoes
 </a>
 
 
-> Nicholas Zhao Si 说：“这是一款让人感到舒服的主题 **[Preview](http://tomotoes.com/)**”
+>  [个人网站](http://tomotoes.com/) 存在很多定制化的内容 ， 所以与本主题难免存在出入。”
 
 ## Feature
 1. 仅支持 IE10+ 等现代浏览器 *（向下兼容需要做大量工作，我就是懒啊）*。
@@ -37,8 +37,8 @@ hexo-theme-tomotoes
 12. 小图标菜单。By [OhYee](https://www.oyohyee.com)
 13. 网站开启时间
 14. Emoji支持
-15. [网站主页项目](https://github.com/Tomotoes/Tomotoes-HomePage)
-16. [网站关于页项目](https://github.com/Tomotoes/Tomotoes-AboutPage)
+15. [网站主页项目(开发中...)](https://github.com/Tomotoes/Tomotoes-HomePage)
+16. [网站关于页项目](https://github.com/dongsuo/vue-terminal)
 17. 还有很多特性留给你探索...
 
 ## Useage
