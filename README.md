@@ -37,9 +37,8 @@ hexo-theme-tomotoes
 12. 小图标菜单。By [OhYee](https://www.oyohyee.com)
 13. 网站开启时间
 14. Emoji支持
-15. [网站主页项目(开发中...)](https://github.com/Tomotoes/Tomotoes-HomePage)
-16. [网站关于页项目](https://github.com/dongsuo/vue-terminal)
-17. 还有很多特性留给你探索...
+15. [网站关于页项目](https://github.com/dongsuo/vue-terminal)
+16. 还有很多特性留给你探索...
 
 ## Useage
 
