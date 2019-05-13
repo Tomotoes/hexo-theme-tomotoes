@@ -19,6 +19,9 @@ hexo-theme-tomotoes
 <img src="https://img.shields.io/bithound/code/github/rexxars/sse-channel.svg" alt="" data-canonical-src="https://img.shields.io/badge/preview-Tomotoes.svg?style=flat-square" style="max-width:100%;">
 </a>
 
+[![支付宝赞助按钮](https://camo.githubusercontent.com/f4874996db5ac421925db08778d800d76d36abbc/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2545362539342541462545342542422539382545352541452539442d25453525393025393154412545362538442539302545352538412541392d677265656e2e737667)](https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/alipay.png)
+
+[![微信赞助按钮](https://camo.githubusercontent.com/26101aa838286ad0d45a6f71b25fdc6e14e7668c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2545352542452541452545342542462541312d25453525393025393154412545362538442539302545352538412541392d677265656e2e737667)](https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/wechat.png)
 
 >  [个人网站](http://tomotoes.com/) 存在很多定制化的内容 ， 所以与本主题难免存在出入。”
 
@@ -37,8 +40,9 @@ hexo-theme-tomotoes
 12. 小图标菜单。By [OhYee](https://www.oyohyee.com)
 13. 网站开启时间
 14. Emoji支持
-15. [网站关于页项目](https://github.com/dongsuo/vue-terminal)
-16. 还有很多特性留给你探索...
+15. [网站关于页项目](https://github.com/Tomotoes/React-terminal)
+16. [网站主页项目](https://github.com/Tomotoes/HomePage)
+17. 还有很多特性留给你探索...
 
 ## Useage
 
